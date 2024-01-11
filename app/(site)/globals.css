@@ -1,0 +1,172 @@
+@import url("https://fonts.cdnfonts.com/css/gilroy-bold");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+font-family: 'Gilroy-Bold', sans-serif;
+font-family: 'Gilroy-Heavy', sans-serif;
+font-family: 'Gilroy-Light', sans-serif;
+font-family: 'Gilroy-Medium', sans-serif;
+font-family: 'Gilroy-Regular', sans-serif; 
+  font-family: Helvetica, Arial, sans-serif;
+
+*/
+
+:root {
+  /* CSS HEX */
+  --sundance: #cb9f5c;
+  --black: #040404;
+  --soya-bean: #5b5448;
+  --gunsmoke: #7b8481;
+  --monza: #d21108;
+  --zeus: #2d2720;
+  --cape-cod: #3a4444;
+  --storm-gray: #636b8a;
+  --ebony-clay: #2d3248;
+}
+
+body {
+  font-family: "Gilroy-Bold", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.brand-yellow {
+  color: var(--sundance);
+}
+
+/* nav */
+
+nav {
+  font-family: "Gilroy-Bold", sans-serif;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 3rem;
+}
+
+.navlink-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navlinks li {
+  color: var(--sundance);
+  padding-right: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.navlinks li:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+.logo {
+  border: 1px solid var(--sundance);
+}
+
+.logo:hover {
+  border: 1px double #fff;
+}
+
+/* Home page 
+hero segment */
+
+.small__logo {
+  display: none;
+}
+
+.hero__homepage {
+  padding: 3rem;
+  background-color: #000;
+  width: 100vw;
+  height: auto;
+  max-width: 1920px;
+  max-height: 1500px;
+  overflow: hidden;
+  align-items: center;
+}
+
+.intro {
+  font-family: "Gilroy-Bold", sans-serif;
+  display: flex;
+  padding: 1rem 0;
+  color: #fff;
+  width: 50%;
+  min-width: 40%;
+}
+
+
+.intro h3 {
+  font-size: 32px;
+}
+
+.name {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: inline-block;
+  transform-style: preserve-3d; /* Maintain 3D positioning */
+  transform: rotateX(60deg)
+}
+
+.products-container__homepage,
+.brand-benefits,
+.customers-comments,
+.faq {
+  padding: 2rem 3rem;
+  min-height: 500px;
+  height: 600px;
+}
+
+.faq-container {
+  line-height: 1.5;
+  padding: 10px 10px;
+  background-color: #f02d34;
+  border-radius: 15px;
+  max-width: 1280px;
+  height: auto;
+  color: white;
+  width: 98%;
+}
+
+.faq-icons {
+  transition: all 0.2s ease-in;
+}
+
+/* footer */
+
+.footer-container {
+  padding: 0.5rem 3rem;
+}
+
+.footer-page-links-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-left: 50px;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 769px) {
+  /* Navbar */
+  .small__logo {
+    display: block;
+  }
+
+  .large__logo {
+    display: none;
+  }
+
+  .hero__homepage {
+    display: flex;
+    flex-direction: column;
+  }
+}
