@@ -29,10 +29,13 @@ const Navbar: React.FC = () => {
       </div>
       <div className="searchbar-container">searchbar</div>
 
-      <div className="navlink-container w-[33%]">
-        <ul className="navlinks flex">
+      <div className="navlink-container w-auto">
+        <ul className="navlinks flex space-between">
           <li>
             <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/products">Products</Link>
           </li>
           <li>
             <Link href="/services">Services</Link>

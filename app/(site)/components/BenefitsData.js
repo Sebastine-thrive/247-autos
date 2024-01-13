@@ -1,9 +1,8 @@
 import timeImage from "./../../../public/assets/images/efficient-timing.svg";
-import moneyImage from "./../../../public/assets/images/money.jpg";
+import moneyImage from "./../../../public/assets/images/money2.svg";
 import completeImage from "./../../../public/assets/images/total.svg";
-import skilledImage from "./../../../public/assets/images/technical_team.jpg";
-import money_and_time_Image from "./../../../public/assets/images/money_and-time.jpg";
-
+import skilledImage from "./../../../public/assets/images/engineering-team.svg";
+import money_and_time_Image from "./../../../public/assets/images/time-is-money.svg";
 
 export const benefitsData = [
   {
@@ -46,23 +45,4 @@ export const benefitsData = [
     className: "benefits__technicians",
   },
   
-];
-
-// function BrandBenefits() {
-//   return (
-//     <div className="brand-benefits bg-[#000]">
-//       <h4>Why 24/7 Autos</h4>
-//       <div>
-//         {benefitsData.map((benefit, index) => (
-//           <div key={index}>
-//             <Image src={benefit.imageSrc} className={benefit.className} alt={benefit.imageAlt} />
-//             <h6>{benefit.title}</h6>
-//             <p>{benefit.description}</p>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default BrandBenefits;
+]

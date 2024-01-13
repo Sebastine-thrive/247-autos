@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import Navbar from './Navbar';
-// import Footer from './Footer';
+import Footer from './Footer';
 
 type LayoutProps = {
   children: ReactNode;
@@ -14,8 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </header>
       <main className="main-container">{children}</main>
       <footer className="mt-auto mb-0 ">
-        footer
-        {/* <Footer /> */}
+        <Footer />
       </footer>
     </div>
   );
