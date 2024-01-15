@@ -27,11 +27,14 @@ font-family: Helvetica, Arial, sans-serif;
 }
 
 h1, h2 {
-  font-family: "Gilroy-Bold", sans-serif;
+  font-family: "textGilroy-Bold", sans-serif;
 }
 
+h3, h4 {
+  font-family: 'Gilroy-Heavy', sans-serif;
+}
 
-p, h3,h4 {
+p{
   font-family: "Gilroy-Medium", sans-serif;
 }
 
@@ -126,19 +129,40 @@ hero segment */
   bottom: 20px;
   left: 50%;
   display: inline-block;
-  transform-style: preserve-3d; /* Maintain 3D positioning */
+  transform-style: preserve-3d; 
   transform: rotateX(60deg)
 }
 
 .count {
   font-family: Helvetica, Arial, sans-serif;
-  
+} 
+
+/* 
+.your-dreams {
+  position: relative;
+  font-size: 3em; 
+  font-weight: bold;
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 4s linear infinite;
+}   */
+
+.customers-comments-title {
+border-top: 5px solid #cb9f5c;
+border-bottom:5px solid #cb9f5c;
 }
 
-.benefit-image svg {
-width: 100px;
-height: 80px;
-}
+/* 
+@keyframes shine {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: -100% 50%;
+  }
+} */
 
 .products-container__homepage,
 .brand-benefits,
@@ -146,10 +170,10 @@ height: 80px;
 .faq {
   padding: 2rem 3rem;
   height: auto;
-  max-width: 1920px;
   min-height: 600px;
+  max-width: 1920px;
 }
-
+/* 
 .faq-container {
   line-height: 1.5;
   padding: 10px 10px;
@@ -159,7 +183,7 @@ height: 80px;
   height: auto;
   color: white;
   width: 98%;
-}
+} */
 
 .faq-icons {
   transition: all 0.2s ease-in;

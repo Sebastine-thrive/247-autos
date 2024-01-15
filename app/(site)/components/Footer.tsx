@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
     <div className="footer-container max-w-[1920px] w-[100vw] bg-[#040404] text-white py-8">
       <div className="footer-links">
         <div className="logo-socials-container">
-          <div className=" flex">
+          <div className=" flex text-center">
             <div className="footer-logo w-[80px] h-[80px] mr-4">
               <Image
                 src={small_logo}
@@ -18,22 +18,21 @@ const Footer: React.FC = () => {
                 alt="logo image for small screen"
                 className="logo small__logo"
               />
+              small logo
             </div>
+
             <h3> 247 Autos</h3>
           </div>
 
           <div className="footer-socials">socials</div>
         </div>
 
-        <div className="footer-page-links ml-16">
+        <div className="footer-page-links ml-[3rem]">
           <div className="footer-page-links-wrapper">
             <div className="page-links">
-              <h4>
+              <h4 className="">
                 <Link href="">Why 247</Link>
               </h4>
-              <p>
-                <Link href="">Efficient servicing</Link>
-              </p>
             </div>
 
             <div className="page-links">

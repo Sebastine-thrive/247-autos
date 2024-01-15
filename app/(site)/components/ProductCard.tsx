@@ -20,28 +20,46 @@ const Product: React.FC<ProductProps> = ({ product }) => {
   const { image, name, slug, price } = product;
 
   return (
-    <div>
+    <>
       <Link href={`/product/${slug?.current}`}>
-        <div className="product-card xs:flex xs:flex-col xs:justify-center xs:items-center md:block">
+        <div className="product-card xxs:flex flex-col justify-center items-center md:block">
           {image && (
-            <Image
-              src={urlForImage(image[0]) || ""}
-              alt={name}
-              width={250}
-              height={250}
-              className="product-image"
-            />
+            <div>
+              <Image
+                src={urlForImage(image[0]) || ""}
+                alt={name}
+                width={250}
+                height={250}
+                className="product-image"
+              />
+            </div>
           )}
-          <p className="product-name"> {name} </p>
-          <p className="product-price">
-            {price.toLocaleString("en-NG", {
-              style: "currency",
-              currency: "NGN",
-            })}
-          </p>
+          <div className="flex">
+            <div className="flex flex-col">
+              <div className="flex flex-col">
+                {/* year | brand | name */}
+                <div className="flex items-center"> 
+                <p>year</p> <p className="ml-6"> brand</p> <p className="ml-4">name</p>
+                </div>
+                <p className="mt-4"> extra summary info</p>
+              </div>
+
+              <p className="mt-6"> Location</p>
+            </div>
+
+            <div className="price my-auto">
+            <p className="product-price">
+              {price.toLocaleString("en-NG", {
+                style: "currency",
+                currency: "NGN",
+              })}
+            </p>
+
+            </div>
+          </div>
         </div>
       </Link>
-    </div>
+    </>
   );
 };
 
