@@ -1,5 +1,6 @@
+"use client"
 import React, { useState, useRef, useEffect } from "react";
-// import Product from "./../components/Product";
+import ProductCard from "./ProductCard";
 import { BiChevronsLeft, BiChevronsRight } from "react-icons/bi";
 
 interface Product {
@@ -11,7 +12,7 @@ interface CarouselProps {
   products: Product[];
 }
 
-const Carousel: React.FC<CarouselProps> = ({ products }) => {
+const ProductCarousel: React.FC<CarouselProps> = ({ products }) => {
   const [position, setPosition] = useState<number>(0);
   const [itemsPerPage, setItemsPerPage] = useState<number>(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -52,8 +53,10 @@ const Carousel: React.FC<CarouselProps> = ({ products }) => {
           }px)`,
         }}
       >
-        {/* {products.map((product) => (
-          <Product key={product?._id} product={product} />
+        {/* {products.map((product, index) => (
+            <ProductCard   key={index} 
+            product={product} 
+            />
         ))} */}
       </div>
       <button
@@ -78,4 +81,4 @@ const Carousel: React.FC<CarouselProps> = ({ products }) => {
   );
 };
 
-export default Carousel;
+export default ProductCarousel;

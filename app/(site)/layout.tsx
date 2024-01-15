@@ -3,15 +3,14 @@ import type { Metadata } from "next";
 import Layout from "./components/Layout";
 import "./globals.css";
 import Head from "next/head";
+import { StateContext } from "../context/Contexts";
 
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title:
-    "24//7 autos | Best quality cars in Lagos, Awka and across Nigeria",
+  title: "24//7 autos | Best quality cars in Lagos, Awka and across Nigeria",
   description:
     "Buy Brand new, Direct Belgium, Fairly-used cars with ease at fair prices.Trusted cars/auto dealer in Lagos, Awka, and throughout Nigeria.",
-
 };
 
 export default function RootLayout({
@@ -22,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="page-body">
-        <Layout>{children}</Layout>
+        <StateContext>
+          <Layout>{children}</Layout>
+        </StateContext>
       </body>
     </html>
   );

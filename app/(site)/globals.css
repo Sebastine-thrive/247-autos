@@ -137,32 +137,10 @@ hero segment */
   font-family: Helvetica, Arial, sans-serif;
 } 
 
-/* 
-.your-dreams {
-  position: relative;
-  font-size: 3em; 
-  font-weight: bold;
-  background-size: 200% 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: shine 4s linear infinite;
-}   */
-
 .customers-comments-title {
 border-top: 5px solid #cb9f5c;
 border-bottom:5px solid #cb9f5c;
 }
-
-/* 
-@keyframes shine {
-  0% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: -100% 50%;
-  }
-} */
 
 .products-container__homepage,
 .brand-benefits,
@@ -173,17 +151,6 @@ border-bottom:5px solid #cb9f5c;
   min-height: 600px;
   max-width: 1920px;
 }
-/* 
-.faq-container {
-  line-height: 1.5;
-  padding: 10px 10px;
-  background-color: #f02d34;
-  border-radius: 15px;
-  max-width: 1280px;
-  height: auto;
-  color: white;
-  width: 98%;
-} */
 
 .faq-icons {
   transition: all 0.2s ease-in;

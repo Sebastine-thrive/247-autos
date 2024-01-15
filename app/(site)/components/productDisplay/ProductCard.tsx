@@ -16,7 +16,7 @@ interface ProductProps {
   };
 }
 
-const Product: React.FC<ProductProps> = ({ product }) => {
+const ProductCard: React.FC<ProductProps> = ({ product }) => {
   const { image, name, slug, price } = product;
 
   return (
@@ -34,7 +34,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
               />
             </div>
           )}
-          <div className="flex">
+          <div className="flex mr-2 border-r border-red-300">
             <div className="flex flex-col">
               <div className="flex flex-col">
                 {/* year | brand | name */}
@@ -47,7 +47,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
               <p className="mt-6"> Location</p>
             </div>
 
-            <div className="price my-auto">
+            <div className="ml-2 price my-auto">
             <p className="product-price">
               {price.toLocaleString("en-NG", {
                 style: "currency",
@@ -63,4 +63,4 @@ const Product: React.FC<ProductProps> = ({ product }) => {
   );
 };
 
-export default Product;
+export default ProductCard;
