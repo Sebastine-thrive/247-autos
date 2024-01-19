@@ -6,8 +6,14 @@ import CustomerComments from "./components/customers/CustomerComments";
 import HomepageHero from "./components/heroHomePage/HomepageHero";
 import BrandBenefits from "./components/brandBenefits/BrandBenefits";
 import CustomerComponent from "./components/customers/CustomerComponent";
+import ProductFrame_Large from "./components/productDisplay/ProductFrame_Large";
+import { getFirstTenProductsOnSale } from "./utils/utils";
+import { ProductsArray } from "../types/types";
 
-export default function Home() {
+export default async function Home() {
+  const firstTenProducts = await getFirstTenProductsOnSale();
+  // console.log(firstTenProducts);
+
   return (
     <main className="home-container">
       {/* Hero 1 */}
@@ -16,11 +22,13 @@ export default function Home() {
       </div>
 
       {/* 2 Products in categories
-      All-BrandNew-Used-RecentlySold-SortBybudget
-      */}
+      All-BrandNew-Used-RecentlySold-SortBybudget*/}
 
-      <div className="products-container__homepage bg-[#636b8a]">
-        <h3>Your Products</h3>
+      <div className="products-container__homepage w-[100vw] flex flex-col bg-[#e5c8a0]">
+        <h3 className="mx-auto">Your Products</h3>
+        <div className="w-full mt-4">
+          <ProductFrame_Large products={firstTenProducts} />
+        </div>
       </div>
 
       {/* 3 Why 247 Autos */}
@@ -30,7 +38,7 @@ export default function Home() {
 
       {/* 4 Satisfied customers 
       - What they are saying */}
-      <div className="customers-comments bg-[#636b8a] flex flex-col justify-center ">
+      <div className="customers-comments bg-[#e5c8a0] flex flex-col justify-center ">
         <CustomerComponent />
       </div>
 

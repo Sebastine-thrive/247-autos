@@ -1,6 +1,10 @@
 import React from "react";
 import small_logo from "../../../public/assets/logo/logo__small.jpg";
-import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
+import {
+  AiFillInstagram,
+  AiFillTwitterSquare,
+  AiOutlineTwitter,
+} from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,7 +19,7 @@ const Footer: React.FC = () => {
                 src={small_logo}
                 width={80}
                 height={80}
-                alt="logo image for small screen"
+                alt="logo image for small screens"
                 className="logo small__logo"
               />
               small logo
@@ -24,44 +28,58 @@ const Footer: React.FC = () => {
             <h3> 247 Autos</h3>
           </div>
 
-          <div className="footer-socials">socials</div>
+          <div className="footer-socials flex">
+            {/* socials */}
+            <Link href="">
+              {" "}
+              <div>
+                <AiFillTwitterSquare />
+              </div>
+            </Link>
+            <Link href="">
+              {" "}
+              <div>
+                <AiFillInstagram />
+              </div>
+            </Link>
+          </div>
         </div>
 
-        <div className="footer-page-links ml-[3rem]">
-          <div className="footer-page-links-wrapper">
+        <div className="footer-page-links w-full mx-[3rem] ">
+          <div className="footer-page-links-wrapper flex flex-wrap gap-8">
             <div className="page-links">
-              <h4 className="">
-                <Link href="">Why 247</Link>
-              </h4>
+              <Link href="">
+                {" "}
+                <h4 className="text-[#cb9f5c]">Why 247 </h4>
+              </Link>
             </div>
 
             <div className="page-links">
-              <h4>
-                <Link href="">Products</Link>
-              </h4>
-              <p>
-                <Link href="">Used</Link>
-              </p>
-              <p>
-                <Link href="">New</Link>
-              </p>
-              <p>
-                <Link href="">Sell Your Car</Link>
-              </p>
+              <Link href="">
+                <h4 className="text-[#cb9f5c] my-[5px]">Products</h4>
+              </Link>
+              <Link href="">
+                <p>New</p>
+              </Link>
+              <Link href="">
+                <p>Used</p>
+              </Link>
+              <Link href="">
+                <p>Sell your Car</p>
+              </Link>
             </div>
 
             <div className="page-links">
-              <h4>Resources</h4>
-
-              <p>
-                <Link href="">FAQ</Link>
-              </p>
-              <p>
-                <Link href="">Blog</Link>
-              </p>
-              <p>
-                <Link href="">Contact Us</Link>
-              </p>
+              <h4 className="text-[#cb9f5c]">Resources</h4>
+              <Link href="">
+                <p>FAQs</p>
+              </Link>
+              <Link href="">
+                <p>Blog</p>
+              </Link>
+              <Link href="">
+                <p>Contact us</p>
+              </Link>
             </div>
           </div>
         </div>

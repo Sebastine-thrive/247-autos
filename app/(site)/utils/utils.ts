@@ -1,10 +1,10 @@
 import { client } from "@/sanity/lib/client";
 
-export async function getBestSellingProducts() {
-    const productQuery = `*[_type == "product"]`;
-    const carsData = await client.fetch(productQuery);
-    if (!carsData) {
-      throw new Error("No product found");
+export async function getFirstTenProductsOnSale() {
+    const productQuery = `*[_type == "product"][0...2]`;
+    const firstTenCarsOnSale = await client.fetch(productQuery);
+    if (!firstTenCarsOnSale) {
+      throw new Error("No cars-on-sale found");
     }
-    return carsData;
+    return firstTenCarsOnSale;
   }

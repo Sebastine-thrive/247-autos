@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { benefitsData } from '../BenefitsData'
+import { benefitsData } from './BenefitsData'
 
 const BrandBenefits : React.FC = () => {
   return (

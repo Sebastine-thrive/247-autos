@@ -15,7 +15,8 @@ font-family: Helvetica, Arial, sans-serif;
 
 :root {
   /* CSS HEX */
-  --sundance: #cb9f5c;
+  /* lighter shade1: #cb9f5c  ligther shade 2: #e5c8a0 */
+  --sundance: #cb9f5c; 
   --black: #040404;
   --soya-bean: #5b5448;
   --gunsmoke: #7b8481;
@@ -26,12 +27,18 @@ font-family: Helvetica, Arial, sans-serif;
   --ebony-clay: #2d3248;
 }
 
+
+Img {
+  width: auto;
+  height: auto;
+}
+
 h1, h2 {
-  font-family: "textGilroy-Bold", sans-serif;
+  font-family: "Gilroy-Heavy", sans-serif;
 }
 
 h3, h4 {
-  font-family: 'Gilroy-Heavy', sans-serif;
+  font-family: 'Gilroy-bold', sans-serif;
 }
 
 p{
@@ -40,7 +47,6 @@ p{
 
 span {
   font-family: 'Gilroy-Regular', sans-serif; 
-
 }
 
 body {
@@ -138,15 +144,15 @@ hero segment */
 } 
 
 .customers-comments-title {
-border-top: 5px solid #cb9f5c;
-border-bottom:5px solid #cb9f5c;
+border-top: 5px solid var(--monza);
+border-bottom:5px solid var(--monza);
 }
 
 .products-container__homepage,
 .brand-benefits,
 .customers-comments,
 .faq {
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
   height: auto;
   min-height: 600px;
   max-width: 1920px;
@@ -155,19 +161,45 @@ border-bottom:5px solid #cb9f5c;
 .faq-icons {
   transition: all 0.2s ease-in;
 }
+.product-card {
+cursor: pointer;
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+  /* color: white; */
+  /* color: #324d67; */
+  max-width: 320px;
+  height: auto;
+  max-height: 400px;
+  border-radius: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  margin: 0 5px;
+  box-shadow: 0 0 6px #c3c7cb;
+}
+
+.product-card img {
+    max-width: 100%;
+    width: 300px;
+    height: 280px;
+}
+
+.comments-card {
+  box-shadow: -6px 8px var(--monza);
+}
+
 
 /* footer */
 
 .footer-container {
   padding: 0.5rem 3rem;
 }
-
+/* 
 .footer-page-links-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin-left: 50px;
-}
+} */
 
 /* Media queries */
 

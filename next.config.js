@@ -1,11 +1,19 @@
-// const { withNextVideo } = require("next-video/process");
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
 
-module.exports = nextConfig;
-// module.exports = withNextVideo(nextConfig);
+const withVideos = require("next-videos");
 
-const withVideos = require('next-videos')
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.sanity.io",
+        port: "",
+        pathname: "/images/**",
+      },
+    ],
+  },
+};
 
-module.exports = withVideos();
+module.exports = withVideos(nextConfig);
+

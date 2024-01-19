@@ -1,5 +1,3 @@
-// import Video from "next-video";
-// import videoLoop from "/videos/247_video_bg.mp4";
 
 export default function VideoBackground() {
   return (
