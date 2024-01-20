@@ -31,5 +31,4 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
     </div>
   );
 };
-
 export default FaqItem;

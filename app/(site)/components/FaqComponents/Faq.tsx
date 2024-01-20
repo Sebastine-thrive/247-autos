@@ -21,7 +21,7 @@ const Faq: React.FC = () => {
   ];
 
   return (
-    <div className="faq flex flex-col text-center gap-2 w-[98%] lg:w-[70%] m-auto">
+    <div className="faq flex flex-col text-center gap-2 w-full lg:w-[70%] m-auto">
       <h2 className="text-2xl font-bold mb-4"> Often Asked Questions</h2>
       <div className="accordion text-center">
         {faqData.map((item, index) => (

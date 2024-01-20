@@ -6,6 +6,14 @@ import money_and_time_Image from "./../../../../public/assets/images/time-is-mon
 
 export const benefitsData = [
   {
+    imageSrc: completeImage,
+    imageAlt: "complete circle image",
+    title: "Wholistic Servicing",
+    description:
+      "Import/buy, sales and delivery, repairs, pimping and maintenance for your ride.",
+    className: "benefits__servicing",
+  },
+  {
     imageSrc: moneyImage,
     imageAlt: "money image",
     title: "Transparent Pricing",
@@ -20,14 +28,7 @@ export const benefitsData = [
     description: "Quick response to potential buyer requests",
     className: "benefits__time",
   },
-  {
-    imageSrc: completeImage,
-    imageAlt: "complete circle image",
-    title: "Wholistic Servicing",
-    description:
-      "Import/buy, sales and delivery, repairs, pimping and maintenance for your ride.",
-    className: "benefits__servicing",
-  },
+
   {
     imageSrc: skilledImage,
     imageAlt: "technicians image",

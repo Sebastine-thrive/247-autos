@@ -9,10 +9,14 @@ const CustomerComments = () => {
           key={index}
           className="bg-white comments-card w-full md:w-1/2 lg:w-[30%] rounded-md p-4"
         >
-          <q style={{ color: "red" }} className="text-black">
-            {" "}
-            <h3> {customer.comment} </h3>
-          </q>
+
+    
+      <h3  className="text-black"> <span className="text-customRed">&quot;</span>
+      {customer.comment}  
+      
+      <span className="text-customRed"> &quot;</span>
+      </h3>
+    
           <h4 className="my-8 text-customRed">{customer.name}</h4>
           <h5 className="my-4">{customer.location}</h5>
           <h6 className="my-4">{customer.number}</h6>

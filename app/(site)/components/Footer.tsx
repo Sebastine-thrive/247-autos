@@ -13,22 +13,21 @@ const Footer: React.FC = () => {
     <div className="footer-container max-w-[1920px] w-[100vw] bg-[#040404] text-white py-8">
       <div className="footer-links">
         <div className="logo-socials-container">
-          <div className=" flex text-center">
-            <div className="footer-logo w-[80px] h-[80px] mr-4">
+          <div className="flex">
+            <div className="footer-logo w-[80px] h-[50px] mr-4 flex items-center">
               <Image
                 src={small_logo}
                 width={80}
-                height={80}
+                height={50}
                 alt="logo image for small screens"
                 className="logo small__logo"
               />
-              small logo
             </div>
 
             <h3> 247 Autos</h3>
           </div>
 
-          <div className="footer-socials flex">
+          <div className="footer-socials flex text-[30px]">
             {/* socials */}
             <Link href="">
               {" "}
@@ -45,9 +44,9 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="footer-page-links w-full mx-[3rem] ">
-          <div className="footer-page-links-wrapper flex flex-wrap gap-8">
-            <div className="page-links">
+        <div className="footer-page-links w-full mx-[3rem] px-4 flex justify-center ">
+          <div className="footer-page-links-wrapper flex flex-wrap gap-8 w-full lg:ml-0 lg:w-[50%] justify-between ">
+            <div className="page-links mr-[80px]">
               <Link href="">
                 {" "}
                 <h4 className="text-[#cb9f5c]">Why 247 </h4>

@@ -10,26 +10,33 @@ const Navbar: React.FC = () => {
   return (
     <nav className="max-w-[1920px] w-[100vw] h-auto min-h-[40px] mt-0">
       <div className="logo-container">
-        <Link href="/">
-          <Image
-            src={logo__large}
-            width={100}
-            height={100}
-            alt="logo image for large screen"
-            className="logo large__logo"
-          />
-          <Image
-            src={logo__small}
-            width={100}
-            height={100}
-            alt="logo image for small screen"
-            className="logo small__logo"
-          />
-        </Link>{" "}
+        <div className="hidden lg:block">
+          <Link href="/">
+            <Image
+              src={logo__large}
+              width={100}
+              height={100}
+              alt="logo image for large screen"
+              className="logo large__logo"
+            />
+          </Link>
+        </div>
+
+        <div className="block lg:hidden">
+          <Link href="/">
+            <Image
+              src={logo__small}
+              width={100}
+              height={50}
+              alt="logo image for small screen"
+              className="logo small__logo"
+            />
+          </Link>{" "}
+        </div>
       </div>
       <div className="searchbar-container">searchbar</div>
 
-      <div className="navlink-container w-auto">
+      <div className="navlink-container w-auto hidden lg:flex">
         <ul className="navlinks flex space-between">
           <li>
             <Link href="/">Home</Link>

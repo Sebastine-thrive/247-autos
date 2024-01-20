@@ -16,7 +16,7 @@ font-family: Helvetica, Arial, sans-serif;
 :root {
   /* CSS HEX */
   /* lighter shade1: #cb9f5c  ligther shade 2: #e5c8a0 */
-  --sundance: #cb9f5c; 
+  --sundance: #cb9f5c;
   --black: #040404;
   --soya-bean: #5b5448;
   --gunsmoke: #7b8481;
@@ -27,26 +27,22 @@ font-family: Helvetica, Arial, sans-serif;
   --ebony-clay: #2d3248;
 }
 
-
-Img {
-  width: auto;
-  height: auto;
-}
-
-h1, h2 {
+h1,
+h2 {
   font-family: "Gilroy-Heavy", sans-serif;
 }
 
-h3, h4 {
-  font-family: 'Gilroy-bold', sans-serif;
+h3,
+h4 {
+  font-family: "Gilroy-bold", sans-serif;
 }
 
-p{
+p {
   font-family: "Gilroy-Medium", sans-serif;
 }
 
 span {
-  font-family: 'Gilroy-Regular', sans-serif; 
+  font-family: "Gilroy-Regular", sans-serif;
 }
 
 body {
@@ -95,14 +91,12 @@ nav {
 
 .logo:hover {
   border: 1px double #fff;
+  transform: scale(1.01);
 }
 
 /* Home page 
 hero segment */
 
-.small__logo {
-  display: none;
-}
 
 .hero__homepage {
   padding: 3rem;
@@ -124,7 +118,6 @@ hero segment */
   min-width: 40%;
 }
 
-
 .intro h3 {
   font-size: 32px;
 }
@@ -135,17 +128,12 @@ hero segment */
   bottom: 20px;
   left: 50%;
   display: inline-block;
-  transform-style: preserve-3d; 
-  transform: rotateX(60deg)
+  transform-style: preserve-3d;
+  transform: rotateX(60deg);
 }
 
 .count {
   font-family: Helvetica, Arial, sans-serif;
-} 
-
-.customers-comments-title {
-border-top: 5px solid var(--monza);
-border-bottom:5px solid var(--monza);
 }
 
 .products-container__homepage,
@@ -161,12 +149,11 @@ border-bottom:5px solid var(--monza);
 .faq-icons {
   transition: all 0.2s ease-in;
 }
+
 .product-card {
-cursor: pointer;
+  cursor: pointer;
   transform: scale(1, 1);
   transition: transform 0.5s ease;
-  /* color: white; */
-  /* color: #324d67; */
   max-width: 320px;
   height: auto;
   max-height: 400px;
@@ -178,28 +165,21 @@ cursor: pointer;
 }
 
 .product-card img {
-    max-width: 100%;
-    width: 300px;
-    height: 280px;
+  max-width: 100%;
+  width: 300px;
+  height: 280px;
 }
 
 .comments-card {
-  box-shadow: -6px 8px var(--monza);
+  box-shadow: -3px 3px var(--monza);
 }
-
 
 /* footer */
 
 .footer-container {
   padding: 0.5rem 3rem;
 }
-/* 
-.footer-page-links-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin-left: 50px;
-} */
+
 
 /* Media queries */
 
@@ -217,4 +197,14 @@ cursor: pointer;
     display: flex;
     flex-direction: column;
   }
+
+  
+.products-container__homepage,
+.brand-benefits,
+.customers-comments,
+.faq {
+  padding: 1rem;
+  min-height: 400px;
+}
+
 }
