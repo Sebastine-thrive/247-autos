@@ -14,8 +14,8 @@ const Navbar: React.FC = () => {
           <Link href="/">
             <Image
               src={logo__large}
-              width={100}
-              height={100}
+              width={80}
+              height={40}
               alt="logo image for large screen"
               className="logo large__logo"
             />
@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
       </div>
       <div className="searchbar-container">searchbar</div>
 
-      <div className="navlink-container w-auto hidden lg:flex">
+      <div className="navlink-container  hidden lg:flex lg:w-auto">
         <ul className="navlinks flex space-between">
           <li>
             <Link href="/">Home</Link>
@@ -49,6 +49,9 @@ const Navbar: React.FC = () => {
           </li>
           <li>
             <Link href="/contact">Contact</Link>
+          </li>
+          <li>
+            <Link href="/contact">Blog</Link>
           </li>
         </ul>
       </div>

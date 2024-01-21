@@ -97,7 +97,6 @@ nav {
 /* Home page 
 hero segment */
 
-
 .hero__homepage {
   padding: 3rem;
   background-color: #000;
@@ -170,6 +169,19 @@ hero segment */
   height: 280px;
 }
 
+.footer img {
+  width: 80px;
+  height: 40px;
+}
+
+
+.footer svg, .footer path {
+  width: 40px;
+  height: 40px;
+}
+
+
+
 .comments-card {
   box-shadow: -3px 3px var(--monza);
 }
@@ -179,7 +191,6 @@ hero segment */
 .footer-container {
   padding: 0.5rem 3rem;
 }
-
 
 /* Media queries */
 
@@ -198,13 +209,11 @@ hero segment */
     flex-direction: column;
   }
 
-  
-.products-container__homepage,
-.brand-benefits,
-.customers-comments,
-.faq {
-  padding: 1rem;
-  min-height: 400px;
-}
-
+  .products-container__homepage,
+  .brand-benefits,
+  .customers-comments,
+  .faq {
+    padding: 1rem;
+    min-height: 400px;
+  }
 }

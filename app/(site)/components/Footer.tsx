@@ -13,12 +13,12 @@ const Footer: React.FC = () => {
     <div className="footer-container max-w-[1920px] w-[100vw] bg-[#040404] text-white py-8">
       <div className="footer-links">
         <div className="logo-socials-container">
-          <div className="flex">
-            <div className="footer-logo w-[80px] h-[50px] mr-4 flex items-center">
+          <div className="flex items-center">
+            <div className="footer-logo w-[80px] h-[40px] mr-4 flex ">
               <Image
                 src={small_logo}
                 width={80}
-                height={50}
+                height={40}
                 alt="logo image for small screens"
                 className="logo small__logo"
               />
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
             {/* socials */}
             <Link href="">
               {" "}
-              <div>
+              <div >
                 <AiFillTwitterSquare />
               </div>
             </Link>

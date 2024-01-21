@@ -24,9 +24,11 @@ const SelectComponent: React.FC = () => {
           onClick={showProductsOnSale}
         >
           {selectedProductDisplayOption === "on sale" ? (
-            <FcCheckmark />
+            // <FcCheckmark />
+            "✔"  
           ) : (
-             <FaDashcube />
+            "-"
+            //  <FaDashcube />
           )} 
           {/* -- */}
           <p className="ml-1 text-white">On sale</p>
@@ -38,9 +40,11 @@ const SelectComponent: React.FC = () => {
           onClick={showSoldProducts}
         >
           {selectedProductDisplayOption === "sold" ? (
-            <FcCheckmark />
-          ) : (
-            <FaDashcube />
+           // <FcCheckmark />
+           "✔"  
+           ) : (
+             "-"
+             //  <FaDashcube />
           )}{" "}
           <p className="ml-1 text-white">Recently sold</p>
         </div>

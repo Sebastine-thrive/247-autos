@@ -6,7 +6,7 @@ const HomepageHero = () => {
     <div>
       <div className="hero__homepage flex  ">
         <div className="intro hidden lg:flex flex-col items-center lg:w-[50%] lg:h-[60%] min-w-[40%]">
-          <div className=" flex items-center text-[26] lg:text-[50px] mb-8">
+          <div className=" flex items-center text-[26px] md:text-[32px] lg:text-[40px] mb-8">
             {" "}
             <h2 className="brand-yellow capitalize font-bold tracking-wide">
               Drive
@@ -14,7 +14,7 @@ const HomepageHero = () => {
             <h2 className="your-dreams mx-[5px]"> Your Dreams </h2>{" "}
             <h2 className="brand-yellow capitalize font-bold">Daily</h2>{" "}
           </div>
-          <div className="flex items-center text-[20px] lg:text-[32px] mt-16  ">
+          <div className="flex items-center text-[20px] md:text[24px] lg:text-[30px] mt-16  ">
             {" "}
             <h3>Discover a Car Buying Experience </h3>
             <h3 className="brand-yellow font-bold ml-[5px]">

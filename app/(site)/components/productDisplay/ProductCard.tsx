@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { BiCar } from "react-icons/bi";
 import { CardProps, ProductListProps } from "@/app/types/types";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
@@ -33,7 +34,7 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
       <Link href={`/product/${slug}`}>
         <div className="product-card bg-white text-black xxs:flex flex-col justify-center items-center rounded-sm">
           {image && (
-            <div className="w-[300px] h-[290px]">
+            <div className="w-[300px] h-[290px] pt-[5px]">
               <Image
                 src={image.length > 0 ? urlForImage(image[0]) : ""}
                 alt={_type}
@@ -51,9 +52,10 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
               {/* year | brand | name */}
               <div className="flex items-center capitalize">
                 {year ? (
-                  <p className="bg-yellow-200 rounded-sm p-1"> {year}</p>
+                  <p className="bg-yellow-200 rounded-sm p-1 h-[20px] flex items-center"> {year}</p>
                 ) : (
-                  <p className="bg-yellow-200 rounded-sm p-1"> ✔ </p>
+                  <p className="bg-yellow-200 rounded-sm p-1"> <BiCar />
+                  </p>
                 )}
                 <p className="ml-6"> {brand} </p>
                 {/* <p className="ml-4">{_type}</p> */}
@@ -70,7 +72,7 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
 
               {/* Price */}
               <div className="price ml-2 pl-3 border-l border-black h-auto flex items-center">
-                <p className="product-price font-bold bg-[#cb9f5c] rounded-sm p-1">
+                <p className="product-price font-bold bg-yellow-200 rounded-sm p-1">
                   {price?.toLocaleString("en-NG", {
                     style: "currency",
                     currency: "NGN",
