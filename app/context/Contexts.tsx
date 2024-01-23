@@ -11,6 +11,9 @@ interface StateContextValue {
   showSoldProducts: () => void;
   displayBrandNew: () => void;
   displayUsed: () => void;
+  displaySaleSelectionBox:boolean;
+  setDisplaySaleSelectionBox: React.Dispatch<React.SetStateAction<boolean>>;
+
 }
 const Context = createContext<StateContextValue | null>(null);
 
@@ -23,6 +26,8 @@ export const StateContext: React.FC<StateContextProps> = ({ children }) => {
     useState<string>("on sale");
   const [classOfProductDisplayed, setClassOfProductDisplayed] =
     useState<string>("all");
+  const [displaySaleSelectionBox, setDisplaySaleSelectionBox] =
+    useState<boolean>(false);
 
   const showProductsOnSale: () => void = () => {
     setSelectedProductDisplayOption("on sale");
@@ -49,6 +54,8 @@ export const StateContext: React.FC<StateContextProps> = ({ children }) => {
     showSoldProducts,
     displayBrandNew,
     displayUsed,
+    displaySaleSelectionBox,
+    setDisplaySaleSelectionBox
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;

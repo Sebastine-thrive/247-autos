@@ -11,9 +11,9 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full h-auto shadow-sm shadow-black rounded-md mb-2">
       <div
-        className="flex justify-between items-center p-4 cursor-pointer"
+        className="faq-accordion flex justify-between items-center p-4 cursor-pointer h-3rem shadow-sm shadow-black rounded-md "
         onClick={toggleAccordion}
       >
         <div className="font-semibold xxs:text-[10px] xs:text-[12px] sm:text-sm md:text-lg ml-[-1rem] ">

@@ -26,15 +26,15 @@ export default async function Home() {
       All-BrandNew-Used-RecentlySold-SortBybudget*/}
 
       <div className="products-container__homepage w-[100vw] flex flex-col bg-[#e5c8a0]">
-        <h2 className="mx-auto"> Cars </h2>
-        <div className="hidden lg:flex w-full mt-4">
+        <h2 className="mx-auto text-2xl"> Cars </h2>
+        <div className="flex w-full mt-4">
           <ProductFrame_Large products={firstTenProducts} />
         </div>
-        <div className="lg:hidden  flex w-full mt-4">
+        {/* <div className="lg:hidden  flex w-full mt-4">
           <ProductFrame_Small
           // products={firstTenProducts}
           />
-        </div>
+        </div> */}
       </div>
 
       {/* 3 Why 247 Autos */}

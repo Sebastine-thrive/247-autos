@@ -1,10 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import { useStateContext } from "@/app/context/Contexts";
 import React, { useState } from "react";
 import { FcCheckmark } from "react-icons/fc";
 import { AiOutlineCheck } from "react-icons/ai";
-import { FaDashcube } from "react-icons/fa";
-
 
 const SelectComponent: React.FC = () => {
   const {
@@ -12,40 +11,67 @@ const SelectComponent: React.FC = () => {
     setSelectedProductDisplayOption,
     showSoldProducts,
     showProductsOnSale,
+    displaySaleSelectionBox,
+    setDisplaySaleSelectionBox,
   } = useStateContext() ?? {};
 
+  const showProductsOnSaleAndCloseSelector = () => {
+    if (showProductsOnSale) {
+      showProductsOnSale();
+    }
+    if (setDisplaySaleSelectionBox) {
+      setDisplaySaleSelectionBox(!displaySaleSelectionBox);
+    }
+  };
+
+  
+  const showSoldProductsAndCloseSelector = () => {
+    if (showSoldProducts) {
+      showSoldProducts();
+    }
+    if (setDisplaySaleSelectionBox) {
+      setDisplaySaleSelectionBox(!displaySaleSelectionBox);
+    }
+  };
+
   return (
-    <div className="">
+    <div>
       <div className="bg-black  p-1 w-auto h-auto  border-[1px] border-white rounded-md">
         <div
           className={`cursor-pointer text-${
             selectedProductDisplayOption === "on sale" ? "#cb9f5c" : ""
           } hover:bg-customGray  flex rounded-md px-1 items-center font-bold  `}
-          onClick={showProductsOnSale}
+          // onClick={showProductsOnSale}
+          onClick={showProductsOnSaleAndCloseSelector}
+
         >
           {selectedProductDisplayOption === "on sale" ? (
-            // <FcCheckmark />
-            "✔"  
+            <span className="w-[20px] p-1">
+              {" "}
+              <FcCheckmark />
+            </span>
           ) : (
-            "-"
-            //  <FaDashcube />
-          )} 
-          {/* -- */}
+            <span className="w-[20px] p-1"> </span>
+          )}
+
           <p className="ml-1 text-white">On sale</p>
         </div>
         <div
           className={` cursor-pointer text-${
             selectedProductDisplayOption === "sold" ? "[customYellow]" : ""
           } hover:bg-customGray  flex rounded-md px-1  items-center  font-bold`}
-          onClick={showSoldProducts}
+          // onClick={showSoldProducts}
+          onClick={showSoldProductsAndCloseSelector}
+
         >
           {selectedProductDisplayOption === "sold" ? (
-           // <FcCheckmark />
-           "✔"  
-           ) : (
-             "-"
-             //  <FaDashcube />
-          )}{" "}
+            <span className="w-[20px] p-1">
+              {" "}
+              <FcCheckmark />
+            </span>
+          ) : (
+            <span className="w-[20px] p-1"> </span>
+          )}
           <p className="ml-1 text-white">Recently sold</p>
         </div>
       </div>

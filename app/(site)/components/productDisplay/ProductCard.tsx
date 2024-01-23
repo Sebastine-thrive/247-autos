@@ -34,7 +34,7 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
       <Link href={`/product/${slug}`}>
         <div className="product-card bg-white text-black xxs:flex flex-col justify-center items-center rounded-sm">
           {image && (
-            <div className="w-[300px] h-[290px] pt-[5px]">
+            <div className="md:w-[300px] md:h-[290px] pt-[2px]">
               <Image
                 src={image.length > 0 ? urlForImage(image[0]) : ""}
                 alt={_type}

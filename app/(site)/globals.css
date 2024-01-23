@@ -53,12 +53,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.brand-yellow {
-  color: var(--sundance);
-}
-
 /* nav */
-
 nav {
   font-family: "Gilroy-Bold", sans-serif;
   background-color: #000;
@@ -94,31 +89,8 @@ nav {
   transform: scale(1.01);
 }
 
-/* Home page 
-hero segment */
-
-.hero__homepage {
-  padding: 3rem;
-  background-color: #000;
-  width: 100vw;
-  height: auto;
-  max-width: 1920px;
-  min-height: 600px;
-  overflow: hidden;
-  align-items: center;
-}
-
 .intro {
   font-family: "Gilroy-Bold", sans-serif;
-  display: flex;
-  padding: 1rem 0;
-  color: #fff;
-  width: 50%;
-  min-width: 40%;
-}
-
-.intro h3 {
-  font-size: 32px;
 }
 
 .name {
@@ -131,6 +103,13 @@ hero segment */
   transform: rotateX(60deg);
 }
 
+.hero-homepage__small {
+  background-image: url("/assets/images/2vid.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .count {
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -139,14 +118,15 @@ hero segment */
 .brand-benefits,
 .customers-comments,
 .faq {
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   height: auto;
   min-height: 600px;
   max-width: 1920px;
 }
 
-.faq-icons {
-  transition: all 0.2s ease-in;
+.faq-icons,
+.faq-accordion {
+  transition: all 0.5s ease-in-out;
 }
 
 .product-card {
@@ -169,18 +149,17 @@ hero segment */
   height: 280px;
 }
 
+.logo-container img,
 .footer img {
   width: 80px;
   height: 40px;
 }
 
-
-.footer svg, .footer path {
+.footer svg,
+.footer path {
   width: 40px;
   height: 40px;
 }
-
-
 
 .comments-card {
   box-shadow: -3px 3px var(--monza);
@@ -195,18 +174,27 @@ hero segment */
 /* Media queries */
 
 @media screen and (max-width: 769px) {
-  /* Navbar */
-  .small__logo {
-    display: block;
+  .product-card {
+    max-width: 180px;
+    height: auto;
+    max-height: 250px;
+    border-radius: 10px;
+    padding: 5px;
+    border-radius: 8px;
+    margin: 0 5px;
+    box-shadow: 0 0 6px #c3c7cb;
   }
 
-  .large__logo {
-    display: none;
+  .product-card img {
+    max-width: 100%;
+    width: 150px;
+    height: 120px;
   }
 
-  .hero__homepage {
-    display: flex;
-    flex-direction: column;
+  .navbar img,
+  .footer img {
+    width: 80px;
+    height: 40px;
   }
 
   .products-container__homepage,

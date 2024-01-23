@@ -1,37 +1,60 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import SelectComponent from "../SelectComponent";
 import { useStateContext } from "@/app/context/Contexts";
-// import ProductContainer from "../ProductContainer";
 import ProductCard from "./ProductCard";
 import { ProductListProps } from "@/app/types/types";
-import { Product } from "@/app/types/types";
-
-const options = ["on sale", "recently sold", "Option 3"];
+import ProductCarousel from "./ProductCarousel";
+import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 
 const ProductFrame_Large: React.FC<ProductListProps> = ({ products }) => {
-  const { selectedProductDisplayOption } = useStateContext() ?? {};
+  const {
+    selectedProductDisplayOption,
+    displaySaleSelectionBox,
+    setDisplaySaleSelectionBox,
+  } = useStateContext() ?? {};
+
+  const closeOrOpenSelectionBoxOnly = () => {
+    if (setDisplaySaleSelectionBox) {
+      setDisplaySaleSelectionBox(!displaySaleSelectionBox);
+    }
+  };
 
   return (
     <div className="w-full ">
       <div className="flex relative z-50">
-        <h4 className="capitalise mx-auto">
+        <h4 className="capitalise mx-auto w-12">
           {" "}
-          {selectedProductDisplayOption}
+          {selectedProductDisplayOption}{" "}
+          <span className="ml-2" onClick={closeOrOpenSelectionBoxOnly}>
+            {/* {displaySaleSelectionBox  
+            ? 
+               <AiFillCaretUp /> : <AiFillCaretDown
+} */}
+      
+          </span>
         </h4>
-        <div className="absolute right-[30%]">
+        <div className="absolute right-[35%]">
           {/* option selection */}
           <SelectComponent />
         </div>
       </div>
 
-      <div className="flex mt-4 z-10">
+      <div className="mt-4 z-10 hidden lg:flex">
         {/* product content */}
-        {products.map((car, index) => (
-          <div className="" key={index}>
-            <ProductCard product={car} />
+        <div className="hidden lg:flex">
+          {products.map((cars, index) => (
+            <div className="" key={index}>
+              <ProductCard product={cars} />
+            </div>
+          ))}
+        </div>
+
+        <div className="flex lg:hidden">
+          <div>
+            <ProductCarousel products={products} />
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

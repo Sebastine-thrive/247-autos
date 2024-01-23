@@ -3,7 +3,7 @@ import { CustomerCommentsData } from "./CustomerCommentsData";
 
 const CustomerComments = () => {
   return (
-    <div className="flex flex-wrap justify-center  gap-8 w-full m-auto">
+    <div className="flex flex-wrap justify-center gap-6 w-full m-auto">
       {CustomerCommentsData.map((customer, index) => (
         <div
           key={index}

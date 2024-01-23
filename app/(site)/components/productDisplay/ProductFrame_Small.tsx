@@ -9,7 +9,8 @@ const ProductFrame_Small: React.FC = () => {
         <div> option selection</div>
       </div>
 
-      <div>{/* <ProductCarousel  products={} /> */}</div>
+      <div>{/* <ProductCarousel  products={} /> */}
+      </div>
     </div>
   );
 };

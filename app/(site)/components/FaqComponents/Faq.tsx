@@ -5,18 +5,29 @@ import { FaqItemProps } from "./FaqProps";
 const Faq: React.FC = () => {
   const faqData: FaqItemProps[] = [
     {
-      question: "What is the mission of Shopit?",
-      answer: "To provide quality goods for shopping at affordable prices",
+      question: "What does 247 Autos represent?",
+      answer:
+        "247 autos exists as a service point for everything autos. From importation,sales, servicing,alignment etc. It also exists to make car sales and buying an easy business for anyone interested.",
     },
     {
-      question: "Can I return the items I bought from ShopIt?",
+      question: "Is 247 Autos only concerned with car sales?",
       answer:
-        "Yes, you can return items you bought for free and get refunded as soon as possible! We have a refund policy that grants you 7 days to return items bought from the official store.",
+        "No. We also render importation services, technical services and general auto consultations",
     },
     {
-      question: "Can I get free delivery on all my orders?",
+      question: "Can I sell my car with 247 Autos?",
       answer:
-        "Customers can enjoy free delivery on some products not all. Free delivery does not apply to large items like refrigerators, TVs,  and others.",
+        "Yes, you can. You have to pass through the required process in order to ascertain the state and quality of the car. All within the quality assurance terms and conditions of the company.",
+    },
+    {
+      question: "Are the prices displayed for the cars negotiable?",
+      answer:
+        "No, they are not. We ensure that the prices are fair enough and better than most out there.",
+    },
+    {
+      question: "Can a vehicle returned after purchase?",
+      answer:
+        "Once a vehicle has been tested and purchased in good condition, it cannot be returned."
     },
   ];
 

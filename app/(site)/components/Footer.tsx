@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
-    <div className="footer-container max-w-[1920px] w-[100vw] bg-[#040404] text-white py-8">
+    <div className="footer-container max-w-[1920px] w-[100vw] bg-[#040404] text-white p-8">
       <div className="footer-links">
         <div className="logo-socials-container">
           <div className="flex items-center">
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
             <h3> 247 Autos</h3>
           </div>
 
-          <div className="footer-socials flex text-[30px]">
+          <div className="footer-socials flex text-[30px] mt-4">
             {/* socials */}
             <Link href="">
               {" "}
@@ -44,8 +44,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="footer-page-links w-full mx-[3rem] px-4 flex justify-center ">
-          <div className="footer-page-links-wrapper flex flex-wrap gap-8 w-full lg:ml-0 lg:w-[50%] justify-between ">
+        <div className="footer-page-links w-full  flex justify-center ">
+          <div className="footer-page-links-wrapper mt-4 flex flex-wrap gap-8 w-full lg:w-[50%] justify-between ">
             <div className="page-links mr-[80px]">
               <Link href="">
                 {" "}

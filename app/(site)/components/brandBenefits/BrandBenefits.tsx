@@ -6,7 +6,7 @@ const BrandBenefits: React.FC = () => {
   return (
     <>
       <div className="flex flex-col w-full">
-        <h2 className="mx-auto my-8 font-extrabold text-[#d21108]">
+        <h2 className="mx-auto my-8 font-bold text-2xl ">
           Why 24//7 Autos{" "}
         </h2>
         <div className="flex flex-wrap justify-center m-auto xxs:gap-8 md:gap-12 w-full">

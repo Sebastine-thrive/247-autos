@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import React, { useState, useRef, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import { BiChevronsLeft, BiChevronsRight } from "react-icons/bi";
+import { ProductListProps } from "@/app/types/types";
 
 interface Product {
   _id: string;
@@ -12,7 +13,7 @@ interface CarouselProps {
   products: Product[];
 }
 
-const ProductCarousel: React.FC<CarouselProps> = ({ products }) => {
+const ProductCarousel: React.FC<ProductListProps> = ({ products }) => {
   const [position, setPosition] = useState<number>(0);
   const [itemsPerPage, setItemsPerPage] = useState<number>(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -49,18 +50,16 @@ const ProductCarousel: React.FC<CarouselProps> = ({ products }) => {
         className="flex space-x-4 transition-transform duration-300 ease-in-out transform"
         style={{
           transform: `translateX(-${
-            position * (containerRef.current?.offsetWidth || 0) / itemsPerPage
+            (position * (containerRef.current?.offsetWidth || 0)) / itemsPerPage
           }px)`,
         }}
       >
-        {/* {products.map((product, index) => (
-            <ProductCard   key={index} 
-            product={product} 
-            />
-        ))} */}
+        {products.map((product, index) => (
+          <ProductCard key={index} product={product} />
+        ))}
       </div>
       <button
-        className={`hidden md:flex px-4 py-2 bg-red-500 text-white font-extrabold rounded-full w-12 h-12 absolute left-[2%] top-[35%] text-center justify-center items-center ${
+        className={`hidden md:flex px-4 py-2 bg-customRed text-white font-extrabold rounded-full w-12 h-12 absolute left-[2%] top-[35%] text-center justify-center items-center ${
           isLeftDisabled ? "cursor-not-allowed opacity-50" : ""
         }`}
         onClick={slideLeft}
