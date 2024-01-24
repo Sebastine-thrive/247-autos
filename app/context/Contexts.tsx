@@ -34,7 +34,7 @@ export const StateContext: React.FC<StateContextProps> = ({ children }) => {
   };
 
   const showSoldProducts: () => void = () => {
-    setSelectedProductDisplayOption("sold");
+    setSelectedProductDisplayOption("recently sold");
   };
 
   const displayBrandNew: () => void = () => {

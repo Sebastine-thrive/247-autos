@@ -23,26 +23,22 @@ const ProductFrame_Large: React.FC<ProductListProps> = ({ products }) => {
   return (
     <div className="w-full ">
       <div className="flex relative z-50">
-        <h4 className="capitalise mx-auto w-12">
+        <h4 className="capitalize flex mx-auto w-auto items-center">
           {" "}
           {selectedProductDisplayOption}{" "}
           <span className="ml-2" onClick={closeOrOpenSelectionBoxOnly}>
-            {/* {displaySaleSelectionBox  
-            ? 
-               <AiFillCaretUp /> : <AiFillCaretDown
-} */}
-      
+            {displaySaleSelectionBox ? <AiFillCaretUp /> : <AiFillCaretDown />}
           </span>
         </h4>
-        <div className="absolute right-[35%]">
+        <div className={displaySaleSelectionBox ? "absolute right-[25%]" : "hidden"}>
           {/* option selection */}
           <SelectComponent />
         </div>
       </div>
 
-      <div className="mt-4 z-10 hidden lg:flex">
-        {/* product content */}
-        <div className="hidden lg:flex">
+      <div className="mt-4 z-10 ">
+        {/* product content for large screen */}
+        <div className="hidden md:flex">
           {products.map((cars, index) => (
             <div className="" key={index}>
               <ProductCard product={cars} />
@@ -50,7 +46,7 @@ const ProductFrame_Large: React.FC<ProductListProps> = ({ products }) => {
           ))}
         </div>
 
-        <div className="flex lg:hidden">
+        <div className="flex md:hidden overflow-x-scroll">
           <div>
             <ProductCarousel products={products} />
           </div>

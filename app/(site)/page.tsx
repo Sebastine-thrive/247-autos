@@ -25,7 +25,7 @@ export default async function Home() {
       {/* 2 Products in categories
       All-BrandNew-Used-RecentlySold-SortBybudget*/}
 
-      <div className="products-container__homepage w-[100vw] flex flex-col bg-[#e5c8a0]">
+      <div className="products-container__homepage w-[100vw] flex flex-col bg-[#e5c8a0] ">
         <h2 className="mx-auto text-2xl"> Cars </h2>
         <div className="flex w-full mt-4">
           <ProductFrame_Large products={firstTenProducts} />

@@ -32,7 +32,7 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
   return (
     <>
       <Link href={`/product/${slug}`}>
-        <div className="product-card bg-white text-black xxs:flex flex-col justify-center items-center rounded-sm">
+        <div className="product-card bg-white text-black flex flex-col justify-center items-center rounded-sm">
           {image && (
             <div className="md:w-[300px] md:h-[290px] pt-[2px]">
               <Image
@@ -46,32 +46,32 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
           )}
 
           {/* Houses other details asides images */}
-          <div className="flex flex-col mt-2 h-[120px] px-1 py-1 text-black">
+          <div className="flex flex-col text-xs md:text-lg h-[120px] px-1 py-1 text-black mx-2 my-1 md:mx-0 justify-center text-center md:justify-start md:text-start overflow-x-auto md:overflow-hidden">
             {/* <div className="flex flex-col"> */}
             <div className="flex flex-col">
               {/* year | brand | name */}
-              <div className="flex items-center capitalize">
+              <div className="flex items-center capitalize justify-center md:justify-start">
                 {year ? (
                   <p className="bg-yellow-200 rounded-sm p-1 h-[20px] flex items-center"> {year}</p>
                 ) : (
                   <p className="bg-yellow-200 rounded-sm p-1"> <BiCar />
                   </p>
                 )}
-                <p className="ml-6"> {brand} </p>
+                <p className="ml-2 md:ml-6"> {brand} </p>
                 {/* <p className="ml-4">{_type}</p> */}
               </div>
-              <p className="mt-2"> {extra_details}</p>
+              <p className="mt-1 md:mt-2"> {extra_details}</p>
             </div>
 
-            <div className="mt-2 flex ">
+            <div className="mt-1 md:mt-2 flex ">
               {/* Location */}
-              <div className="mr-2 flex items-center">
+              <div className="ml-1 md:mr-2 flex items-center">
                 <FaMapMarkerAlt />
-                <p className="ml-2 capitalize"> {location}</p>
+                <p className="ml-1 md:ml-2 capitalize"> {location}</p>
               </div>
 
               {/* Price */}
-              <div className="price ml-2 pl-3 border-l border-black h-auto flex items-center">
+              <div className="price ml-2 pl-3 text-sm md:text-lg border-l border-black h-auto flex items-center">
                 <p className="product-price font-bold bg-yellow-200 rounded-sm p-1">
                   {price?.toLocaleString("en-NG", {
                     style: "currency",
@@ -81,6 +81,7 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
               </div>
             </div>
           </div>
+          
         </div>
       </Link>
     </>

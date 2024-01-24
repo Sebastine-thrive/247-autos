@@ -58,13 +58,13 @@ const SelectComponent: React.FC = () => {
         </div>
         <div
           className={` cursor-pointer text-${
-            selectedProductDisplayOption === "sold" ? "[customYellow]" : ""
+            selectedProductDisplayOption === "recently sold" ? "[customYellow]" : ""
           } hover:bg-customGray  flex rounded-md px-1  items-center  font-bold`}
           // onClick={showSoldProducts}
           onClick={showSoldProductsAndCloseSelector}
 
         >
-          {selectedProductDisplayOption === "sold" ? (
+          {selectedProductDisplayOption === "recently sold" ? (
             <span className="w-[20px] p-1">
               {" "}
               <FcCheckmark />
