@@ -16,9 +16,8 @@ export const CustomerCommentsData = [
   {
     name: "Kunle",
     comment:
-      "Thanks for your professionalisn and hoesty. I'll recommend you to others",
+      "Thanks for your professionalism and honesty. I'll recommend you to others",
     location: "Lagos, Nigeria",
     number: "091356763xx",
   },
 ];
-

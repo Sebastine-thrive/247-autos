@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
       <div className="navlink-container  hidden lg:flex lg:w-auto">
         <ul className="hidden md:flex">
           {NavbarLinks.map((navlink, index) => (
-            <Link href={`/${"#" + navlink.title}`} key={index}>
+            <Link href={`/${navlink.address}`} key={index}>
               <li className="ml-4 text-sm font-bold text-customYellow capitalize hover:border-b hover:text-white cursor-pointer">
                 {navlink.title}
               </li>
@@ -65,7 +65,9 @@ const Navbar: React.FC = () => {
 
       <div
         className={
-          nav ? "fixed left-0 top-0 w-full h-screen bg-black/80 lg:hidden" : ""
+          nav
+            ? "nav__small fixed left-0 top-0 w-full h-screen bg-black/80 z-10 lg:hidden"
+            : ""
         }
       >
         {/* side drawer menu */}
@@ -73,7 +75,7 @@ const Navbar: React.FC = () => {
         <div
           className={
             nav
-              ? "fixed left-0 top-0 w-[85%] h-screen bg-[#2d2720] p-10 ease-in duration-1000 "
+              ? "fixed left-0 top-0 w-[85%] h-screen bg-[#2d2720] p-10 ease-in duration-1000 z-10 "
               : "fixed left-[-150%] top-0 p-10 ease-in duration-1000"
           }
         >
@@ -100,13 +102,7 @@ const Navbar: React.FC = () => {
             <div className="flex flex-col py-4 uppercase">
               <ul className="">
                 {NavbarLinks.map((navlink, index) => (
-                  <Link
-                    href={`/${"#" + navlink.title}`}
-                    passHref
-                    // legacyBehavior
-                    // scroll={false}
-                    key={index}
-                  >
+                  <Link href={`/${navlink.address}`} passHref key={index}>
                     <li
                       onClick={() => setNav(false)}
                       className="py-4 capitalize text-sm hover:border-b text-customYellow hover:text-white font-semibold cursor-pointer "

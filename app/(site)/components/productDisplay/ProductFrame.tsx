@@ -7,7 +7,7 @@ import { ProductListProps } from "@/app/types/types";
 import ProductCarousel from "./ProductCarousel";
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 
-const ProductFrame_Large: React.FC<ProductListProps> = ({ products }) => {
+const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
   const {
     selectedProductDisplayOption,
     displaySaleSelectionBox,
@@ -30,7 +30,7 @@ const ProductFrame_Large: React.FC<ProductListProps> = ({ products }) => {
             {displaySaleSelectionBox ? <AiFillCaretUp /> : <AiFillCaretDown />}
           </span>
         </h4>
-        <div className={displaySaleSelectionBox ? "absolute right-[25%]" : "hidden"}>
+        <div className={displaySaleSelectionBox ? "absolute right-[34vw]" : "hidden"}>
           {/* option selection */}
           <SelectComponent />
         </div>
@@ -56,4 +56,4 @@ const ProductFrame_Large: React.FC<ProductListProps> = ({ products }) => {
   );
 };
 
-export default ProductFrame_Large;
+export default ProductFrame;

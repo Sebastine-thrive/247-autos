@@ -1,4 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/gilroy-bold");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -11,6 +12,9 @@ font-family: 'Gilroy-Medium', sans-serif;
 font-family: 'Gilroy-Regular', sans-serif; 
 font-family: Helvetica, Arial, sans-serif;
 
+#e2c6a1
+#7d6342
+#b68a61
 */
 
 :root {
@@ -25,6 +29,31 @@ font-family: Helvetica, Arial, sans-serif;
   --cape-cod: #3a4444;
   --storm-gray: #636b8a;
   --ebony-clay: #2d3248;
+
+  
+  /* text colors */
+  --light: #e3e3e3;
+  --mid: #616161;
+  --dark: #47546
+
+  
+  /* background colors */
+  --white-bg: #ffffff;
+  --ash-bg: #f1f1f1;
+
+  /* state colors */
+  --hover: #f7f7f7;
+  --pressed: #f0f0f0;
+  --focused: #005bd3;
+}
+img {
+  z-index: 1;
+}
+.main-container {
+  z-index: 1;
+}
+nav, .nav__small {
+  z-index: 10;
 }
 
 h1,
@@ -36,13 +65,19 @@ h3,
 h4 {
   font-family: "Gilroy-bold", sans-serif;
 }
-
+/* 
 p {
   font-family: "Gilroy-Medium", sans-serif;
 }
 
 span {
   font-family: "Gilroy-Regular", sans-serif;
+} */
+
+p, h5,h6 {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 body {
@@ -114,11 +149,23 @@ nav {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+.about-us-container {
+  max-width: 1920px;
+  width: 100vw;
+}
+
+.about-us-heading-image {
+  background-image: url("/assets/hero-image/247_autos.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .products-container__homepage,
 .brand-benefits,
 .customers-comments,
 .faq {
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   height: auto;
   min-height: 600px;
   max-width: 1920px;
@@ -126,7 +173,7 @@ nav {
 
 .faq-icons,
 .faq-accordion {
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .product-card {
@@ -142,6 +189,17 @@ nav {
   margin: 0 5px;
   box-shadow: 0 0 6px #c3c7cb;
 }
+
+.about-us-container img {
+  width: 340px;
+  min-width: 300px;
+  height: 200px;
+}
+
+.about-us-container svg path {
+  fill: var(--sundance)
+}
+
 
 .product-card img {
   max-width: 100%;
@@ -174,6 +232,7 @@ nav {
 /* Media queries */
 
 @media screen and (max-width: 769px) {
+
   .product-card {
     max-width: 190px;
     height: auto;
@@ -187,7 +246,7 @@ nav {
 
   .product-card img {
     max-width: 100%;
-    width: 160px;
+    width: 180px;
     height: 130px;
   }
 

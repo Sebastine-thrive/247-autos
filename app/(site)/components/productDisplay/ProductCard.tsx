@@ -46,7 +46,7 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
           )}
 
           {/* Houses other details asides images */}
-          <div className="flex flex-col text-xs md:text-lg h-[120px] px-1 py-1 text-black mx-2 my-1 md:mx-0 justify-center text-center md:justify-start md:text-start overflow-x-auto md:overflow-hidden">
+          <div className="flex flex-col text-xs md:text-lg h-[120px] px-1 pb-1 text-black mx-2 my-1 md:mx-0 justify-center text-center md:justify-start md:text-start overflow-x-auto md:overflow-hidden">
             {/* <div className="flex flex-col"> */}
             <div className="flex flex-col">
               {/* year | brand | name */}

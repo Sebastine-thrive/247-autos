@@ -1,9 +1,8 @@
 export default function VideoBackground() {
   return (
-    <div className="video-overlay ">
+    <div className="video-overlay">
       <video
-      // poster="/bg-video-posterimage.jpg"
-      poster = "/assets/images/1vid.png"
+        poster="/assets/images/vid1.png"
         src={require("./../../../public/assets/video/247_video_bg.mp4")}
         className="video"
         autoPlay

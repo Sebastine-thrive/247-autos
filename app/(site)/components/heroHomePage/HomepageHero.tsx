@@ -1,13 +1,15 @@
 import React from "react";
 import VideoBackground from "../VideoComponent";
+import Image from "next/image";
+import vidSubstitute from "./../../../../public/assets/images/vid1.png";
 
 const HomepageHero = () => {
   return (
     <div>
-      <div className="hero-homepage flex pl-8 bg-black h-auto max-w-[1920px] items-center min-h-600px overflow-hidden">
+      <div className="hero-homepage flex pl-8 bg-black h-auto max-w-[1920px] items-center min-h-800px overflow-hidden">
         {/* Only show on large screens 50-50 with the div below */}
         <div className="intro hidden lg:flex flex-col items-center w-0 lg:w-[50%] lg:h-[90%] text-white">
-          <div className=" flex items-center text-[26px] md:text-[30px] lg:text-[40px] mb-8">
+          <div className=" flex items-center text-xl md:text-2xl lg:text-4xl mb-8">
             {" "}
             <h2 className="text-customYellow capitalize font-bold tracking-wide">
               Drive
@@ -15,12 +17,12 @@ const HomepageHero = () => {
             <h2 className="your-dreams mx-[5px]"> Your Dreams </h2>{" "}
             <h2 className="text-customYellow capitalize font-bold">Daily</h2>{" "}
           </div>
-          <div className="flex flex-col items-center text-[20px] md:text[24px] lg:text-[30px] mt-8  ">
+          <div className="flex flex-col items-center text-lg md:text-xl lg:text-3xl mt-8  ">
             {" "}
             <h3>Discover a Car Buying Experience </h3>
-            <h3 className="text-customYellow font-bold ml-[5px]">
+            <h3 className="text-customYellow capitalize font-bold ml-[5px]">
               {" "}
-              Tailored to You.
+              made for you.
             </h3>
           </div>
         </div>
@@ -28,8 +30,20 @@ const HomepageHero = () => {
         {/* No display on small screens, 50% on large screens */}
         <div className="hero-image-wrapper__homepage  relative justify-center items-center hidden lg:block lg:w-[50%] lg:h-[80%]">
           <div className="dark-overlay absolute inset-0 bg-gradient-to-l from-transparent to-black"></div>
-          <VideoBackground />
-          <h4 className="name hidden lg:block  absolute text-[30px] font-extrabold">
+          {<VideoBackground /> ? (
+            <VideoBackground />
+          ) : (
+            <div>
+              <Image
+                src={vidSubstitute}
+                alt="purpose driven picture"
+                width={600}
+                height={400}
+                className="product-image w-auto rounded-sm"
+              />
+            </div>
+          )}
+          <h4 className="name hidden lg:block  absolute  text-3xl  font-extrabold">
             {" "}
             <span className="text-[#d21108]"> 24//7 </span>{" "}
             <span className="text-white"> Autos </span>
@@ -49,7 +63,7 @@ const HomepageHero = () => {
           <h2 className="text-customYellow capitalize font-bold">Daily</h2>{" "}
         </div>
 
-        <div className="flex flex-col w-full items-center text-[20px] md:text[24px] absolute bottom-8 left-1/2 transform -translate-x-1/2 ">
+        <div className="flex flex-col w-full items-center text-xl md:text-2xl absolute bottom-8 left-1/2 transform -translate-x-1/2 ">
           {" "}
           <h3 className="text-white">Discover a Car Buying Experience </h3>
           <h3 className="text-customYellow font-bold ml-[5px]">

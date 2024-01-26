@@ -10,7 +10,7 @@ const CustomerComponent: React.FC = () => {
       </div>
       <div className=""></div>
       <div className=" flex flex-col w-full justify-center items-center my-2">
-        <h2 className="customers-comments-title text-2xl font-bold ">
+        <h2 className="customers-comments-title text-2xl font-bold text-center">
           What our Customers are saying
         </h2>
         <div className="my-4">

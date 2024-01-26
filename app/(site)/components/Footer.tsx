@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
             {/* socials */}
             <Link href="">
               {" "}
-              <div >
+              <div>
                 <AiFillTwitterSquare />
               </div>
             </Link>
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="footer-page-links w-full  flex justify-center ">
-          <div className="footer-page-links-wrapper mt-4 flex flex-wrap gap-8 w-full lg:w-[50%] justify-between ">
+          <div className="footer-page-links-wrapper mt-4 flex flex-wrap gap-8 w-full lg:w-[50%] justify-between">
             <div className="page-links mr-[80px]">
               <Link href="">
                 {" "}
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
 
             <div className="page-links">
               <Link href="">
-                <h4 className="text-[#cb9f5c] my-[5px]">Products</h4>
+                <h4 className="text-[#cb9f5c]">Products</h4>
               </Link>
               <Link href="">
                 <p>New</p>

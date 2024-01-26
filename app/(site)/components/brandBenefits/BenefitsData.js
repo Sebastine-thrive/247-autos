@@ -32,7 +32,7 @@ export const benefitsData = [
   {
     imageSrc: skilledImage,
     imageAlt: "technicians image",
-    title: "skilled and productive technical team",
+    title: "skilled, productive team",
     description:
       "Effective team of technicians to deliver your request promptly and professionally.",
     className: "benefits__technicians",

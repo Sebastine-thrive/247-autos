@@ -19,6 +19,11 @@ export default {
       type: "string",
     },
     {
+      name: "name",
+      title: "Name",
+      type: "string",
+    },
+    {
       name: "year",
       title: "year",
       type: "number",

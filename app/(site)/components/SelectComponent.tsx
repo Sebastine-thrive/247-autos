@@ -41,7 +41,6 @@ const SelectComponent: React.FC = () => {
           className={`cursor-pointer text-${
             selectedProductDisplayOption === "on sale" ? "#cb9f5c" : ""
           } hover:bg-customGray  flex rounded-md px-1 items-center font-bold  `}
-          // onClick={showProductsOnSale}
           onClick={showProductsOnSaleAndCloseSelector}
 
         >
@@ -60,7 +59,6 @@ const SelectComponent: React.FC = () => {
           className={` cursor-pointer text-${
             selectedProductDisplayOption === "recently sold" ? "[customYellow]" : ""
           } hover:bg-customGray  flex rounded-md px-1  items-center  font-bold`}
-          // onClick={showSoldProducts}
           onClick={showSoldProductsAndCloseSelector}
 
         >
