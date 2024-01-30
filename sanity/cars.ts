@@ -41,7 +41,7 @@ export default {
     {
       name: "slug",
       title: "Slug",
-      type: "slug",
+      type: "string",
       options: {
         source: "name",
         maxLength: 90,

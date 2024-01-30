@@ -11,10 +11,10 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
   };
 
   return (
-    <div className="w-full h-auto rounded-md mb-3 ">
+    <div className="faq-accordion w-full h-auto  mb-3 ">
       <div
-        className={`faq-accordion flex justify-between items-center p-4 cursor-pointer h-3rem shadow-sm shadow-[#2d2720] rounded-${
-          isOpen ? "none" : "md"
+        className={`flex justify-between items-center p-4 cursor-pointer h-3rem shadow-sm shadow-[#2d2720] rounded-${
+          isOpen ? "none" : "t-md"
         } `}
         onClick={toggleAccordion}
       >
@@ -26,7 +26,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
         </div>
       </div>
       {isOpen ? (
-        <div className="p-4 bg-[#2d2720] rounded-sm">
+        <div className="p-4 bg-[#2d2720] rounded-b-md ">
           <p className="text-white">{answer}</p>
         </div>
       ) : null}

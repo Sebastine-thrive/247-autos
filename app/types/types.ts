@@ -4,8 +4,13 @@
 // }
 
 // Define the interface for a single product
+interface Slug {
+  _type: string;
+  current: string;
+}
 export interface Product {
   price: number;
+  name:string;
   details: string;
   category: string;
   _updatedAt: string;
@@ -18,7 +23,7 @@ export interface Product {
   _createdAt: string;
   location: string;
   _id: string;
-  slug?:string
+  slug?:Slug;
   sold?: boolean; // Optional property, as seen in the second product
 }
 

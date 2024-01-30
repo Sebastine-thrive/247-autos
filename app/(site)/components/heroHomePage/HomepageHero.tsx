@@ -54,7 +54,7 @@ const HomepageHero = () => {
       {/* for small screens 100% width */}
       <div className="hero-homepage__small relative block min-h-[600px] lg:hidden">
         <div className="dark-overlay absolute inset-0 bg-gradient-to-l from-transparent to-black"></div>
-        <div className=" flex items-center w-full justify-center text-[28px] md:text[30px] absolute top-8 left-1/2 transform -translate-x-1/2">
+        <div className=" flex items-center w-full justify-center text-[28px] md:text[30px] absolute top-1/4 left-1/2 transform -translate-x-1/2">
           {" "}
           <h2 className="text-customYellow capitalize font-bold tracking-wide ">
             Drive
@@ -63,7 +63,7 @@ const HomepageHero = () => {
           <h2 className="text-customYellow capitalize font-bold">Daily</h2>{" "}
         </div>
 
-        <div className="flex flex-col w-full items-center text-xl md:text-2xl absolute bottom-8 left-1/2 transform -translate-x-1/2 ">
+        <div className="flex flex-col w-full items-center text-xl md:text-2xl absolute bottom-1/4 left-1/2 transform -translate-x-1/2 ">
           {" "}
           <h3 className="text-white">Discover a Car Buying Experience </h3>
           <h3 className="text-customYellow font-bold ml-[5px]">

@@ -5,12 +5,16 @@
 @tailwind components;
 @tailwind utilities;
 /* 
+links:
+instagram: https://www.instagram.com/_247autos?igsh=MTdoOHhjdzFlczQ1aQ==
 font-family: 'Gilroy-Bold', sans-serif;
 font-family: 'Gilroy-Heavy', sans-serif;
 font-family: 'Gilroy-Light', sans-serif;
 font-family: 'Gilroy-Medium', sans-serif;
 font-family: 'Gilroy-Regular', sans-serif; 
 font-family: Helvetica, Arial, sans-serif;
+
+100%/1.55 Poppins,sans-serif
 
 #e2c6a1
 #7d6342
@@ -45,10 +49,19 @@ font-family: Helvetica, Arial, sans-serif;
   --hover: #f7f7f7;
   --pressed: #f0f0f0;
   --focused: #005bd3;
+
 }
 img {
   z-index: 1;
 }
+
+a:active {
+  color: white; 
+  border-top: 1px solid white;
+  border-bottom:  1px solid white;
+
+}
+
 .main-container {
   z-index: 1;
 }
@@ -65,6 +78,7 @@ h3,
 h4 {
   font-family: "Gilroy-bold", sans-serif;
 }
+
 /* 
 p {
   font-family: "Gilroy-Medium", sans-serif;
@@ -75,7 +89,7 @@ span {
 } */
 
 p, h5,h6 {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
@@ -115,15 +129,6 @@ nav {
   transform: scale(1.1);
 }
 
-.logo {
-  border: 1px solid var(--sundance);
-}
-
-.logo:hover {
-  border: 1px double #fff;
-  transform: scale(1.01);
-}
-
 .intro {
   font-family: "Gilroy-Bold", sans-serif;
 }
@@ -149,10 +154,6 @@ nav {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.about-us-container {
-  max-width: 1920px;
-  width: 100vw;
-}
 
 .about-us-heading-image {
   background-image: url("/assets/hero-image/247_autos.png");
@@ -168,7 +169,6 @@ nav {
   padding: 1rem 3rem;
   height: auto;
   min-height: 600px;
-  max-width: 1920px;
 }
 
 .faq-icons,
@@ -191,7 +191,7 @@ nav {
 }
 
 .about-us-container img {
-  width: 340px;
+  width: 300px;
   min-width: 300px;
   height: 200px;
 }

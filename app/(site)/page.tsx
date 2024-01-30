@@ -1,18 +1,13 @@
-import Image from "next/image";
-import CustomerServicingData from "./components/customers/CustomerServicingData";
 
 import Faq from "./components/faqComponents/Faq";
-import CustomerComments from "./components/customers/CustomerComments";
 import HomepageHero from "./components/heroHomePage/HomepageHero";
 import BrandBenefits from "./components/brandBenefits/BrandBenefits";
 import CustomerComponent from "./components/customers/CustomerComponent";
 import ProductFrame from "./components/productDisplay/ProductFrame";
 import { getFirstTenProductsOnSale } from "./utils/utils";
-import { ProductsArray } from "../types/types";
 
 export default async function Home() {
   const firstTenProducts = await getFirstTenProductsOnSale();
-  // console.log(firstTenProducts);
 
   return (
     <main className="home-container">
@@ -27,9 +22,8 @@ export default async function Home() {
       <div className="products-container__homepage w-[100vw] flex flex-col bg-[#e5c8a0] ">
         <h2 className="mx-auto text-2xl"> Cars </h2>
         <div className="flex w-full mt-4">
-          <ProductFrame products={firstTenProducts} />
+          <ProductFrame products={firstTenProducts}     />
         </div>
-       
       </div>
 
       {/* 3 Why 247 Autos */}

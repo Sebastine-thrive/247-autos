@@ -8,7 +8,7 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="m-0">
+    <div className="main-container max-w-[1920px] w-[100vw] m-0">
       <header className="m-0">
         <Navbar />
       </header>

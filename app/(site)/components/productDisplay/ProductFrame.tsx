@@ -19,6 +19,7 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
       setDisplaySaleSelectionBox(!displaySaleSelectionBox);
     }
   };
+console.log(products)
 
   return (
     <div className="w-full ">
@@ -37,7 +38,7 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
       </div>
 
       <div className="mt-4 z-10 ">
-        {/* product content for large screen */}
+        {/* product content for large screens - home page display */}
         <div className="hidden md:flex">
           {products.map((cars, index) => (
             <div className="" key={index}>
@@ -45,6 +46,7 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
             </div>
           ))}
         </div>
+        {/* product content for small screens - home page display */}
 
         <div className="flex md:hidden overflow-x-scroll">
           <div>

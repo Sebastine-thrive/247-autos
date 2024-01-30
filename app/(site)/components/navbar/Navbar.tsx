@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="max-w-[1920px] w-[100vw] h-auto min-h-[40px] mt-0">
       <div className="logo-container">
-        <div className="hidden lg:block">
+        <div className="hidden lg:block hover:border-customYellow border-[1px] ">
           <Link href="/">
             <Image
               src={logo__large}
@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
         <ul className="hidden md:flex">
           {NavbarLinks.map((navlink, index) => (
             <Link href={`/${navlink.address}`} key={index}>
-              <li className="ml-4 text-sm font-bold text-customYellow capitalize hover:border-b hover:text-white cursor-pointer">
+              <li className="ml-4 p-1 text-sm font-bold text-customYellow capitalize hover:border-b hover:text-white cursor-pointer">
                 {navlink.title}
               </li>
             </Link>

@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const page: React.FC = () => {
   return (
-    <div className="about-us-container px-4 lg:px-12">
+    <div className="about-us-container p-4 lg:w-[60%] flex flex-col">
       {/* intro segment */}
       <div className="mt-2 ">
         <div className="about-us-heading text-[#616161] text-2xl font-bold text-center">
@@ -29,12 +29,12 @@ const page: React.FC = () => {
       <div className=" px-4 md:px-12 lg:px-16 py-2 mt-4">
         <div>
           <div className="about-us py-2 ">
-            <h1 className="text-[#616161] text-2xl">About Us</h1>
+            <h1 className="text-2xl">About Us</h1>
 
             <div className="mt-2">
-              <h2 className="text-[#616161] font-bold text-2xl">Who we are</h2>
+              <h2 className=" font-bold text-2xl">Who we are</h2>
 
-              <p className="mt-1">
+              <p className="mt-1 font-normal">
                 Welcome to 247 autos. We define ourselves around the qualities
                 of transparency and efficiency in the world of vehicle sales and
                 servicing. At 247 Autos, we pride ourselves on our unwavering
@@ -65,8 +65,8 @@ const page: React.FC = () => {
             </div>
           </div>
           <div className="py-2">
-            <h2 className="text-[#616161] font-bold text-2xl">What we do</h2>
-            <p className="mt-1">
+            <h2 className="font-bold text-2xl">What we do</h2>
+            <p className="mt-1 font-normal">
               Whether you're in the market for a brand new or a quality,
               fairly-used vehicle, we have a diverse inventory to meet your
               needs. Our team ensures that every vehicle meets high standards of
@@ -108,7 +108,7 @@ const page: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className=" py-4">
+        <div className="py-4">
           <div className="flex flex-col text-center items-center md:text-start md:items-start md:flex-row mt-4 lg:mt-2">
             <div>
               <Image
@@ -123,14 +123,14 @@ const page: React.FC = () => {
               <h3 className="text-[#616161] font-bold text-xl md:mr-2">
                 Driven with purpose
               </h3>
-              <p className="mt-1">
+              <p className="mt-1 font-normal">
                 At 247 Autos, we empower buyers and sellers with the resources
                 to enjoy value and make sales.
               </p>
             </div>
           </div>
           <div className="flex flex-col text-center items-center md:text-start md:items-start md:flex-row mt-4 lg:mt-2">
-            <div className="mt-1">
+            <div className="mt-1 font-normal">
               <Image
                 src={relationship}
                 alt="interpersonal relationship picture"
@@ -143,7 +143,7 @@ const page: React.FC = () => {
               <h3 className="text-[#616161] font-bold text-xl md:mr-2 ">
                 Cultivating interpersonal Connections
               </h3>
-              <p className="mt-1">
+              <p className="mt-1 font-normal">
                 Our relationships are the conerstone of our business. We are
                 proud of the relationships we have fostered over the years. We
                 look to sustain them and build more connections of people and
@@ -165,7 +165,7 @@ const page: React.FC = () => {
               <h3 className="text-[#616161]   font-bold text-xl">
                 Prioritising customer satisfaction{" "}
               </h3>
-              <p className="mt-1">
+              <p className="mt-1 font-normal">
                 customer satisfaction is at the center of our world. Cars play
                 an important role in peoples's lives and is the one of the
                 biggest purchases one can make. We are dedicated to helping
@@ -180,7 +180,7 @@ const page: React.FC = () => {
       <div className="flex flex-col  md:flex-row items-center justify-center mt-4">
         <div className="rounded-lg w-auto h-auto p-2 bg-red-500 text-white hover:bg-customYellow">
           <Link href="/blog">
-            <button>Stay informed</button>
+            <button className="font-normal">Stay informed</button>
           </Link>
         </div>
         <div className="mt-1 md:ml-2">
