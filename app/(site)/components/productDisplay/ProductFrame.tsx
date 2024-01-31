@@ -6,6 +6,7 @@ import ProductCard from "./ProductCard";
 import { ProductListProps } from "@/app/types/types";
 import ProductCarousel from "./ProductCarousel";
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
+import Link from "next/link";
 
 const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
   const {
@@ -19,11 +20,14 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
       setDisplaySaleSelectionBox(!displaySaleSelectionBox);
     }
   };
-console.log(products)
+  // console.log(products)
+
+  const showFewProducts = products.length <= 4;
 
   return (
     <div className="w-full ">
       <div className="flex relative z-50">
+        {/*  sale option and toggle icon */}
         <h4 className="capitalize flex mx-auto w-auto items-center">
           {" "}
           {selectedProductDisplayOption}{" "}
@@ -31,10 +35,25 @@ console.log(products)
             {displaySaleSelectionBox ? <AiFillCaretUp /> : <AiFillCaretDown />}
           </span>
         </h4>
-        <div className={displaySaleSelectionBox ? "absolute right-[34vw]" : "hidden"}>
+        {/* option select component */}
+        <div
+          className={
+            displaySaleSelectionBox ? "absolute right-[34vw]" : "hidden"
+          }
+        >
           {/* option selection */}
           <SelectComponent />
         </div>
+        {showFewProducts ? (
+          <Link
+          href=""
+          >
+          <p className="flex items-center">
+            {" "}
+            See all <span className="ml-1"> &#187; </span>{" "}
+          </p>
+          </Link>
+        ) : null}
       </div>
 
       <div className="mt-4 z-10 ">

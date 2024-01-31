@@ -1,15 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import purpose from "./../../../public/assets/images/team1.jpg";
 import relationship from "./../../../public/assets/images/relationship.png";
 import satisfaction from "./../../../public/assets/images/customer satisfaction.webp";
 import carMan from "./../../../public/assets/images/car_man.svg";
-import Link from "next/link";
+import carPic from "./../../../public/assets/images/2vid.png";
 
 const page: React.FC = () => {
   return (
-    <div className="about-us-container p-4 lg:w-[60%] flex flex-col">
+    <div className="about-us-container p-4 lg:w-[70%] xl:w-[60%] flex flex-col m-auto">
       {/* intro segment */}
       <div className="mt-2 ">
         <div className="about-us-heading text-[#616161] text-2xl font-bold text-center">
@@ -20,16 +21,18 @@ const page: React.FC = () => {
           </h2>
           <h2 className="font-medium">Connecting buyers with sellers</h2>
         </div>
-        <div className="about-us-heading-image">
+
+        <div className="about-us-heading-image min-h-[80px] w-full bg-gradient-to-br from-white to-customOrange justify-center ">
           {/* background image here*/}
+          <Image src={carPic} alt="car image" width={100} height={60} />
         </div>
       </div>
 
       {/* Main body */}
-      <div className=" px-4 md:px-12 lg:px-16 py-2 mt-4">
+      <div className=" px-4 py-2 mt-4">
         <div>
-          <div className="about-us py-2 ">
-            <h1 className="text-2xl">About Us</h1>
+          <div className="about-us  py-2 ">
+            <h1 className="text-2xl ">About Us</h1>
 
             <div className="mt-2">
               <h2 className=" font-bold text-2xl">Who we are</h2>
@@ -101,7 +104,7 @@ const page: React.FC = () => {
               condition.
             </p>{" "}
             <br />
-            <p>
+            <p className="font-normal">
               There is no "one-size-fits-all" solution when it comes to buying a
               car. Depending on the your budget and car-buying experience, 247
               Autos got you, always!

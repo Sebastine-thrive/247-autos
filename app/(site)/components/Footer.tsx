@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
 
         <div className="footer-page-links  w-full  flex justify-center ">
           <div className="footer-page-links-wrapper mt-4 flex flex-wrap gap-8 w-full lg:w-[50%] justify-between">
-            <div className="page-links mr-[80px] capitalize ">
+            <div className="page-links gap-x-8 capitalize ">
               <Link href="">
                 {" "}
                 <h4 className="text-[#cb9f5c] hover:border-b hover:text-customRed cursor-pointer">
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
               </Link>
             </div>
 
-            <div className="page-links capitalize hover:border-b hover:text-customRed ">
+            <div className="page-links capitalize">
               <h4 className="text-[#cb9f5c]">Resources</h4>
               <Link href="">
                 <p className="hover:border-b hover:text-customRed cursor-pointer">
@@ -93,11 +93,11 @@ const Footer: React.FC = () => {
         </div>
       </div>
       {/* <div className="footer-note"></div> */}
-      <div className="footer-note text-customYellow text-end">
+      <div className="footer-note text-customYellow mt-2 flex lg:block text-center lg:text-end">
         <p className="footer-terms capitalize hover:border-b hover:text-customRed">
           Terms of Service
         </p>
-        <p className="brand-and-year">24//7 Autos; 2023</p>
+        <p className="brand-and-year ml-2 lg:ml-0">24//7 Autos; 2023</p>
       </div>
       <div className="absolute right-0 bottom-0">
         <Image

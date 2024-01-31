@@ -90,8 +90,16 @@ span {
 
 p, h5,h6 {
   font-family: "Merriweather", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+}
+
+
+h1 {
+  @apply font-extrabold;
+}
+
+
+p,h5,h6 {
+  @apply font-normal;
 }
 
 body {

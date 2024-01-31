@@ -18,7 +18,9 @@ const page: React.FC = () => {
     <div className="blog">
       {/* car on road photo */}
 
-      <div className="min-h-[50px] w-full"></div>
+      <div className="min-h-[50px] w-full">
+        
+      </div>
 
       {/*3 blog cards */}
       <div className="w-[300px] h-[300px]">

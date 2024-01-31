@@ -8,6 +8,7 @@ import { NavbarLinks } from "./NavbarLinks";
 
 import "./../../globals.css";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import Searchbar from "../Searchbar";
 
 const Navbar: React.FC = () => {
   const [nav, setNav] = useState<boolean>(false);
@@ -44,7 +45,7 @@ const Navbar: React.FC = () => {
           </Link>{" "}
         </div>
       </div>
-      <div className="searchbar-container">searchbar</div>
+      <div className="searchbar-container w-[33%]"><Searchbar /></div>
 
       <div className="navlink-container  hidden lg:flex lg:w-auto">
         <ul className="hidden md:flex">
@@ -113,6 +114,9 @@ const Navbar: React.FC = () => {
                 ))}
               </ul>
             </div>
+
+            <div className="searchbar-container mt-2 w-[80%]"><Searchbar /></div>
+
           </div>
         </div>
       </div>
