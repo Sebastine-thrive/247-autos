@@ -8,9 +8,12 @@ import { StateContext } from "../context/Contexts";
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "24//7 autos | Best quality cars in Lagos, Awka and across Nigeria",
+  title: {
+    template: "%s |  247 Autos",
+    default: "247 Autos",
+  },
   description:
-    "Buy Brand new, Direct Belgium, Fairly-used cars with ease at fair prices.Trusted cars/auto dealer in Lagos, Awka, and throughout Nigeria.",
+    "Buy Brand new, Direct Belgium, Fairly-used cars with ease at fair prices.Trusted cars/auto dealer in Lagos, Awka, and cities across Nigeria.",
 };
 
 export default function RootLayout({

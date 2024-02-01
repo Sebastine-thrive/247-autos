@@ -9,10 +9,11 @@ import { CardProps, ProductListProps } from "@/app/types/types";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 import { urlForImage } from "@/sanity/lib/image";
-
+import { formatPriceInMillion } from "../../utils/utils";
 
 const ProductCard: React.FC<CardProps> = ({ product }) => {
-  const { brand, name, image, location, year, slug, price, extra_details } = product;
+  const { brand, name, image, location, year, slug, price, extra_details } =
+    product;
 
   const carPriceInMillion = (price / 1000000).toFixed(2);
 
@@ -52,8 +53,8 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
                     <BiCar />
                   </p>
                 )}
-                <p className="ml-2 md:ml-6"> {brand} </p>
-                <p className="ml-4">{name}</p>
+                <p className="ml-2"> {brand} </p>
+                <p className="ml-2">{name}</p>
               </div>
               <p className="mt-[2px] md:mt-2"> {extra_details}</p>
             </div>
@@ -68,7 +69,7 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
               {/* Price */}
               <div className="price ml-2 pl-3 text-sm md:text-lg border-l border-black h-auto flex items-center">
                 <p className="product-price font-bold bg-yellow-200 rounded-sm p-1">
-                  &#8358;{carPriceInMillion} M
+                  &#8358;{formatPriceInMillion(price)}
                 </p>
               </div>
             </div>

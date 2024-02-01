@@ -20,3 +20,9 @@ export async function getAllProductsOnSaleInBatches() {
   }
   return AllCarsOnSale;
 }
+
+
+export function formatPriceInMillion(price: number): string {
+  const carPriceInMillion = (price / 1000000).toFixed(2);
+  return ` ${carPriceInMillion}M`;
+}

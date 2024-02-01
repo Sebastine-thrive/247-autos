@@ -161,14 +161,14 @@ nav {
 .count {
   font-family: Helvetica, Arial, sans-serif;
 }
-
+/* 
 
 .about-us-heading-image {
   background-image: url("/assets/hero-image/247_autos.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
+} */
 
 .products-container__homepage,
 .brand-benefits,
@@ -187,15 +187,23 @@ nav {
 .product-card {
   cursor: pointer;
   transform: scale(1, 1);
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in-out;
   max-width: 320px;
   height: auto;
   max-height: 400px;
   border-radius: 10px;
   padding: 5px;
-  border-radius: 8px;
   margin: 0 5px;
   box-shadow: 0 0 6px #c3c7cb;
+}
+
+
+.product-card:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.product-card p {
+  font-family: "Gilroy-Medium", sans-serif;
 }
 
 .about-us-container img {
@@ -227,9 +235,64 @@ nav {
   height: 40px;
 }
 
+.footer p {
+  display: inline-block;
+}
+
+
 .comments-card {
   box-shadow: -3px 3px var(--monza);
 }
+
+
+ .header-searchbar {
+  background-color: black;
+  width: 480px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  padding-right: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px double var(--mid);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+ .header-searchbar:hover {
+  border: 1px solid #e1e1e1;
+}
+
+ .header-searchbar:active,
+ .header-searchbar:focus {
+  border: 1px double #ffffff;
+}
+
+ .header-searchbar input {
+  background: transparent;
+  color: white !important;
+  width: 460px;
+  height: 32px;
+  margin-left: 8px;
+  font-size: 13px;
+  color: var(--c-100);
+  border: none;
+}
+
+ .header-searchbar input::placeholder {
+  color: var(--light);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+ .header-searchbar input:hover,
+ .header-searchbar input:active,
+ .header-searchbar input:focus {
+  border: none;
+  outline: none;
+}
+
 
 /* footer */
 

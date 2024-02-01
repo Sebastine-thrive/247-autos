@@ -1,6 +1,11 @@
 import React from "react";
+import { Metadata } from "next";
 import Image from "next/image";
 import completeImage from "./../../../public/assets/images/complete.svg";
+
+export const metadata: Metadata = {
+  title: "Blog",
+};
 
 export const blogData = [
   {
@@ -19,7 +24,7 @@ const page: React.FC = () => {
       {/* car on road photo */}
 
       <div className="min-h-[50px] w-full">
-        
+
       </div>
 
       {/*3 blog cards */}

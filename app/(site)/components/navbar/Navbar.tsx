@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
           </Link>{" "}
         </div>
       </div>
-      <div className="searchbar-container w-[33%]"><Searchbar /></div>
+      <div className="searchbar-container w-auto"><Searchbar /></div>
 
       <div className="navlink-container  hidden lg:flex lg:w-auto">
         <ul className="hidden md:flex">
@@ -115,9 +115,10 @@ const Navbar: React.FC = () => {
               </ul>
             </div>
 
-            <div className="searchbar-container mt-2 w-[80%]"><Searchbar /></div>
 
           </div>
+                      {/* <div className="searchbar-container mt-2 w-[80%]"><Searchbar /></div> */}
+
         </div>
       </div>
     </nav>

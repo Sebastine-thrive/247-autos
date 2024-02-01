@@ -45,20 +45,20 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
           <SelectComponent />
         </div>
         {showFewProducts ? (
-          <Link
-          href=""
-          >
-          <p className="flex items-center">
-            {" "}
-            See all <span className="ml-1"> &#187; </span>{" "}
-          </p>
-          </Link>
+          <div className="absolute right-[10vw] hover:scale-105 ">
+            <Link href="">
+              <p className="flex items-center">
+                {" "}
+                See all <span className="ml-1"> &#187; </span>{" "}
+              </p>
+            </Link>
+          </div>
         ) : null}
       </div>
 
       <div className="mt-4 z-10 ">
-        {/* product content for large screens - home page display */}
-        <div className="hidden md:flex">
+        {/* product content for large screens  */}
+        <div className="hidden md:flex flex-wrap gap-2">
           {products.map((cars, index) => (
             <div className="" key={index}>
               <ProductCard product={cars} />
@@ -68,9 +68,7 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
         {/* product content for small screens - home page display */}
 
         <div className="flex md:hidden overflow-x-scroll">
-          <div>
-            <ProductCarousel products={products} />
-          </div>
+          <ProductCarousel products={products} />
         </div>
       </div>
     </div>

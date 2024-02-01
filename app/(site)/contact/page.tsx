@@ -1,4 +1,9 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact-us",
+};
 
 export default function Contact() {
   return (
@@ -20,15 +25,7 @@ export default function Contact() {
       <div className="mt-2">
         {/* Customer support */}
         <h3 className="mt-1">Customer Support</h3>
-        <p className="mt-1"> +234 </p>
-        <div>
-          {/* <p> Whatsapp link</p> */}
-
-          <Image 
-          src=''
-          alt=""
-          />
-        </div>
+        <p className="mt-1"> +2347069651539 </p>
       </div>
     </div>
   );
