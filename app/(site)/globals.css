@@ -161,14 +161,10 @@ nav {
 .count {
   font-family: Helvetica, Arial, sans-serif;
 }
-/* 
 
-.about-us-heading-image {
-  background-image: url("/assets/hero-image/247_autos.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-} */
+.about-us-heading{
+  background: linear-gradient(to right, #cb9f5c, #d21108);
+}
 
 .products-container__homepage,
 .brand-benefits,

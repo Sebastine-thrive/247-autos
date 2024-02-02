@@ -20,8 +20,9 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="max-w-[1920px] w-[100vw] h-auto min-h-[40px] mt-0">
+      {/* 1.logo */}
       <div className="logo-container">
-        <div className="hidden lg:block hover:border-customYellow border-[1px] ">
+        <div className="hidden lg:block hover:border-customYellow border-[1px] rounded-md ">
           <Link href="/">
             <Image
               src={logo__large}
@@ -45,10 +46,16 @@ const Navbar: React.FC = () => {
           </Link>{" "}
         </div>
       </div>
-      <div className="searchbar-container w-auto"><Searchbar /></div>
 
-      <div className="navlink-container  hidden lg:flex lg:w-auto">
-        <ul className="hidden md:flex">
+      {/* 2.Navbar */}
+      <div className="searchbar-container w-auto hidden lg:flex">
+        <Searchbar />
+      </div>
+
+      {/* 3.Nav links*/}
+
+      <div className="navlink-container hidden lg:flex lg:w-auto">
+        <ul>
           {NavbarLinks.map((navlink, index) => (
             <Link href={`/${navlink.address}`} key={index}>
               <li className="ml-4 p-1 text-sm font-bold text-customYellow capitalize hover:border-b hover:text-white cursor-pointer">
@@ -63,7 +70,6 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Menu  and overlay*/}
-
       <div
         className={
           nav
@@ -72,7 +78,6 @@ const Navbar: React.FC = () => {
         }
       >
         {/* side drawer menu */}
-
         <div
           className={
             nav
@@ -114,15 +119,13 @@ const Navbar: React.FC = () => {
                 ))}
               </ul>
             </div>
-
-
           </div>
-                      {/* <div className="searchbar-container mt-2 w-[80%]"><Searchbar /></div> */}
-
+          <div className="searchbar-container mx-auto my-2 w-[80%]">
+            <Searchbar />
+          </div>
         </div>
       </div>
     </nav>
   );
 };
-
 export default Navbar;

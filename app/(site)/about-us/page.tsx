@@ -18,18 +18,13 @@ const page: React.FC = () => {
     <div className="min-h-screen about-us-container p-4  flex flex-col m-auto">
       {/* intro segment */}
       <div className="mt-2 ">
-        <div className="about-us-heading text-[#616161] text-2xl font-bold text-center">
+        <div className="about-us-heading min-h-[80px]  text-2xl font-bold flex items-center justify-center">
           <h2>
             {" "}
             We Make Car buying and selling easy, efficient and transparent for
             everyone.
           </h2>
           <h2 className="font-medium">Connecting buyers with sellers</h2>
-        </div>
-
-        <div className="about-us-heading-image min-h-[80px] w-full bg-gradient-to-br from-white to-customOrange justify-center ">
-          {/* background image here*/}
-          <Image src={carPic} alt="car image" width={100} height={60} />
         </div>
       </div>
 
@@ -74,14 +69,27 @@ const page: React.FC = () => {
                   provide you with the best vehicle sales and servicing
                   experience possible."
                 </p>
+                <div className="flex justify-center mt-1">
+                  <div className="rounded-lg h-auto p-2 bg-[#e86c57] text-white hover:bg-customYellow">
+                    <Link href="/contact">
+                      <button className="font-normal">Contact us</button>
+                    </Link>
+                  </div>
+
+                  <div className="rounded-lg h-auto p-2  text-customYellow hover:text-customRed">
+                    <Link href="/cars">
+                      <p className="font-normal">View Cars</p>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="py-2">
               <h2 className="font-bold text-2xl">What we do</h2>
               <p className="mt-1 font-normal">
                 Whether you're in the market for a brand new or a quality,
-                fairly-used vehicle, we have a diverse inventory to meet your
-                needs. Our team ensures that every vehicle meets high standards
+                fairly-used vehicle, we have a good inventory to meet your
+                needs. Our team ensures that every vehicle meets good standards
                 of quality and reliability.
                 <br /> <br />
                 We assist customers in purchasing or selling their vehicles,
@@ -118,6 +126,15 @@ const page: React.FC = () => {
                 a car. Depending on the your budget and car-buying experience,
                 247 Autos got you, always!
               </p>
+              {/* send a whataspp message */}
+              
+              {/* <div className="rounded-lg h-auto p-2 bg-[#e86c57] text-white hover:bg-customYellow">
+                <Link href="/contact">
+                  <button className="font-normal">
+                    Send a Whatsapp message
+                  </button>
+                </Link>
+              </div> */}
             </div>
           </div>
           <div className="py-4">
@@ -189,8 +206,8 @@ const page: React.FC = () => {
           </div>
         </div>
         {/* Concluding part */}
-        <div className=" lg:w-[70%] xl:w-[60%]flex flex-col  md:flex-row items-center justify-center mt-4">
-          <div className="rounded-lg w-auto h-auto p-2 bg-red-500 text-white hover:bg-customYellow">
+        <div className=" lg:w-[70%] xl:w-[60%] flex flex-col  md:flex-row items-center justify-center mt-4">
+          <div className="rounded-lg h-auto p-2 bg-[#e86c57] text-white hover:bg-customYellow">
             <Link href="/blog">
               <button className="font-normal">Stay informed</button>
             </Link>
