@@ -20,13 +20,13 @@ interface ImagesDisplayProps {
         <Image
           src={images ? urlForImage(images[index]) : ""}
           alt="large product image"
-          className="large-product-image bg-white"
+          className="large-product-image rounded-md bg-white"
           width={400}
           height={300}
           priority={true}
         />
       </div>
-      <div className="small-images-container mt-2 flex flex-wrap gap-2">
+      <div className="small-images-container mt-4 flex mx-auto flex-wrap gap-2">
         {/* Images client components needing server image prop */}
         {images?.map((item, i) => (
           <Image
@@ -37,7 +37,7 @@ interface ImagesDisplayProps {
             height={100}
             priority={true}
             className={
-              i === index ? "small-image selected-image" : "small-image"
+              i === index ? "small-image rounded-md selected-image" : "small-image"
             }
             onMouseEnter={() => setIndex(i)}
           />

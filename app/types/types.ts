@@ -4,10 +4,11 @@
 // }
 
 // Define the interface for a single product
-interface Slug {
+export interface Slug {
   _type: string;
   current: string;
 }
+
 export interface Product {
   price: number;
   name:string;

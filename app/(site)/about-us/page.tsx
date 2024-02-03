@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 
 const page: React.FC = () => {
   return (
-    <div className="min-h-screen about-us-container p-4  flex flex-col m-auto">
+    <div className="min-h-[90vh] about-us-container p-4  flex flex-col m-auto">
       {/* intro segment */}
       <div className="mt-2 ">
-        <div className="about-us-heading min-h-[80px]  text-2xl font-bold flex items-center justify-center">
+        <div className="about-us-heading min-h-[80px] p-2 text-white text-2xl font-bold flex items-center justify-center">
           <h2>
             {" "}
             We Make Car buying and selling easy, efficient and transparent for
@@ -76,7 +76,7 @@ const page: React.FC = () => {
                     </Link>
                   </div>
 
-                  <div className="rounded-lg h-auto p-2  text-customYellow hover:text-customRed">
+                  <div className="rounded-lg h-auto p-2 ml-4  text-customYellow hover:text-customRed">
                     <Link href="/cars">
                       <p className="font-normal">View Cars</p>
                     </Link>
@@ -127,7 +127,7 @@ const page: React.FC = () => {
                 247 Autos got you, always!
               </p>
               {/* send a whataspp message */}
-              
+
               {/* <div className="rounded-lg h-auto p-2 bg-[#e86c57] text-white hover:bg-customYellow">
                 <Link href="/contact">
                   <button className="font-normal">
@@ -191,7 +191,7 @@ const page: React.FC = () => {
                 />
               </div>
               <div className="mt-1 md:mt-0 md:ml-2 lg:ml-4">
-                <h3 className="text-[#616161]   font-bold text-xl">
+                <h3 className="text-[#616161] font-bold text-xl">
                   Prioritising customer satisfaction{" "}
                 </h3>
                 <p className="mt-1 font-normal">

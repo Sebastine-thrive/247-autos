@@ -8,7 +8,7 @@ const LoadingComponent: React.FC = () => {
       <div className="text-[#cb9f5c] text-xl flex justify-center items-center ">
         <div>
           {" "}
-          <Image src={sandTimer} alt="hour glass animation" />
+          <Image src={sandTimer} width={100} height={100}  alt="hour glass animation" />
           <p className="ml-4"> Loading... please wait! </p>
         </div>{" "}
       </div>

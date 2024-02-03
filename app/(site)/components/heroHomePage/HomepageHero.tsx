@@ -30,9 +30,9 @@ const HomepageHero = () => {
         {/* No display on small screens, 50% on large screens */}
         <div className="hero-image-wrapper__homepage  relative justify-center items-center hidden lg:block lg:w-[50%] lg:h-[80%]">
           <div className="dark-overlay absolute inset-0 bg-gradient-to-l from-transparent to-black"></div>
-          {<VideoBackground /> ? (
+          {/* {<VideoBackground /> ? (
             <VideoBackground />
-          ) : (
+          ) : ( */}
             <div>
               <Image
                 src={vidSubstitute}
@@ -42,7 +42,7 @@ const HomepageHero = () => {
                 className="product-image w-auto rounded-sm"
               />
             </div>
-          )}
+          {/* )} */}
           <h4 className="name hidden lg:block  absolute  text-3xl  font-extrabold">
             {" "}
             <span className="text-[#d21108]"> 24//7 </span>{" "}
@@ -66,9 +66,9 @@ const HomepageHero = () => {
         <div className="flex flex-col w-full items-center text-xl md:text-2xl absolute bottom-1/4 left-1/2 transform -translate-x-1/2 ">
           {" "}
           <h3 className="text-white">Discover a Car Buying Experience </h3>
-          <h3 className="text-customYellow font-bold ml-[5px]">
+          <h3 className="text-customYellow capitalize font-bold ml-[5px]">
             {" "}
-            Tailored to You.
+            Made for you.
           </h3>
         </div>
       </div>

@@ -93,13 +93,13 @@ const Footer: React.FC = () => {
         </div>
       </div>
       {/* <div className="footer-note"></div> */}
-      <div className="footer-note text-customYellow mt-2 flex lg:block text-center lg:text-end">
-        <p className="footer-terms capitalize hover:border-b hover:text-customRed inline-block">
+      <div className="footer-note text-customYellow mt-2 flex lg:block justify-center lg:text-end">
+        <p className="footer-terms mr-2 capitalize hover:border-b hover:text-customRed inline-block">
           Terms of Service
         </p>
-        <p className="brand-and-year ml-2 lg:ml-0">24//7 Autos; 2023</p>
+        <p className="brand-and-year inline-block ml-2 lg:ml-0 lg:mt-2 border-l-1 border-white lg:border-b-1 ">24//7 Autos; 2023</p>
       </div>
-      <div className="absolute right-0 bottom-0">
+      <div className="absolute right-0 bottom-0 ">
         <Image
           src={footerRightSvg}
           alt="footer right svg image"
@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
           height={200}
         />
       </div>
-      <div className="absolute left-0 bottom-0">
+      <div className="absolute left-0 top-0 lg:bottom-0">
         <Image
           src={footerLeftSvg}
           alt="footer right svg image"

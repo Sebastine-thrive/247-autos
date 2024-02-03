@@ -43,7 +43,7 @@ export default {
       title: "Slug",
       type: "string",
       options: {
-        source: "name",
+        source: (doc: Record<string, any>) => `${doc.brand}-${doc.name}`,
         maxLength: 90,
       },
     },

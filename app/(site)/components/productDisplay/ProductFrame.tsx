@@ -26,7 +26,7 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
 
   return (
     <div className="w-full ">
-      <div className="flex relative z-50">
+      <div className="flex relative z-5">
         {/*  sale option and toggle icon */}
         <h4 className="capitalize flex mx-auto w-auto items-center">
           {" "}
@@ -56,20 +56,29 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
         ) : null}
       </div>
 
-      <div className="mt-4 z-10 ">
-        {/* product content for large screens  */}
-        <div className="hidden md:flex flex-wrap gap-2">
+      <div className="mt-4 z-5 ">
+        {/* product content for large screens - home page and cars page */}
+        <div className="hidden md:flex justify-center flex-wrap gap-2">
           {products.map((cars, index) => (
             <div className="" key={index}>
               <ProductCard product={cars} />
             </div>
           ))}
         </div>
-        {/* product content for small screens - home page display */}
 
-        <div className="flex md:hidden overflow-x-scroll">
-          <ProductCarousel products={products} />
-        </div>
+        {showFewProducts ? (
+          <div className="flex md:hidden overflow-x-scroll">
+            <ProductCarousel products={products} />
+          </div>
+        ) : (
+          <div className="flex md:hidden justify-center flex-wrap gap-2">
+            {products.map((cars, index) => (
+              <div className="" key={index}>
+                <ProductCard product={cars} />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

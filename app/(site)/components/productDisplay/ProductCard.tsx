@@ -15,8 +15,6 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
   const { brand, name, image, location, year, slug, price, extra_details } =
     product;
 
-  const carPriceInMillion = (price / 1000000).toFixed(2);
-
   return (
     <>
       <Link
@@ -37,7 +35,7 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
           )}
 
           {/* Houses other details asides images */}
-          <div className="flex flex-col text-xs md:text-base h-[120px] px-1 pb-1 text-black mx-2 my-[2px] md:mx-0 justify-center text-center md:justify-start md:text-start overflow-x-auto md:overflow-hidden">
+          <div className="flex flex-col text-xs md:text-base h-[120px] px-1 pb-1 text-black my-[2px] md:mx-0 justify-center text-center md:justify-start md:text-start overflow-hidden md:overflow-hidden">
             {/* <div className="flex flex-col"> */}
             <div className="flex flex-col">
               {/* year | brand | name */}

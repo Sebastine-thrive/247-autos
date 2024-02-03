@@ -113,17 +113,7 @@ body {
 /* nav */
 nav {
   font-family: "Gilroy-Bold", sans-serif;
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 3rem;
-}
-
-.navlink-container {
-  display: flex;
-  justify-content: space-around;
+  padding: 0.5rem 1rem 0.5rem 3rem;
 }
 
 .navlinks li {
@@ -166,6 +156,15 @@ nav {
   background: linear-gradient(to right, #cb9f5c, #d21108);
 }
 
+.cars-heading {
+  background: linear-gradient(to right, #5b5448 , #d21108);
+}
+
+.product-details-heading  {
+ background: linear-gradient(to right, #fff ,  #cb9f5c);
+}
+
+
 .products-container__homepage,
 .brand-benefits,
 .customers-comments,
@@ -184,15 +183,15 @@ nav {
   cursor: pointer;
   transform: scale(1, 1);
   transition: transform 0.5s ease-in-out;
+  width: 320px;
   max-width: 320px;
-  height: auto;
+  height: 400px;
   max-height: 400px;
   border-radius: 10px;
   padding: 5px;
   margin: 0 5px;
   box-shadow: 0 0 6px #c3c7cb;
 }
-
 
 .product-card:hover {
   transform: scale(1.05, 1.05);
@@ -212,6 +211,15 @@ nav {
   fill: var(--sundance)
 }
 
+.large-product-image {
+width: 400px;
+height: 300px;
+}
+
+.small-image{
+width: 200px;
+    height: 150px;
+}
 
 .product-card img {
   max-width: 100%;
@@ -234,7 +242,6 @@ nav {
 .footer p {
   display: inline-block;
 }
-
 
 .comments-card {
   box-shadow: -3px 3px var(--monza);
@@ -301,8 +308,9 @@ nav {
 @media screen and (max-width: 769px) {
 
   .product-card {
+    width: 190px;
     max-width: 190px;
-    height: auto;
+    height: 250px;
     max-height: 250px;
     border-radius: 10px;
     padding: 5px;

@@ -12,17 +12,16 @@ import Searchbar from "../Searchbar";
 
 const Navbar: React.FC = () => {
   const [nav, setNav] = useState<boolean>(false);
-  const [shadow, setShadow] = useState<boolean>(false);
 
   const handleNav = () => {
     setNav(!nav);
   };
 
   return (
-    <nav className="max-w-[1920px] w-[100vw] h-auto min-h-[40px] mt-0">
+    <nav className="max-w-[1920px] w-[100vw] h-auto min-h-[40px] lg:flex bg-black text-white items-center justify-between mt-0">
       {/* 1.logo */}
       <div className="logo-container">
-        <div className="hidden lg:block hover:border-customYellow border-[1px] rounded-md ">
+        <div className="hidden lg:block hover:border-customYellow border-[1px] rounded-sm ">
           <Link href="/">
             <Image
               src={logo__large}
@@ -33,8 +32,30 @@ const Navbar: React.FC = () => {
             />
           </Link>
         </div>
+      </div>
 
-        <div className="block lg:hidden">
+      {/* 2.Navbar */}
+      <div className="searchbar-container w-auto hidden lg:block">
+        <Searchbar />
+      </div>
+
+      {/* 3.Nav links*/}
+
+      <div className="navlink-container hidden lg:flex lg:w-auto">
+        <ul className="flex gap-x-1">
+          {NavbarLinks.map((navlink, index) => (
+            <Link href={`/${navlink.address}`} key={index}>
+              <li className="mx-2 py-1 text-sm font-bold text-customYellow capitalize hover:border-b hover:text-white cursor-pointer">
+                {navlink.title}
+              </li>
+            </Link>
+          ))}
+        </ul>
+      </div>
+
+{/* logo and outline display on small screens */}
+      <div className="flex w-full h-auto justify-between lg:hidden items-center">
+        <div className="block border-[1px] hover:border-customYellow rounded-sm">
           <Link href="/">
             <Image
               src={logo__small}
@@ -45,26 +66,8 @@ const Navbar: React.FC = () => {
             />
           </Link>{" "}
         </div>
-      </div>
 
-      {/* 2.Navbar */}
-      <div className="searchbar-container w-auto hidden lg:flex">
-        <Searchbar />
-      </div>
-
-      {/* 3.Nav links*/}
-
-      <div className="navlink-container hidden lg:flex lg:w-auto">
-        <ul>
-          {NavbarLinks.map((navlink, index) => (
-            <Link href={`/${navlink.address}`} key={index}>
-              <li className="ml-4 p-1 text-sm font-bold text-customYellow capitalize hover:border-b hover:text-white cursor-pointer">
-                {navlink.title}
-              </li>
-            </Link>
-          ))}
-        </ul>
-        <div onClick={handleNav} className="md:hidden">
+        <div onClick={handleNav}>
           <AiOutlineMenu size={25} />
         </div>
       </div>
@@ -81,7 +84,7 @@ const Navbar: React.FC = () => {
         <div
           className={
             nav
-              ? "fixed left-0 top-0 w-[85%] h-screen bg-[#2d2720] p-10 ease-in duration-1000 z-10 "
+              ? "fixed left-0 top-0 w-[90%] h-screen bg-[#2d2720] p-10 ease-in duration-1000 z-10 "
               : "fixed left-[-150%] top-0 p-10 ease-in duration-1000"
           }
         >
@@ -90,9 +93,9 @@ const Navbar: React.FC = () => {
               <Link href="/">
                 <Image
                   src={logo__small}
-                  width={100}
+                  width={80}
                   height={40}
-                  className="cursor-pointer "
+                  className="cursor-pointer border-[1px] hover:border-customYellow rounded-sm "
                   alt="logo"
                 />
               </Link>
@@ -120,7 +123,7 @@ const Navbar: React.FC = () => {
               </ul>
             </div>
           </div>
-          <div className="searchbar-container mx-auto my-2 w-[80%]">
+          <div className="searchbar-container my-2 w-[60vw]">
             <Searchbar />
           </div>
         </div>

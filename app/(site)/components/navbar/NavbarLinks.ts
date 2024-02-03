@@ -17,10 +17,6 @@ export const NavbarLinks: NavbarLink[] = [
     address: "cars",
   },
   {
-    title: "services",
-    address: "services",
-  },
-  {
     title: "contact",
     address: "contact",
   },
