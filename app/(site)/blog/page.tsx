@@ -1,39 +1,30 @@
 import React from "react";
 import { Metadata } from "next";
 import Image from "next/image";
-import completeImage from "./../../../public/assets/images/complete.svg";
+import { BlogData } from "./../components/blogComponents/blogData";
 
 export const metadata: Metadata = {
   title: "Blog",
 };
 
-export const blogData = [
-  {
-    imageSrc: completeImage,
-    imageAlt: "complete circle image",
-    title: "Wholistic Servicing",
-    description:
-      "Import/buy, sales and delivery, repairs, pimping and maintenance for your ride.",
-    className: "benefits__servicing",
-  },
-];
-
 const page: React.FC = () => {
   return (
     <div className="blog-container min-h-[90vh] p-4 lg:w-[70%] xl:w-[60%] flex flex-col justify-center items-center m-auto">
-        <div className="blog-container-heading mt-2  min-h-[80px] p-2 text-white text-2xl font-bold flex flex-col items-center text-center">
-          <h2>
-            {" "}
-           The Blog is upcoming. Watch this space for it!
-          </h2>
-        </div>
-    
+      <div className="blog-container-heading mt-2  min-h-[80px] p-2 text-white text-2xl font-bold flex flex-col items-center text-center">
+        <h2> The Blog is upcoming. Watch this space for it!</h2>
+      </div>
+
       {/*3 blog cards */}
       <div className="">
-        {blogData.map((blog, index) => (
-          <div key={index} className="w-[300px] h-[400px]"  >
+        {BlogData.map((blog, index) => (
+          <div key={index} className="w-[300px] h-[400px]">
             <div className="w-[300px] max-h-[200px]">
-              <Image alt={blog.imageAlt} src={blog.imageSrc} width={300} height={150} />
+              <Image
+                alt={blog.imageAlt}
+                src={blog.imageSrc}
+                width={300}
+                height={150}
+              />
             </div>
             <div className="p-2 rounded-sm max-h-[150px]">
               <div>
