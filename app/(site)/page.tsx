@@ -2,7 +2,7 @@ import HomepageHero from "./components/heroHomePage/HomepageHero";
 import BrandBenefits from "./components/brandBenefits/BrandBenefits";
 import CustomerComponent from "./components/customers/CustomerComponent";
 import ProductFrame from "./components/productDisplay/ProductFrame";
-import Faq from "./components/faqComponents/Faq";
+import FaqComponent from "./components/faqComponents/FaqComponent";
 import { getFirstTenProductsOnSale } from "./utils/utils";
 
 export default async function Home() {
@@ -30,15 +30,14 @@ export default async function Home() {
         <BrandBenefits />
       </div>
 
-      {/* 4 Satisfied customers 
-      - What they are saying */}
+      {/* 4 Satisfied customers - What they are saying */}
       <div className="customers-comments bg-[#e5c8a0] flex flex-col justify-center w-[100vw] ">
         <CustomerComponent />
       </div>
 
       {/* FAQS */}
       <div className="faq bg-white flex justify-center w-[100vw]">
-        <Faq />{" "}
+        <FaqComponent />{" "}
       </div>
     </main>
   );
