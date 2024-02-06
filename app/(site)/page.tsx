@@ -1,8 +1,8 @@
-import Faq from "./components/faqComponents/Faq";
 import HomepageHero from "./components/heroHomePage/HomepageHero";
 import BrandBenefits from "./components/brandBenefits/BrandBenefits";
 import CustomerComponent from "./components/customers/CustomerComponent";
 import ProductFrame from "./components/productDisplay/ProductFrame";
+import Faq from "./components/faqComponents/Faq";
 import { getFirstTenProductsOnSale } from "./utils/utils";
 
 export default async function Home() {

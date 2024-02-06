@@ -127,7 +127,6 @@ nav {
   transform: scale(1.1);
 }
 
-
 .small__logo {
 height: 40px;
 }
@@ -139,10 +138,6 @@ height: 40px;
 .contact-heading h1 {
   border-top: 2px solid #cb9f5c;
 }
-/* 
-.customer-support {
-  border-bottom: 1px solid #cb9f5c;
-} */
 
 .name {
   font-family: Helvetica, Arial, sans-serif;

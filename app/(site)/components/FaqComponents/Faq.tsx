@@ -27,7 +27,7 @@ const Faq: React.FC = () => {
     {
       question: "Can a vehicle returned after purchase?",
       answer:
-        "Once a vehicle has been tested and purchased in good condition, it cannot be returned."
+        "Once a vehicle has been tested and purchased in good condition, it cannot be returned.",
     },
   ];
 
