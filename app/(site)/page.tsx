@@ -1,4 +1,3 @@
-
 import Faq from "./components/faqComponents/Faq";
 import HomepageHero from "./components/heroHomePage/HomepageHero";
 import BrandBenefits from "./components/brandBenefits/BrandBenefits";
@@ -22,7 +21,7 @@ export default async function Home() {
       <div className="products-container__homepage w-[100vw] flex flex-col bg-[#e5c8a0] ">
         <h2 className="mx-auto text-2xl"> Cars </h2>
         <div className="flex w-full mt-4">
-          <ProductFrame products={firstTenProducts}     />
+          <ProductFrame products={firstTenProducts} />
         </div>
       </div>
 

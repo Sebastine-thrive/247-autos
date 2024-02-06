@@ -20,13 +20,12 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
       setDisplaySaleSelectionBox(!displaySaleSelectionBox);
     }
   };
-  // console.log(products)
 
   const showFewProducts = products.length <= 4;
 
   return (
-    <div className="w-full ">
-      <div className="flex relative z-5">
+    <div className="w-full py-4">
+      <div className="flex relative z-7">
         {/*  sale option and toggle icon */}
         <h4 className="capitalize flex mx-auto w-auto items-center">
           {" "}
@@ -38,7 +37,9 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
         {/* option select component */}
         <div
           className={
-            displaySaleSelectionBox ? "absolute right-[34vw]" : "hidden"
+            displaySaleSelectionBox
+              ? "select-component-container absolute right-[34vw]"
+              : "hidden"
           }
         >
           {/* option selection */}
@@ -47,7 +48,7 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
         {showFewProducts ? (
           <div className="absolute right-[10vw] hover:scale-105 ">
             <Link href="">
-              <p className="flex items-center">
+              <p className="flex items-center hover:text-customRed">
                 {" "}
                 See all <span className="ml-1"> &#187; </span>{" "}
               </p>
@@ -58,7 +59,7 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
 
       <div className="mt-4 z-5 ">
         {/* product content for large screens - home page and cars page */}
-        <div className="hidden md:flex justify-center flex-wrap gap-2">
+        <div className="hidden md:flex justify-center flex-wrap gap-4">
           {products.map((cars, index) => (
             <div className="" key={index}>
               <ProductCard product={cars} />
@@ -72,6 +73,8 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
           </div>
         ) : (
           <div className="flex md:hidden justify-center flex-wrap gap-2">
+            {/* product content for small screens -  cars page */}
+
             {products.map((cars, index) => (
               <div className="" key={index}>
                 <ProductCard product={cars} />

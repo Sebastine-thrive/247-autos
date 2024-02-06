@@ -23,7 +23,7 @@ font-family: Helvetica, Arial, sans-serif;
 
 :root {
   /* CSS HEX */
-  /* lighter shade1: #cb9f5c  ligther shade 2: #e5c8a0 */
+  /* lighter shade1: #cb9f5c  ligther shade 2: #e5c8a0  ash-blend;#f8f8f8*/
   --sundance: #cb9f5c;
   --black: #040404;
   --soya-bean: #5b5448;
@@ -113,7 +113,7 @@ body {
 /* nav */
 nav {
   font-family: "Gilroy-Bold", sans-serif;
-  padding: 0.5rem 1rem 0.5rem 3rem;
+  padding: 0.5rem 1rem ;
 }
 
 .navlinks li {
@@ -127,9 +127,22 @@ nav {
   transform: scale(1.1);
 }
 
+
+.small__logo {
+height: 40px;
+}
+
 .intro {
   font-family: "Gilroy-Bold", sans-serif;
 }
+
+.contact-heading h1 {
+  border-top: 2px solid #cb9f5c;
+}
+/* 
+.customer-support {
+  border-bottom: 1px solid #cb9f5c;
+} */
 
 .name {
   font-family: Helvetica, Arial, sans-serif;
@@ -159,11 +172,16 @@ nav {
 .cars-heading {
   background: linear-gradient(to right, #5b5448 , #d21108);
 }
-
+.product-details p{
+  font-family: "Gilroy-Medium", sans-serif;
+}
 .product-details-heading  {
  background: linear-gradient(to right, #fff ,  #cb9f5c);
 }
 
+.blog-container-heading {
+  background: linear-gradient(to right, #fff ,  #5b5448);
+}
 
 .products-container__homepage,
 .brand-benefits,
@@ -179,10 +197,14 @@ nav {
   transition: all 1s ease-in-out;
 }
 
+.select-component-container {
+z-index: 100;
+}
+
 .product-card {
   cursor: pointer;
   transform: scale(1, 1);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 1s ease-in-out;
   width: 320px;
   max-width: 320px;
   height: 400px;
@@ -194,7 +216,7 @@ nav {
 }
 
 .product-card:hover {
-  transform: scale(1.05, 1.05);
+  transform: scale(0.9);
 }
 
 .product-card p {
@@ -325,6 +347,14 @@ width: 200px;
     height: 130px;
   }
 
+
+  
+.small-image{
+  width: 120px;
+      height: 90px;
+  }
+
+
   .navbar img,
   .footer img {
     width: 80px;
@@ -337,5 +367,14 @@ width: 200px;
   .faq {
     padding: 1rem;
     min-height: 400px;
+  }
+}
+
+
+@media screen and (max-width: 431px) {
+  
+.large-product-image {
+  width: 280px;
+  height: 210px;
   }
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { CardProps, ProductListProps } from "@/app/types/types";
 import ImagesDisplay from "./ImagesDisplay";
 import carPic from "./../../../../public/assets/images/car.svg";
@@ -19,11 +18,14 @@ const ProductDetails: React.FC<CardProps> = ({ product }) => {
     price,
     extra_details,
   } = product;
-
+  // console.log(product);
   return (
-    <div className="py-4">
-      <div className="product-details-heading min-h-[80px] w-full justify-center ">
-        <h1 className="capitalize"> {slug ? slug.toString() : ""} </h1>{" "}
+    <div className="product-details pb-4">
+      <div className="product-details-heading min-h-[80px] w-full flex justify-center items-center ">
+        <h1 className="capitalize mx-auto">
+          {" "}
+          <span>{brand} </span> <span className="ml-2">{name} </span>{" "}
+        </h1>{" "}
       </div>
 
       <div>
@@ -31,10 +33,11 @@ const ProductDetails: React.FC<CardProps> = ({ product }) => {
           {/* images of car. first image and and others */}
           <ImagesDisplay images={image} />
         </div>
-        <div className="lg:w-[70%] mt-4 flex flex-col justify-center">
-          {/* other details of the car. include share button for user to share cars info */}
+
+        {/* other details of the car. include share button for user to share cars info */}
+        <div className="lg:w-[50%] bg-[#cb9f5c] font-normal rounded-md mt-8 flex flex-col mx-[5px] xs:mx-[10px] md:mx-auto sm:px-3 md:px-5  capitalize">
           {/*1 year | brand | name */}
-          <div className="flex items-center capitalize">
+          <div className="flex justify-center items-center font-bold">
             {year ? (
               <p className="bg-yellow-200 rounded-sm p-1 h-[20px] flex items-center">
                 {" "}
@@ -49,12 +52,14 @@ const ProductDetails: React.FC<CardProps> = ({ product }) => {
             <p className="ml-2 md:ml-6"> {brand} </p>
             <p className="ml-4">{name}</p>
           </div>{" "}
-          {details.split(";").map((line, index) => (
-            <div key={index} className="flex items-center">
-              ➕ <p className="ml-1"> {line} </p>
-            </div>
-          ))}
-          <div className="mt-2 flex">
+          <div className=" gap-2 mt-2 ">
+            {details?.split(";").map((line, index) => (
+              <div key={index} className="flex items-center gap-y-2  ">
+                ✔ <p className="ml-1"> {line} </p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-2 flex items-center">
             {" "}
             ✔ <p className="ml-1 capitalize"> {extra_details}</p>
           </div>

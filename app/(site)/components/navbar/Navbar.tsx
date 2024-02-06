@@ -20,32 +20,32 @@ const Navbar: React.FC = () => {
   return (
     <nav className="max-w-[1920px] w-[100vw] h-auto min-h-[40px] lg:flex bg-black text-white items-center justify-between mt-0">
       {/* 1.logo */}
-      <div className="logo-container">
-        <div className="hidden lg:block hover:border-customYellow border-[1px] rounded-sm ">
+      <div className="logo-container w-[30%]">
+        <div className="hidden lg:inline-block hover:border-customYellow border-[1px] rounded-sm ">
           <Link href="/">
             <Image
               src={logo__large}
               width={80}
               height={40}
               alt="logo image for large screen"
-              className="logo large__logo"
+              className="logo large__logo h-[40px]"
             />
           </Link>
         </div>
       </div>
 
-      {/* 2.Navbar */}
-      <div className="searchbar-container w-auto hidden lg:block">
+      {/* 2.Searchbar */}
+      <div className="searchbar-container w-[33%] hidden lg:block">
         <Searchbar />
       </div>
 
       {/* 3.Nav links*/}
 
-      <div className="navlink-container hidden lg:flex lg:w-auto">
-        <ul className="flex gap-x-1">
+      <div className="navlink-container hidden lg:flex lg:w-[30%]">
+        <ul className="flex ">
           {NavbarLinks.map((navlink, index) => (
             <Link href={`/${navlink.address}`} key={index}>
-              <li className="mx-2 py-1 text-sm font-bold text-customYellow capitalize hover:border-b hover:text-white cursor-pointer">
+              <li className="px-2 mx-2 py-1 text-sm font-bold text-customYellow capitalize hover:border-b hover:text-white cursor-pointer">
                 {navlink.title}
               </li>
             </Link>
@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
         </ul>
       </div>
 
-{/* logo and outline display on small screens */}
+      {/* logo and outline display on small screens */}
       <div className="flex w-full h-auto justify-between lg:hidden items-center">
         <div className="block border-[1px] hover:border-customYellow rounded-sm">
           <Link href="/">
@@ -123,7 +123,7 @@ const Navbar: React.FC = () => {
               </ul>
             </div>
           </div>
-          <div className="searchbar-container my-2 w-[60vw]">
+          <div className="searchbar-container my-2 w-[60vw] ">
             <Searchbar />
           </div>
         </div>

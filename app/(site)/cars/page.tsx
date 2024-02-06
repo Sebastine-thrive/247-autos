@@ -10,13 +10,14 @@ export const metadata: Metadata = {
 
 export default async function Cars() {
   const allCarsForSale = await getAllProductsOnSaleInBatches();
+  
   return (
     <div className="cars min-h-[90vh] ">
       <div className=" cars-heading min-h-[5rem] w-full flex justify-center items-center">
         {/* car image */}
         <Image src={carImage} alt="car image" width={100} height={60} />
       </div>
-      <div className="px-12">
+      <div className="px-4 md:px-8 lg:px-12">
         <ProductFrame products={allCarsForSale} />
       </div>
     </div>

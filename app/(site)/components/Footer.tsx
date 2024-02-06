@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="footer-page-links  w-full  flex justify-center ">
-          <div className="footer-page-links-wrapper mt-4 flex flex-wrap gap-8 w-full lg:w-[50%] justify-between">
+          <div className="footer-page-links-wrapper mt-4 flex flex-wrap gap-2 w-full lg:w-[50%] justify-between">
             <div className="page-links gap-x-8 capitalize ">
               <Link href="">
                 {" "}
@@ -37,11 +37,9 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="page-links capitalize ">
-              <Link href="">
                 <h4 className="text-[#cb9f5c]">Products</h4>
-              </Link>
               <Link href="">
-                <p className="hover:border-b hover:text-customRed cursor-pointer">
+                <p className="hover:border-b hover:text-customRed cursor-pointer ">
                   New
                 </p>
               </Link>
@@ -107,7 +105,7 @@ const Footer: React.FC = () => {
           height={200}
         />
       </div>
-      <div className="absolute left-0 top-0 lg:bottom-0">
+      <div className="hidden lg:absolute left-0 bottom-0">
         <Image
           src={footerLeftSvg}
           alt="footer right svg image"

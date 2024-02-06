@@ -26,7 +26,7 @@ interface ImagesDisplayProps {
           priority={true}
         />
       </div>
-      <div className="small-images-container mt-4 flex mx-auto flex-wrap gap-2">
+      <div className="small-images-container mt-4 flex mx-auto justify-center flex-wrap gap-2">
         {/* Images client components needing server image prop */}
         {images?.map((item, i) => (
           <Image

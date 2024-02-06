@@ -20,21 +20,22 @@ export const blogData = [
 
 const page: React.FC = () => {
   return (
-    <div className="blog">
-      {/* car on road photo */}
-
-      <div className="min-h-[50px] w-full">
-
-      </div>
-
+    <div className="blog-container min-h-[90vh] p-4 lg:w-[70%] xl:w-[60%] flex flex-col justify-center items-center m-auto">
+        <div className="blog-container-heading mt-2  min-h-[80px] p-2 text-white text-2xl font-bold flex flex-col items-center text-center">
+          <h2>
+            {" "}
+           The Blog is upcoming. Watch this space for it!
+          </h2>
+        </div>
+    
       {/*3 blog cards */}
-      <div className="w-[300px] h-[300px]">
+      <div className="">
         {blogData.map((blog, index) => (
-          <div key={index}>
-            <div className="w-[300px] h-[150px]">
-              <Image alt={blog.imageAlt} src={blog.imageSrc} />
+          <div key={index} className="w-[300px] h-[400px]"  >
+            <div className="w-[300px] max-h-[200px]">
+              <Image alt={blog.imageAlt} src={blog.imageSrc} width={300} height={150} />
             </div>
-            <div className="p-2 rounded-sm">
+            <div className="p-2 rounded-sm max-h-[150px]">
               <div>
                 {/* class | .  time for reading |  date */}
                 <div className="flex items-center">

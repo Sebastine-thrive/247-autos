@@ -31,11 +31,12 @@ export default {
       name: "categories",
       title: "Categories",
       type: "array",
+      of: [{ type: "string" }],
     },
     {
       name: "publishedAt",
       title: "publishedAt",
-      type: " datetime",
+      type: "datetime",
     },
   ],
 };

@@ -11,7 +11,7 @@ export async function generateStaticParams() {
   }
   `;
 
-  const products = await client.fetch(query);
+  const products = await client.fetch(query, { cache: "no-store" });
   return products.map((cars: Product) => ({
     slug: cars?.slug?.current,
   }));
@@ -28,10 +28,6 @@ export async function generateMetadata({
   };
 }
 
-// async function displayOtherProducts(arr, slugValue) {
-//   return arr.filter((obj) => obj.slug.current !== slugValue);
-// }
-
 export default async function ProductDetailsPage({
   params: { slug },
 }: {
@@ -41,11 +37,5 @@ export default async function ProductDetailsPage({
 
   const product = await client.fetch(query);
 
-  //   const allProducts = await getProducts();
-  //   const otherProducts = await displayOtherProducts(allProducts, slug);
-
   return <ProductDetails product={product} />;
 }
-
-//   products={otherProducts}
-//   slug={slug} />;

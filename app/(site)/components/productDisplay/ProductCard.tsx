@@ -14,12 +14,13 @@ import { formatPriceInMillion } from "../../utils/utils";
 const ProductCard: React.FC<CardProps> = ({ product }) => {
   const { brand, name, image, location, year, slug, price, extra_details } =
     product;
+    // console.log(product);
 
+  // console.log(slug);
   return (
     <>
       <Link
         href={`/cars/${slug?.current}`}
-        // href="/"
       >
         <div className="product-card bg-white text-black flex flex-col justify-center items-center rounded-sm">
           {image && (
