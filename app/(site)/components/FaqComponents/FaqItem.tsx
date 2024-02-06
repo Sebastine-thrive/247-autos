@@ -1,9 +1,9 @@
 "use client";
+import { FaqItemProps } from "@/app/types/types";
 import React, { useState } from "react";
-import { FaqItemProps } from "./FaqProps";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
+export const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -33,4 +33,3 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
     </div>
   );
 };
-export default FaqItem;

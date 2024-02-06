@@ -1,8 +1,3 @@
-
-// export interface ProductProps {
-//   products: Product[];
-// }
-
 // Define the interface for a single product
 export interface Slug {
   _type: string;
@@ -11,7 +6,7 @@ export interface Slug {
 
 export interface Product {
   price: number;
-  name:string;
+  name: string;
   details: string;
   category: string;
   _updatedAt: string;
@@ -24,8 +19,8 @@ export interface Product {
   _createdAt: string;
   location: string;
   _id: string;
-  slug?:Slug;
-  sold?: boolean; // Optional property, as seen in the second product
+  slug?: Slug;
+  sold?: boolean;
 }
 
 // Define the type for an array of products
@@ -37,4 +32,9 @@ export interface ProductListProps {
 
 export interface CardProps {
   product: Product;
+}
+
+export interface FaqItemProps {
+  question: string;
+  answer: string;
 }

@@ -1,6 +1,6 @@
 import React from "react";
-import FaqItem from "./FaqItem";
-import { FaqItemProps } from "./FaqProps";
+import { FaqItemProps } from "@/app/types/types";
+import { FaqItem } from "./FaqItem";
 
 const faqData: FaqItemProps[] = [
   {
@@ -30,7 +30,7 @@ const faqData: FaqItemProps[] = [
   },
 ];
 
-const FaqComponent: React.FC = () => {
+export const FaqComponent: React.FC = () => {
   return (
     <div className="faq flex flex-col text-center gap-2 w-full lg:w-[70%] m-auto">
       <h2 className="text-2xl font-bold mb-4"> Often Asked Questions</h2>
@@ -42,5 +42,3 @@ const FaqComponent: React.FC = () => {
     </div>
   );
 };
-
-export default FaqComponent;
