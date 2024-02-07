@@ -2,7 +2,6 @@ import HomepageHero from "./components/heroHomePage/HomepageHero";
 import BrandBenefits from "./components/brandBenefits/BrandBenefits";
 import CustomerComponent from "./components/customers/CustomerComponent";
 import ProductFrame from "./components/productDisplay/ProductFrame";
-// import FaqComponent from "./components/faqComponents/FaqComponent";
 import { getFirstTenProductsOnSale } from "./utils/utils";
 import { FaqComponent } from "./components/FaqComponents/FaqComponent";
 

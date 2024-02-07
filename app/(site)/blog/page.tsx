@@ -1,7 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import Image from "next/image";
-import { BlogData } from "./../components/blogComponents/blogData";
+import { BlogData } from "./../components/blogComponents/BlogData";
 
 export const metadata: Metadata = {
   title: "Blog",

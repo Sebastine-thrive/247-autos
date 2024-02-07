@@ -1,4 +1,3 @@
-// import completeImage from "./../../../public/assets/images/complete.svg";
 import completeImage from "./../../../../public/assets/images/complete.svg";
 
 export const BlogData = [
