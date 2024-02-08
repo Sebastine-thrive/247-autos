@@ -7,7 +7,7 @@ import footerLeftSvg from "../../../public/assets/images/footer-left-svg.svg";
 
 const Footer: React.FC = () => {
   return (
-    <div className="footer-container relative max-w-[1920px] w-[100vw] bg-[#040404] text-white p-8">
+    <div className="footer-container relative  text-sm md:text-lg max-w-[1920px] w-[100vw] bg-[#040404] text-white p-8">
       <div className="footer-links">
         <div className="logo-socials-container">
           <div className="flex items-center">
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="footer-page-links  w-full  flex justify-center ">
-          <div className="footer-page-links-wrapper mt-4 flex flex-wrap gap-2 w-full lg:w-[50%] justify-between">
+          <div className="footer-page-links-wrapper mt-4 flex flex-wrap gap-x-2 text-sm md:text-lg gap-y-4 w-full lg:w-[70%] justify-between">
             <div className="page-links gap-x-8 capitalize ">
               <Link href="">
                 {" "}
@@ -92,11 +92,11 @@ const Footer: React.FC = () => {
         </div>
       </div>
       {/* <div className="footer-note"></div> */}
-      <div className="footer-note text-customYellow mt-2 flex lg:block justify-center lg:text-end">
-        <p className="footer-terms mr-2 capitalize hover:border-b hover:text-customRed inline-block">
+      <div className="footer-note text-customYellow text-xs sm:text-sm md:text-lg  sm:text- mt-2 flex lg:block justify-center lg:text-end lg:mt-2 ">
+        <p className="footer-terms mr-2 pr-8 lg:pr-0 capitalize hover:border-b hover:text-customRed inline-block">
           Terms of Service
         </p>
-        <p className="brand-and-year inline-block  lg:ml-0 lg:mt-2 pl-2 border-l border-white ">24//7 Autos; 2023</p>
+        <p className="brand-and-year inline-block  lg:ml-2 pl-6 lg:pl-2 border-l border-white ">24//7 Autos; 2023</p>
       </div>
       <div className="absolute right-0 bottom-0 ">
         <Image

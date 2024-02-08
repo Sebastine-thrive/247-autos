@@ -88,6 +88,7 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
         anchorSelect=".product-card-link"
         place="top"
         content="Click to see car details!"
+        className="hidden lg:block"
       />
       {sold ? (
         <div className="sold-indicator max-h-[120px] absolute bottom-24 right-4">

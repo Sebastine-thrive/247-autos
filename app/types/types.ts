@@ -26,9 +26,20 @@ export interface Product {
 // Define the type for an array of products
 export type ProductsArray = Product[];
 
+
+export interface ProductListPropsOptions {
+  productsOnSale: Product[];
+  productsSold: Product[];
+}
+
+// export interface ProductListPropsOption2 {
+//   productsSold: Product[];
+// }
+
 export interface ProductListProps {
   products: Product[];
 }
+
 
 export interface CardProps {
   product: Product;

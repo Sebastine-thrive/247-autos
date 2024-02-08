@@ -6,11 +6,11 @@ export type NavbarLink = {
 export const NavbarLinks: NavbarLink[] = [
   {
     title: "home",
-    address: "",
+    address: "/",
   },
   {
     title: "about us",
-    address: "about us",
+    address: "about-us",
   },
   {
     title: "cars",

@@ -24,10 +24,10 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
   const showFewProducts = products.length <= 4;
 
   return (
-    <div className="w-full py-4">
-      <div className="flex relative z-7">
+    <div className="w-full py-2">
+      <div className="flex z-7">
         {/*  sale option and toggle icon */}
-        <h4 className="capitalize flex mx-auto w-auto items-center">
+        <h4 className="capitalize  absolute left-[5vw] lg:left-[46%] flex  w-auto items-center">
           {" "}
           {selectedProductDisplayOption}{" "}
           <span className="ml-2" onClick={closeOrOpenSelectionBoxOnly}>
@@ -42,9 +42,10 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
               : "hidden"
           }
         >
-          {/* option selection */}
           <SelectComponent />
         </div>
+
+        {/* Show see all button when on home page- currently using show FewProducts state for that */}
         {showFewProducts ? (
           <div className="absolute right-[5vw] lg:right[10vw] hover:scale-105 ">
             <Link href="">
@@ -57,7 +58,8 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
         ) : null}
       </div>
 
-      <div className="mt-4 z-5 ">
+      {/* Products */}
+      <div className="mt-8 z-2 ">
         {/* product content for large screens - home page and cars page */}
         <div className="hidden md:flex justify-center flex-wrap gap-4">
           {products.map((cars, index) => (

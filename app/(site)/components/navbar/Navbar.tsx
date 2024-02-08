@@ -46,21 +46,70 @@ const Navbar: React.FC = () => {
 
       <div className="navlink-container hidden lg:flex lg:w-[30%]">
         <ul className="flex ">
-          {NavbarLinks.map((navlink, index) => (
-            <Link
-              href={`/${navlink.address}`}
-              key={index}
-              className={
-                currentPath === navlink.address
-                  ? "text-white border-b border-2 border-white font-extrabold"
-                  : "text-customYellow"
-              }
-            >
-              <li className="px-2 mx-2 py-1 text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
-                {navlink.title}
-              </li>
-            </Link>
-          ))}
+          <Link
+            href="/"
+            className={
+              currentPath == "/"
+                ? "text-white border-b border-2 border-white font-extrabold mx-2"
+                : "text-customYellow mx-2"
+            }
+          >
+            <li className="px-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
+              Home
+            </li>
+          </Link>
+
+          <Link
+            href="about-us"
+            className={
+              currentPath == "/about-us"
+                ? "text-white border-b border-2 border-white font-extrabold mx-2"
+                : "text-customYellow mx-2"
+            }
+          >
+            <li className="px-2  py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
+              About us
+            </li>
+          </Link>
+
+          <Link
+            href="cars"
+            className={
+              currentPath == "/cars"
+                ? "text-white border-b border-2 border-white font-extrabold mx-2"
+                : "text-customYellow mx-2"
+            }
+          >
+            <li className="px-2 mx-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
+              Cars
+            </li>
+          </Link>
+
+          <Link
+            href="contact"
+            className={
+              currentPath == "/contact"
+                ? "text-white border-b border-2 border-white font-extrabold mx-2"
+                : "text-customYellow mx-2"
+            }
+          >
+            <li className="px-2 mx-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
+              Contact{" "}
+            </li>
+          </Link>
+
+          <Link
+            href="blog"
+            className={
+              currentPath == "/blog"
+                ? "text-white border-b border-2 border-white font-extrabold mx-2"
+                : "text-customYellow mx-2"
+            }
+          >
+            <li className="px-2 mx-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
+              Blog
+            </li>
+          </Link>
         </ul>
       </div>
 
@@ -73,7 +122,7 @@ const Navbar: React.FC = () => {
               width={80}
               height={40}
               alt="logo image for small screen"
-              className="logo small__logo"
+              className="logo small__logo w-[80px] h-[40px]"
             />
           </Link>{" "}
         </div>
@@ -101,6 +150,8 @@ const Navbar: React.FC = () => {
         >
           <div>
             <div className="flex w-full items-center justify-between z-[2]">
+              {/* Side drawer logo */}
+
               <div className="max-h-[40px]">
                 <Link href="/">
                   <Image
@@ -113,6 +164,7 @@ const Navbar: React.FC = () => {
                 </Link>
               </div>
 
+              {/* Side drawer close nav */}
               <div
                 className="rounded-full shadow-lg shadow-gray-300 p-3 cursor-pointer"
                 onClick={handleNav}
@@ -120,8 +172,9 @@ const Navbar: React.FC = () => {
                 <AiOutlineClose />
               </div>
             </div>
+            {/* Nav drawer links */}
 
-            <div className="flex flex-col py-4 uppercase">
+            <div className="flex flex-col mt-4 py-4 uppercase">
               <ul className="">
                 {NavbarLinks.map((navlink, index) => (
                   <Link href={`/${navlink.address}`} passHref key={index}>
@@ -136,7 +189,8 @@ const Navbar: React.FC = () => {
               </ul>
             </div>
           </div>
-          <div className="searchbar-container my-2 w-[60vw] ">
+          {/* Searchbar */}
+          <div className="searchbar-container mt-4 w-[60vw] ">
             <Searchbar />
           </div>
         </div>

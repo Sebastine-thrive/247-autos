@@ -2,11 +2,17 @@ import HomepageHero from "./components/heroHomePage/HomepageHero";
 import BrandBenefits from "./components/brandBenefits/BrandBenefits";
 import CustomerComponent from "./components/customers/CustomerComponent";
 import ProductFrame from "./components/productDisplay/ProductFrame";
-import { getFirstTenProductsOnSale } from "./utils/utils";
+import { getFirstFewProductSold, getFirstFewProductsOnSale } from "./utils/utils";
 import { FaqComponent } from "./components/FaqComponents/FaqComponent";
+import ProductSelection from "./components/productDisplay/ProductSelection";
 
 export default async function Home() {
-  const firstTenProducts = await getFirstTenProductsOnSale();
+  const firstFewProductsOnSale = await getFirstFewProductsOnSale();
+  const firstFewSoldProducts = await getFirstFewProductSold();
+
+  // console.log(firstFewProductsOnSale);
+  // console.log(firstFewSoldProducts);
+
 
   return (
     <main className="home-container">
@@ -20,8 +26,11 @@ export default async function Home() {
 
       <div className="products-container__homepage w-[100vw] flex flex-col bg-[#e5c8a0] ">
         <h2 className="mx-auto text-2xl"> Cars </h2>
-        <div className="flex w-full mt-4">
-          <ProductFrame products={firstTenProducts} />
+        <div className="flex w-full relative mt-4">
+          <ProductSelection  productsOnSale={firstFewProductsOnSale} 
+          productsSold = {firstFewSoldProducts}
+          />
+          {/* <ProductFrame products={firstFewProductsOnSale} /> */}
         </div>
       </div>
 

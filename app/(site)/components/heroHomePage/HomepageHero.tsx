@@ -49,7 +49,7 @@ const HomepageHero = () => {
               Daily
             </motion.h2>{" "}
           </div>
-          <div className="flex flex-col items-center text-lg lg:text-3xl mt-8  ">
+          <div className="flex flex-col items-center text-lg lg:text-3xl mt-8 px-2 ">
             {" "}
             <motion.h3
               initial={{ y: -50, opacity: 0 }}
@@ -87,7 +87,7 @@ const HomepageHero = () => {
       {/* for small screens 100% width */}
       <div className="hero-homepage__small relative block min-h-[600px] lg:hidden">
         <div className="dark-overlay absolute inset-0 bg-gradient-to-l from-transparent to-black"></div>
-        <div className=" flex items-center w-full justify-center text-3xl md:text-4xl absolute top-1/4 left-1/2 transform -translate-x-1/2">
+        <div className=" flex items-center px-2 w-full justify-center text-3xl md:text-4xl absolute top-1/4 left-1/2 transform -translate-x-1/2">
           {" "}
           <motion.h2
             initial={{ opacity: 0 }}
@@ -126,14 +126,14 @@ const HomepageHero = () => {
           </motion.h2>{" "}
         </div>
 
-        <div className="flex flex-col w-full items-center text-2xl md:text-3xl absolute bottom-1/4 left-1/2 transform -translate-x-1/2 ">
+        <div className="flex flex-col px-2 w-full items-center text-2xl md:text-3xl absolute bottom-1/4 left-1/2 transform -translate-x-1/2 ">
           {" "}
           <motion.h3
             initial={{ y: -50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 3, duration: 2 }}
             viewport={{ once: true }}
-            className="text-white"
+            className="text-white text-center"
           >
             Discover a Car Buying Experience{" "}
           </motion.h3>

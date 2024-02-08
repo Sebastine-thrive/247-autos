@@ -24,7 +24,6 @@ const SelectComponent: React.FC = () => {
     }
   };
 
-  
   const showSoldProductsAndCloseSelector = () => {
     if (showSoldProducts) {
       showSoldProducts();
@@ -42,7 +41,6 @@ const SelectComponent: React.FC = () => {
             selectedProductDisplayOption === "on sale" ? "#cb9f5c" : ""
           } hover:bg-customGray  flex rounded-md px-1 items-center font-bold  `}
           onClick={showProductsOnSaleAndCloseSelector}
-
         >
           {selectedProductDisplayOption === "on sale" ? (
             <span className="w-[20px] p-1">
@@ -57,10 +55,11 @@ const SelectComponent: React.FC = () => {
         </div>
         <div
           className={` cursor-pointer text-${
-            selectedProductDisplayOption === "recently sold" ? "[customYellow]" : ""
+            selectedProductDisplayOption === "recently sold"
+              ? "[customYellow]"
+              : ""
           } hover:bg-customGray  flex rounded-md px-1  items-center  font-bold`}
           onClick={showSoldProductsAndCloseSelector}
-
         >
           {selectedProductDisplayOption === "recently sold" ? (
             <span className="w-[20px] p-1">
