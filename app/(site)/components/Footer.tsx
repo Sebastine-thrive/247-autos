@@ -18,7 +18,6 @@ const Footer: React.FC = () => {
                 height={40}
                 alt="logo image for small screens"
                 className="  logo small__logo cursor-pointer border-[1px] hover:border-customYellow rounded-sm "
-
               />
             </div>
 
@@ -38,7 +37,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="page-links capitalize ">
-                <h4 className="text-[#cb9f5c]">Products</h4>
+              <h4 className="text-[#cb9f5c]">Products</h4>
               <Link href="">
                 <p className="hover:border-b hover:text-customRed cursor-pointer ">
                   New
@@ -92,11 +91,13 @@ const Footer: React.FC = () => {
         </div>
       </div>
       {/* <div className="footer-note"></div> */}
-      <div className="footer-note text-customYellow text-xs sm:text-sm md:text-lg  sm:text- mt-2 flex lg:block justify-center lg:text-end lg:mt-2 ">
+      <div className="footer-note text-customYellow text-[10px] sm:text-sm md:text-lg  mt-4 flex lg:block justify-center lg:text-end  ">
         <p className="footer-terms mr-2 pr-8 lg:pr-0 capitalize hover:border-b hover:text-customRed inline-block">
           Terms of Service
         </p>
-        <p className="brand-and-year inline-block  lg:ml-2 pl-6 lg:pl-2 border-l border-white ">24//7 Autos; 2023</p>
+        <p className="brand-and-year inline-block  lg:ml-2 pl-6 lg:pl-2 border-none lg:border-1border-l border-white ">
+          24//7 Autos; 2023
+        </p>
       </div>
       <div className="absolute right-0 bottom-0 ">
         <Image

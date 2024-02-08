@@ -18,6 +18,8 @@ export default async function Cars() {
         <Image src={carImage} alt="car image" width={100} height={60} />
       </div>
       <div className="px-4 md:px-8 lg:px-12">
+
+        
         <ProductFrame products={allCarsForSale} />
       </div>
     </div>

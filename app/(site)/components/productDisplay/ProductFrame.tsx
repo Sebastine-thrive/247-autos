@@ -6,6 +6,8 @@ import ProductCard from "./ProductCard";
 import { ProductListProps } from "@/app/types/types";
 import ProductCarousel from "./ProductCarousel";
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
+import { usePathname } from "next/navigation";
+
 import Link from "next/link";
 
 const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
@@ -21,7 +23,10 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
     }
   };
 
-  const showFewProducts = products.length <= 4;
+  const currentPath = usePathname();
+
+  // Show few products except on the cars page
+  const showFewProducts = currentPath !== "/cars";
 
   return (
     <div className="w-full py-2">
@@ -30,29 +35,40 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
         <h4 className="capitalize  absolute left-[5vw] lg:left-[46%] flex  w-auto items-center">
           {" "}
           {selectedProductDisplayOption}{" "}
-          <span className="ml-2" onClick={closeOrOpenSelectionBoxOnly}>
-            {displaySaleSelectionBox ? <AiFillCaretUp /> : <AiFillCaretDown />}
-          </span>
+          {/* Dont' dissplay this on cars page */}
+          {!showFewProducts ? (
+            <span className="ml-2" onClick={closeOrOpenSelectionBoxOnly}>
+              {displaySaleSelectionBox ? (
+                <AiFillCaretUp />
+              ) : (
+                <AiFillCaretDown />
+              )}
+            </span>
+          ) : null}
         </h4>
         {/* option select component */}
-        <div
-          className={
-            displaySaleSelectionBox
-              ? "select-component-container absolute right-[34vw]"
-              : "hidden"
-          }
-        >
-          <SelectComponent />
-        </div>
+
+        {/* Don't display on cars page */}
+        {!showFewProducts ? (
+          <div
+            className={
+              displaySaleSelectionBox
+                ? "select-component-container absolute right-[34vw]"
+                : "hidden"
+            }
+          >
+            <SelectComponent />
+          </div>
+        ) : null}
 
         {/* Show see all button when on home page- currently using show FewProducts state for that */}
         {showFewProducts ? (
           <div className="absolute right-[5vw] lg:right[10vw] hover:scale-105 ">
-            <Link href="">
-              <p className="flex items-center hover:text-customRed">
+            <Link href="./cars">
+              <h4 className="flex items-center hover:text-customRed">
                 {" "}
                 See all <span className="ml-1"> &#187; </span>{" "}
-              </p>
+              </h4>
             </Link>
           </div>
         ) : null}

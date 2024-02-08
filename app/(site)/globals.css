@@ -141,23 +141,23 @@ height: 40px;
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.about-us-heading{
-  background: linear-gradient(to right, #cb9f5c, #d21108);
+.about-us-heading, .cars-heading, .blog-container-heading {
+  background: linear-gradient(to right, #5b5448, #d21108);
 }
-
+/* 
 .cars-heading {
   background: linear-gradient(to right, #5b5448 , #d21108);
-}
+} */
 .product-details p{
   font-family: "Gilroy-Medium", sans-serif;
 }
 .product-details-heading  {
- background: linear-gradient(to right, #fff ,  #cb9f5c);
+ background: linear-gradient(to right,  #cb9f5c, #5b5448);
 }
-
+/* 
 .blog-container-heading {
   background: linear-gradient(to right, #fff ,  #5b5448);
-}
+} */
 
 .products-container__homepage,
 .brand-benefits,

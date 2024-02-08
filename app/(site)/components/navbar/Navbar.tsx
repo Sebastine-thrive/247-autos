@@ -177,7 +177,7 @@ const Navbar: React.FC = () => {
             <div className="flex flex-col mt-4 py-4 uppercase">
               <ul className="">
                 {NavbarLinks.map((navlink, index) => (
-                  <Link href={`/${navlink.address}`} passHref key={index}>
+                  <Link href={`/${navlink.address}`} passHref key={index} className="block">
                     <li
                       onClick={() => setNav(false)}
                       className="py-4 capitalize text-sm hover:border-b text-customYellow hover:text-white font-semibold cursor-pointer "
