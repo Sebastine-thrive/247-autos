@@ -45,9 +45,9 @@ const WhoWeAre = () => {
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 2 }}
         viewport={{ once: true }}
-        className="flex justify-center mt-1"
+        className="flex justify-center my-4"
       >
-        <div className="rounded-lg h-auto p-2 bg-[#e86c57] text-white hover:bg-customYellow">
+        <div className="rounded-lg h-auto  p-2 bg-[#e86c57] text-white hover:bg-customYellow">
           <Link href="/contact">
             <button className="font-normal">Contact us</button>
           </Link>

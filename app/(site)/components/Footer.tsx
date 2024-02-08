@@ -17,7 +17,8 @@ const Footer: React.FC = () => {
                 width={80}
                 height={40}
                 alt="logo image for small screens"
-                className="logo small__logo"
+                className="  logo small__logo cursor-pointer border-[1px] hover:border-customYellow rounded-sm "
+
               />
             </div>
 
@@ -95,7 +96,7 @@ const Footer: React.FC = () => {
         <p className="footer-terms mr-2 capitalize hover:border-b hover:text-customRed inline-block">
           Terms of Service
         </p>
-        <p className="brand-and-year inline-block ml-2 lg:ml-0 lg:mt-2 border-l-1 border-white lg:border-b-1 ">24//7 Autos; 2023</p>
+        <p className="brand-and-year inline-block  lg:ml-0 lg:mt-2 pl-2 border-l border-white ">24//7 Autos; 2023</p>
       </div>
       <div className="absolute right-0 bottom-0 ">
         <Image

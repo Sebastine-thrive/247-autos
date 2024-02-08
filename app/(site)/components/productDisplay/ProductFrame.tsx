@@ -46,7 +46,7 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
           <SelectComponent />
         </div>
         {showFewProducts ? (
-          <div className="absolute right-[10vw] hover:scale-105 ">
+          <div className="absolute right-[5vw] lg:right[10vw] hover:scale-105 ">
             <Link href="">
               <p className="flex items-center hover:text-customRed">
                 {" "}

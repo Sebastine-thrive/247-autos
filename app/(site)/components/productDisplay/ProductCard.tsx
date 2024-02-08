@@ -10,18 +10,27 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 
 import { urlForImage } from "@/sanity/lib/image";
 import { formatPriceInMillion } from "../../utils/utils";
+import { Tooltip } from "react-tooltip";
+import soldImage from "../../../../public/assets/images/sold-image.svg";
 
 const ProductCard: React.FC<CardProps> = ({ product }) => {
-  const { brand, name, image, location, year, slug, price, extra_details } =
-    product;
-    // console.log(product);
+  const {
+    brand,
+    name,
+    image,
+    location,
+    year,
+    slug,
+    price,
+    extra_details,
+    sold,
+  } = product;
+  // console.log(product);
 
   // console.log(slug);
   return (
-    <>
-      <Link
-        href={`/cars/${slug?.current}`}
-      >
+    <div className="relative">
+      <Link href={`/cars/${slug?.current}`} className="product-card-link">
         <div className="product-card bg-white text-black flex flex-col justify-center items-center rounded-sm">
           {image && (
             <div className="md:w-[300px] md:h-[290px] pt-[2px]">
@@ -75,7 +84,23 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
           </div>
         </div>
       </Link>
-    </>
+      <Tooltip
+        anchorSelect=".product-card-link"
+        place="top"
+        content="Click to see car details!"
+      />
+      {sold ? (
+        <div className="sold-indicator max-h-[120px] absolute bottom-24 right-4">
+          <Image
+            src={soldImage}
+            alt={brand + name}
+            width={100}
+            height={80}
+            className="rounded-sm w-[100px] h-[80px] lg:w-[150px] lg:h-[120px]"
+          />
+        </div>
+      ) : null}
+    </div>
   );
 };
 

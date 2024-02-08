@@ -4,6 +4,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 /* 
 links:
 instagram: https://www.instagram.com/_247autos?igsh=MTdoOHhjdzFlczQ1aQ==
@@ -34,12 +36,10 @@ font-family: Helvetica, Arial, sans-serif;
   --storm-gray: #636b8a;
   --ebony-clay: #2d3248;
 
-  
   /* text colors */
   --light: #e3e3e3;
   --mid: #616161;
   --dark: #47546
-
   
   /* background colors */
   --white-bg: #ffffff;
@@ -49,17 +49,21 @@ font-family: Helvetica, Arial, sans-serif;
   --hover: #f7f7f7;
   --pressed: #f0f0f0;
   --focused: #005bd3;
-
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 img {
   z-index: 1;
-}
-
-a:active {
-  color: white; 
-  border-top: 1px solid white;
-  border-bottom:  1px solid white;
-
 }
 
 .main-container {
@@ -70,23 +74,9 @@ nav, .nav__small {
 }
 
 h1,
-h2 {
-  font-family: "Gilroy-Heavy", sans-serif;
+h2, h3, h4{
+  font-family: "Gilroy-Bold", sans-serif;
 }
-
-h3,
-h4 {
-  font-family: "Gilroy-bold", sans-serif;
-}
-
-/* 
-p {
-  font-family: "Gilroy-Medium", sans-serif;
-}
-
-span {
-  font-family: "Gilroy-Regular", sans-serif;
-} */
 
 p, h5,h6 {
   font-family: "Merriweather", sans-serif;
@@ -95,11 +85,6 @@ p, h5,h6 {
 
 h1 {
   @apply font-extrabold;
-}
-
-
-p,h5,h6 {
-  @apply font-normal;
 }
 
 body {
@@ -133,10 +118,6 @@ height: 40px;
 
 .intro {
   font-family: "Gilroy-Bold", sans-serif;
-}
-
-.contact-heading h1 {
-  border-top: 2px solid #cb9f5c;
 }
 
 .name {
@@ -264,7 +245,6 @@ width: 200px;
   box-shadow: -3px 3px var(--monza);
 }
 
-
  .header-searchbar {
   background-color: black;
   width: 480px;
@@ -311,6 +291,11 @@ width: 200px;
  .header-searchbar input:focus {
   border: none;
   outline: none;
+}
+
+.product-details-important {
+  height:fit-content;
+  width: fit-content;
 }
 
 

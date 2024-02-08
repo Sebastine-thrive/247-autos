@@ -35,9 +35,9 @@ const ProductDetails: React.FC<CardProps> = ({ product }) => {
         </div>
 
         {/* other details of the car. include share button for user to share cars info */}
-        <div className="lg:w-[50%] bg-[#cb9f5c] font-normal rounded-md mt-8 flex flex-col mx-[5px] xs:mx-[10px] md:mx-auto sm:px-3 md:px-5  capitalize">
+        <div className="sm:w-[60%] lg:w-[50%] bg-[#f8f8f8] rounded-md mt-8 flex flex-col sm:justify-between mx-[5px] xs:mx-[10px] sm:mx-auto px-2 sm:px-3 md:px-5  capitalize">
           {/*1 year | brand | name */}
-          <div className="flex justify-center items-center font-bold">
+          <div className="flex justify-center items-center font-extrabold">
             {year ? (
               <p className="bg-yellow-200 rounded-sm p-1 h-[20px] flex items-center">
                 {" "}
@@ -52,27 +52,35 @@ const ProductDetails: React.FC<CardProps> = ({ product }) => {
             <p className="ml-2 md:ml-6"> {brand} </p>
             <p className="ml-4">{name}</p>
           </div>{" "}
-          <div className=" gap-2 mt-2 ">
-            {details?.split(";").map((line, index) => (
-              <div key={index} className="flex items-center gap-y-2  ">
-                ✔ <p className="ml-1"> {line} </p>
+          <div className="flex flex-col sm:flex-row justify-between ">
+            <div className="font-normal">
+              <div className="mt-2 ">
+                {details?.split(";").map((line, index) => (
+                  <div key={index} className="flex items-center gap-y-2  ">
+                    ✔<p className="ml-1"> {line} </p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <div className="mt-2 flex items-center">
-            {" "}
-            ✔ <p className="ml-1 capitalize"> {extra_details}</p>
-          </div>
-          {/*2. location */}
-          <div className="flex items-center mt-2">
-            <FaMapMarkerAlt />
-            <p className="ml-1 capitalize "> {location}</p>
-          </div>{" "}
-          {/*3. price */}
-          <div className="flex items-center mt-2">
-            {" "}
-            💰
-            <p className="ml-1 font-bold">{formatPriceInMillion(price)} </p>
+              <div className="mt-1 flex items-center">
+                {" "}
+                ✔<p className="ml-1 capitalize"> {extra_details}</p>
+              </div>
+            </div>
+            <div className="product-details-important bg-white rounded-md">
+              {/*2. location */}
+              <div className="flex items-center mt-2 font-bold">
+                <FaMapMarkerAlt />
+                <p className="ml-2.5 capitalize"> {location}</p>
+              </div>{" "}
+              {/*3. price */}
+              <div className="flex items-center mt-2">
+                {" "}
+                💰
+                <p className="ml-2.5 text-xl font-bold">
+                  {formatPriceInMillion(price)}{" "}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

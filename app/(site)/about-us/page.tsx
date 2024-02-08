@@ -18,7 +18,7 @@ const page: React.FC = () => {
     <div className="min-h-[90vh] about-us-container p-4  flex flex-col m-auto">
       {/* intro segment */}
       <div className="mt-2 ">
-        <div className="about-us-heading min-h-[80px] p-2  text-2xl font-bold flex flex-col items-center text-center">
+        <div className="about-us-heading min-h-[80px] p-2 text-[#f5f5f5] text-2xl  flex flex-col items-center text-center">
           <h2>
             {" "}
             We Make Car buying and selling easy, efficient and transparent for

@@ -5,6 +5,7 @@ import Image from "next/image";
 import logo__large from "./../../../../public/assets/logo/logo__large.jpg";
 import logo__small from "./../../../../public/assets/logo/logo__small.jpg";
 import { NavbarLinks } from "./NavbarLinks";
+import { usePathname } from "next/navigation";
 
 import "./../../globals.css";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
@@ -16,6 +17,8 @@ const Navbar: React.FC = () => {
   const handleNav = () => {
     setNav(!nav);
   };
+
+  const currentPath = usePathname();
 
   return (
     <nav className="max-w-[1920px] w-[100vw] h-auto min-h-[40px] lg:flex bg-black text-white items-center justify-between mt-0">
@@ -44,8 +47,16 @@ const Navbar: React.FC = () => {
       <div className="navlink-container hidden lg:flex lg:w-[30%]">
         <ul className="flex ">
           {NavbarLinks.map((navlink, index) => (
-            <Link href={`/${navlink.address}`} key={index}>
-              <li className="px-2 mx-2 py-1 text-sm font-bold text-customYellow capitalize hover:border-b hover:text-white cursor-pointer">
+            <Link
+              href={`/${navlink.address}`}
+              key={index}
+              className={
+                currentPath === navlink.address
+                  ? "text-white border-b border-2 border-white font-extrabold"
+                  : "text-customYellow"
+              }
+            >
+              <li className="px-2 mx-2 py-1 text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
                 {navlink.title}
               </li>
             </Link>
@@ -90,15 +101,17 @@ const Navbar: React.FC = () => {
         >
           <div>
             <div className="flex w-full items-center justify-between z-[2]">
-              <Link href="/">
-                <Image
-                  src={logo__small}
-                  width={80}
-                  height={40}
-                  className="cursor-pointer border-[1px] hover:border-customYellow rounded-sm "
-                  alt="logo"
-                />
-              </Link>
+              <div className="max-h-[40px]">
+                <Link href="/">
+                  <Image
+                    src={logo__small}
+                    width={80}
+                    height={40}
+                    className="cursor-pointer border-[1px] hover:border-customYellow rounded-sm "
+                    alt="logo"
+                  />
+                </Link>
+              </div>
 
               <div
                 className="rounded-full shadow-lg shadow-gray-300 p-3 cursor-pointer"

@@ -9,7 +9,7 @@ export const CustomerCommentsData = [
   {
     name: "Margaret",
     comment:
-      " 247 autos really helped me with my car deal. Anyone looking to get agood car should use them",
+      " 247 autos really helped me with my car deal. Anyone looking to get a good car should use them",
     location: "Lagos, Nigeria",
     number: "070356753xx",
   },

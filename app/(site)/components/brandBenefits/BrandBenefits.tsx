@@ -13,7 +13,7 @@ const BrandBenefits: React.FC = () => {
           {benefitsData.map((benefit, index) => (
             <div
               key={index}
-              className=" flex flex-col justify-center items-center w-full md:w-[30%] "
+              className=" flex flex-col justify-center items-center w-full md:w-[30%] bg-[#f8f8f8] px-3 py-2 rounded-md "
             >
               <div className="benefit-image max-w-[100px] max-h-[80px]">
                 <Image
