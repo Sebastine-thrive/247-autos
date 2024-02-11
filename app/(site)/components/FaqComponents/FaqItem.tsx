@@ -18,7 +18,7 @@ export const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
         } `}
         onClick={toggleAccordion}
       >
-        <div className=" px-2 font-semibold xxs:text-[10px] xs:text-[12px] sm:text-sm md:text-lg ml-[-1rem] ">
+        <div className=" px-2 font-semibold xxs:text-[12px]  sm:text-sm md:text-lg ml-[-1rem] text-start ">
           {question}
         </div>
         <div className="text-xl faq-icons">

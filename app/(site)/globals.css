@@ -216,7 +216,7 @@ height: 300px;
 
 .small-image{
 width: 200px;
-    height: 150px;
+  height: 150px;
 }
 
 .product-card img {
@@ -307,6 +307,12 @@ width: 200px;
 
 /* Media queries */
 
+@media screen and (max-width: 1024px) {
+  .show-Sale-option {
+    left: 5vw;
+  }
+  }
+
 @media screen and (max-width: 769px) {
 
   .product-card {
@@ -356,5 +362,12 @@ width: 200px;
 .large-product-image {
   width: 280px;
   height: 210px;
+  }
+}
+
+@media screen and (max-width: 281px) {
+  .carman-image {
+    width: 280px;
+    height: 210px;
   }
 }

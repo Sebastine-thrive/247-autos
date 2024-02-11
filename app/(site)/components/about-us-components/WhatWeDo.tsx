@@ -59,7 +59,7 @@ const WhatWeDo = () => {
         className="rounded-lg flex justify-center max-w-[10rem] text-underline mx-auto my-4 h-auto p-2 bg-[#e86c57] text-white hover:bg-customYellow"
       >
           <Link href="/contact">
-            <button className="font-normal">Request Services </button>
+            <button className="font-normal">Request Service </button>
           </Link>
       </motion.div>
     </div>

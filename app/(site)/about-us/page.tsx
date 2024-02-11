@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 
 const page: React.FC = () => {
   return (
-    <div className="min-h-[90vh] about-us-container p-4  flex flex-col m-auto">
+    <div className="min-h-[90vh] about-us-container pb-4  flex flex-col m-auto">
       {/* intro segment */}
-      <div className="mt-2 ">
+      <div >
         <div className="about-us-heading min-h-[80px] p-2 text-[#f5f5f5] text-2xl  flex flex-col items-center text-center">
           <h2>
             {" "}

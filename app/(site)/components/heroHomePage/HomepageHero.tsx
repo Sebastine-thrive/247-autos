@@ -8,9 +8,9 @@ import vidSubstitute from "./../../../../public/assets/images/vid1.png";
 const HomepageHero = () => {
   return (
     <div>
-      <div className="hero-homepage flex pl-8 bg-black h-auto max-w-[1920px] items-center min-h-800px overflow-hidden">
+      <div className="hero-homepage flex pl-8 bg-black h-auto max-w-[1920px] items-center  overflow-hidden">
         {/* Only show on large screens 50-50 with the div below */}
-        <div className="intro hidden lg:flex flex-col items-center w-0 lg:w-[50%] lg:h-[90%] text-white">
+        <div className="intro hidden lg:flex flex-col items-center w-0 lg:w-[50%] lg:h-[90%]  min-h-[90%] text-white">
           <div className=" flex items-center text-xl  lg:text-4xl mb-8">
             {" "}
             <motion.h2
@@ -73,8 +73,8 @@ const HomepageHero = () => {
         </div>
 
         {/* No display on small screens, 50% on large screens */}
-        <div className="hero-image-wrapper__homepage  relative justify-center items-center hidden lg:block lg:w-[50%] lg:h-[80%]">
-          <div className="dark-overlay absolute inset-0 bg-gradient-to-l from-transparent to-black"></div>
+        <div className="hero-image-wrapper__homepage  relative justify-center items-center hidden lg:block lg:w-[50%] lg:h-[90%] min-h-[90%]">
+          <div className="dark-overlay absolute inset-0 bg-gradient-to-l from-transparent to-black min-h-full"></div>
           <VideoBackground />
           <h4 className="name hidden lg:block  absolute  text-3xl  font-extrabold">
             {" "}

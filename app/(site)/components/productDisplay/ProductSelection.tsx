@@ -12,7 +12,7 @@ const ProductSelection: React.FC<ProductListPropsOptions> = ({
 
 //   console.log(productsSold);
   return (
-    <div className="overflow-x-scroll">
+    <div className="overflow-x-auto">
       {selectedProductDisplayOption === "on sale" ? (
         <div>
           <ProductFrame products={productsOnSale} />

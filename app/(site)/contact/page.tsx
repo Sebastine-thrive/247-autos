@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <div className="contact-container min-h-[90vh] h-auto px-4 py-8 lg:w-[70%] xl:w-[60%] flex flex-col justify-center items-center m-auto ">
+    <div className="contact-container min-h-[90vh] h-auto px-4 pb-8 lg:w-[70%] xl:w-[60%] flex flex-col justify-center items-center m-auto ">
       <div className=" contact-heading">
         <h1 className="text-2xl">Contact Us</h1>
         <p> 247 autos is here to help you if you have any questions. </p>

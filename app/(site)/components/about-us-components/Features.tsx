@@ -42,7 +42,7 @@ const Features: React.FC = () => {
               alt={feature.alt}
               width={300}
               height={200}
-              className="product-image w-auto rounded-sm"
+              className="feature-image rounded-sm w-[280px] h-[200px] sm:w-auto"
             />
           </div>
           <div className="mt-1 md:mt-0 md:ml-2 lg:ml-4">
@@ -58,73 +58,3 @@ const Features: React.FC = () => {
 };
 
 export default Features;
-
-
-// <div className="py-4">
-// <div className="flex flex-col text-center items-center md:text-start md:items-start md:flex-row mt-4 lg:mt-2">
-//   <div>
-//     <Image
-//       src={purpose}
-//       alt="purpose driven picture"
-//       width={300}
-//       height={200}
-//       className="product-image w-auto rounded-sm"
-//     />
-//   </div>
-//   <div className="mt-1 md:mt-0 md:ml-2 lg:ml-4 ">
-//     <h3 className="text-[#616161] font-bold text-xl md:mr-2">
-//       Driven with purpose
-//     </h3>
-//     <p className="mt-1 font-normal">
-//       At 247 Autos, we empower buyers and sellers with the resources
-//       to enjoy value and make sales.
-//     </p>
-//   </div>
-// </div>
-
-// <div className="flex flex-col text-center items-center md:text-start md:items-start md:flex-row mt-4 lg:mt-2">
-//   <div className="mt-1 font-normal">
-//     <Image
-//       src={relationship}
-//       alt="interpersonal relationship picture"
-//       width={300}
-//       height={200}
-//       className="product-image w-auto rounded-sm"
-//     />
-//   </div>
-//   <div className="mt-1 md:mt-0 md:ml-2 lg:ml-4">
-//     <h3 className="text-[#616161] font-bold text-xl md:mr-2 ">
-//       Cultivating interpersonal Connections
-//     </h3>
-//     <p className="mt-1 font-normal">
-//       Our relationships are the conerstone of our business. We are
-//       proud of the relationships we have fostered over the years. We
-//       look to sustain them and build more connections of people and
-//       businesses making profits and enjoying value.
-//     </p>
-//   </div>
-// </div>
-// <div className="flex flex-col text-center items-center md:text-start md:items-start md:flex-row mt-4 lg:mt-2">
-//   <div className="mt-1">
-//     <Image
-//       src={satisfaction}
-//       alt="customer satisfaction picture"
-//       width={300}
-//       height={200}
-//       className="product-image w-auto rounded-sm"
-//     />
-//   </div>
-//   <div className="mt-1 md:mt-0 md:ml-2 lg:ml-4">
-//     <h3 className="text-[#616161] font-bold text-xl">
-//       Prioritising customer satisfaction{" "}
-//     </h3>
-//     <p className="mt-1 font-normal">
-//       customer satisfaction is at the center of our world. Cars play
-//       an important role in peoples's lives and is the one of the
-//       biggest purchases one can make. We are dedicated to helping
-//       everyone who come across us achieve their goals as easily and
-//       efficiently as possible.
-//     </p>
-//   </div>
-// </div>
-// </div>

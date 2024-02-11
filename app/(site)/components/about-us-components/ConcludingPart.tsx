@@ -24,9 +24,9 @@ const ConcludingPart = () => {
         <Image
           src={carMan}
           alt="man with car image"
-          width={300}
+          width={280}
           height={200}
-          className="product-image w-auto rounded-sm"
+          className="carman-image  w-[280px] h-[200px] sm:w-auto  rounded-sm"
         />
       </div>
     </motion.div>

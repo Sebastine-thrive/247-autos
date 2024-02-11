@@ -25,18 +25,19 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
 
   const currentPath = usePathname();
 
+  const absoluteValue = 50 % -"100px";
   // Show few products except on the cars page
   const showFewProducts = currentPath !== "/cars";
 
   return (
     <div className="w-full py-2">
-      <div className="flex z-7">
-        {/*  sale option and toggle icon */}
-        <h4 className="capitalize  absolute left-[5vw] lg:left-[46%] flex  w-auto items-center">
-          {" "}
-          {selectedProductDisplayOption}{" "}
-          {/* Dont' dissplay this on cars page */}
-          {!showFewProducts ? (
+      {showFewProducts ? (
+        <div className="flex z-7">
+          {/*  sale option and toggle icon */}
+          <h4 className="show-sale-option capitalize absolute flex w-300px max-w-auto items-center left-[5vw]">
+            {" "}
+            {selectedProductDisplayOption}{" "}
+            {/* Dont' display this on cars page */}
             <span className="ml-2" onClick={closeOrOpenSelectionBoxOnly}>
               {displaySaleSelectionBox ? (
                 <AiFillCaretUp />
@@ -44,25 +45,24 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
                 <AiFillCaretDown />
               )}
             </span>
+          </h4>
+
+          {/* option select component */}
+
+          {/* Don't display the on sale or recently sold selection box on the cars page */}
+          {showFewProducts ? (
+            <div
+              className={
+                displaySaleSelectionBox
+                  ? "select-component-container absolute right-[34vw]"
+                  : "hidden"
+              }
+            >
+              <SelectComponent />
+            </div>
           ) : null}
-        </h4>
-        {/* option select component */}
 
-        {/* Don't display on cars page */}
-        {!showFewProducts ? (
-          <div
-            className={
-              displaySaleSelectionBox
-                ? "select-component-container absolute right-[34vw]"
-                : "hidden"
-            }
-          >
-            <SelectComponent />
-          </div>
-        ) : null}
-
-        {/* Show see all button when on home page- currently using show FewProducts state for that */}
-        {showFewProducts ? (
+          {/* Show see all button when on home page- currently using show FewProducts state for that */}
           <div className="absolute right-[5vw] lg:right[10vw] hover:scale-105 ">
             <Link href="./cars">
               <h4 className="flex items-center hover:text-customRed">
@@ -71,13 +71,15 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
               </h4>
             </Link>
           </div>
-        ) : null}
-      </div>
+        </div>
+      ) : null}
 
       {/* Products */}
       <div className="mt-8 z-2 ">
         {/* product content for large screens - home page and cars page */}
         <div className="hidden md:flex justify-center flex-wrap gap-4">
+          {/* {!showFewProducts ? <h4>Cars</h4> : null} */}
+
           {products.map((cars, index) => (
             <div className="" key={index}>
               <ProductCard product={cars} />

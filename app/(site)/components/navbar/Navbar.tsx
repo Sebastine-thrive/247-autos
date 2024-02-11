@@ -50,11 +50,11 @@ const Navbar: React.FC = () => {
             href="/"
             className={
               currentPath == "/"
-                ? "text-white border-b border-2 border-white font-extrabold mx-2"
+                ? "text-white border-b border-2 border-white font-extrabold mx-2 px-1"
                 : "text-customYellow mx-2"
             }
           >
-            <li className="px-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
+            <li className="py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
               Home
             </li>
           </Link>
@@ -63,11 +63,11 @@ const Navbar: React.FC = () => {
             href="about-us"
             className={
               currentPath == "/about-us"
-                ? "text-white border-b border-2 border-white font-extrabold mx-2"
+                ? "text-white border-b border-2 border-white font-extrabold mx-2 px-1"
                 : "text-customYellow mx-2"
             }
           >
-            <li className="px-2  py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
+            <li className=" py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
               About us
             </li>
           </Link>
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
                 : "text-customYellow mx-2"
             }
           >
-            <li className="px-2 mx-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
+            <li className="mx-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
               Cars
             </li>
           </Link>
@@ -93,7 +93,7 @@ const Navbar: React.FC = () => {
                 : "text-customYellow mx-2"
             }
           >
-            <li className="px-2 mx-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
+            <li className="mx-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
               Contact{" "}
             </li>
           </Link>
@@ -106,7 +106,7 @@ const Navbar: React.FC = () => {
                 : "text-customYellow mx-2"
             }
           >
-            <li className="px-2 mx-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
+            <li className="mx-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
               Blog
             </li>
           </Link>
@@ -158,7 +158,7 @@ const Navbar: React.FC = () => {
                     src={logo__small}
                     width={80}
                     height={40}
-                    className="cursor-pointer border-[1px] hover:border-customYellow rounded-sm "
+                    className="cursor-pointer border-[1px] h-[40px] hover:border-customYellow rounded-sm "
                     alt="logo"
                   />
                 </Link>
