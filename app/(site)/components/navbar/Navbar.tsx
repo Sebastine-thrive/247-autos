@@ -98,7 +98,7 @@ const Navbar: React.FC = () => {
             </li>
           </Link>
 
-          <Link
+          {/* <Link
             href="blog"
             className={
               currentPath == "/blog"
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
             <li className="mx-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
               Blog
             </li>
-          </Link>
+          </Link> */}
         </ul>
       </div>
 

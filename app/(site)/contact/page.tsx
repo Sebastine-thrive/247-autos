@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { Metadata } from "next";
+import Link from "next/link";
+import whatsappIcon from "../../../public/assets/logo/logo_socials/whatsapp-icon.png";
 
 export const metadata: Metadata = {
   title: "Contact-us",
@@ -30,9 +32,19 @@ export default function Contact() {
 
       <div className="mb-6 customer-support">
         {/* Customer support */}
-        <h3 className="">Send a DM</h3>
-        <div>
-          {/* <Image src={} alt="whatsapp icon" /> */}
+        <h3>Click to send a DM</h3>
+        <div className="whatsapp icon mt-2 cursor-pointer">
+          <Link href="https://wa.me/2347069651539">
+            {/* Image */}
+
+            <Image
+              src={whatsappIcon}
+              alt="whatsapp icon"
+              width={100}
+              height={100}
+              className="whatsappIcon-image rounded-sm w-[60px] h-[60px] lg:w-[100px] lg:h-[100px] sm:w-auto mx-auto"
+            />
+          </Link>
         </div>
       </div>
     </div>

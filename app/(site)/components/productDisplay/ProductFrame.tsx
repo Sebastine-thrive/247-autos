@@ -34,7 +34,7 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
       {showFewProducts ? (
         <div className="flex z-7">
           {/*  sale option and toggle icon */}
-          <h4 className="show-sale-option capitalize absolute flex w-300px max-w-auto items-center left-[5vw]">
+          <h4 className="show-sale-option capitalize absolute flex w-300px max-w-auto items-center left-[5vw] lg:left-[42vw] ">
             {" "}
             {selectedProductDisplayOption}{" "}
             {/* Dont' display this on cars page */}
