@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import ProductCard from "./ProductCard";
-import { BiChevronsLeft, BiChevronsRight } from "react-icons/bi";
 import { ProductListProps } from "@/app/types/types";
 
 

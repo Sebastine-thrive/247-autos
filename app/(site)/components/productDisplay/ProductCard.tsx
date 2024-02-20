@@ -11,7 +11,9 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { urlForImage } from "@/sanity/lib/image";
 import { formatPriceInMillion } from "../../utils/utils";
 import { Tooltip } from "react-tooltip";
-import soldImage from "../../../../public/assets/images/sold-image.svg";
+// import soldImage from "../../../../public/assets/images/sold-image.svg";
+import soldImage2 from "../../../../public/assets/images/sold-image2.png";
+
 
 const ProductCard: React.FC<CardProps> = ({ product }) => {
   const {
@@ -25,9 +27,7 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
     extra_details,
     sold,
   } = product;
-  // console.log(product);
 
-  // console.log(slug);
   return (
     <div className="relative">
       <Link href={`/cars/${slug?.current}`} className="product-card-link">
@@ -93,8 +93,8 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
       {sold ? (
         <div className="sold-indicator max-h-[120px] absolute bottom-24 right-4">
           <Image
-            src={soldImage}
-            alt={brand + name}
+            src={soldImage2}
+            alt="sold image identifier"
             width={100}
             height={80}
             className="rounded-sm w-[100px] h-[80px] lg:w-[150px] lg:h-[120px]"

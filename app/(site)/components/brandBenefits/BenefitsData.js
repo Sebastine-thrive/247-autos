@@ -11,7 +11,7 @@ export const benefitsData = [
     title: "Wholistic Servicing",
     description:
       "Import/buy, sales and delivery, repairs, pimping and maintenance for your ride.",
-    className: "benefits__servicing",
+    className: "benefits__servicing w-auto h-auto",
   },
   {
     imageSrc: moneyImage,
@@ -19,14 +19,14 @@ export const benefitsData = [
     title: "Transparent Pricing",
     description:
       "Transparent, fair pricing. See how much you will pay on cars you want.",
-    className: "benefits__money",
+    className: "benefits__money  w-auto h-auto",
   },
   {
     imageSrc: timeImage,
     imageAlt: "time image",
     title: "Efficient response time",
     description: "Quick response to potential buyer requests",
-    className: "benefits__time",
+    className: "benefits__time  w-auto h-auto ",
   },
 
   {
@@ -35,7 +35,7 @@ export const benefitsData = [
     title: "skilled, productive team",
     description:
       "Effective team of technicians to deliver your request promptly and professionally.",
-    className: "benefits__technicians",
+    className: "benefits__technicians  w-auto h-auto",
   },
   {
     imageSrc: money_and_time_Image,
@@ -43,6 +43,6 @@ export const benefitsData = [
     title: "Find your car fast",
     description:
       "Time-saving tool to help you find the right car according to your budget fast.",
-    className: "benefits__technicians",
+    className: "benefits__technicians  w-auto h-auto",
   },
 ];

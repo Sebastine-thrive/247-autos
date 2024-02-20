@@ -1,49 +1,39 @@
 import React from "react";
 import { Metadata } from "next";
 import Image from "next/image";
-import { BlogData } from "./../components/blogComponents/BlogData";
+import BlogCard from "../components/blogComponents/BlogCard";
+import { getBlogPostsMainData } from "../utils/utils";
+import { MainBlogData } from "@/app/types/types";
 
 export const metadata: Metadata = {
   title: "Blog",
 };
 
-const page: React.FC = () => {
-  return (
-    <div className="blog-container min-h-[90vh] p-4 lg:w-[70%] xl:w-[60%] flex flex-col justify-center items-center m-auto">
-      <div className="blog-container-heading mt-2  min-h-[80px] p-2 text-white text-2xl font-bold flex flex-col items-center text-center">
-        <h2> The Blog is upcoming. Watch this space for it!</h2>
-      </div>
+export default async function Blog() {
+  const blogMainData: MainBlogData[] = await getBlogPostsMainData();
 
-      {/*3 blog cards */}
-      <div className="">
-        {BlogData.map((blog, index) => (
-          <div key={index} className="w-[300px] h-[400px]">
-            <div className="w-[300px] max-h-[200px]">
-              <Image
-                alt={blog.imageAlt}
-                src={blog.imageSrc}
-                width={300}
-                height={150}
-              />
-            </div>
-            <div className="p-2 rounded-sm max-h-[150px]">
-              <div>
-                {/* class | .  time for reading |  date */}
-                <div className="flex items-center">
-                  <p className="mr-2">Topic</p>
-                  <div className="w-2 h-2 bg-black rounded-sm"></div>
-                  <p className="ml-2">5 mins read</p>
-                  <div className="w-2 h-2 bg-black rounded-sm"></div>
-                  <p className="ml-2">Jan 20, 2024</p>
-                </div>
+  return (
+    <div className="w-full ">
+      <div className="blog-container min-h-[90vh]  md:m-auto ">
+        <div className="blog-container-heading h-[5rem] px-2 sm:px-0 min-h-[5rem] w-full text-[#2d2720]">
+          <h2 className="h-full flex justify-center items-center text-white">
+            {" "}
+            Stay updated! Let good information power your drive.
+          </h2>
+        </div>
+
+        <div className="w-full lg:w-[70%] xl:w-[60%]  mx-auto ">
+          <div className="mt-16 flex flex-wrap justify-center gap-4 mx-auto">
+            {/* Blog cards  */}
+
+            {blogMainData.map((blogData, index) => (
+              <div className="" key={index}>
+                <BlogCard mainBlogData={blogData} />
               </div>
-              <h4 className="my-1 capitalize"> title</h4>
-            </div>
-            <p className="capitalize underline my-1"> read more</p>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
-};
-export default page;
+}

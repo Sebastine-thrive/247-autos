@@ -7,7 +7,7 @@ const CustomerComments = () => {
       {CustomerCommentsData.map((customer, index) => (
         <div
           key={index}
-          className="bg-white comments-card w-full md:w-1/2 lg:w-[30%] rounded-md p-4"
+          className="bg-[#f1f1f1] comments-card w-full md:w-1/2 lg:w-[30%] rounded-md p-4"
         >
 
     

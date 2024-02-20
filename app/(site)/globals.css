@@ -144,20 +144,56 @@ height: 40px;
 .about-us-heading, .cars-heading, .blog-container-heading {
   background: linear-gradient(to right, #5b5448, #d21108);
 }
-/* 
-.cars-heading {
-  background: linear-gradient(to right, #5b5448 , #d21108);
-} */
+
 .product-details p{
   font-family: "Gilroy-Medium", sans-serif;
 }
 .product-details-heading  {
  background: linear-gradient(to right,  #cb9f5c, #5b5448);
 }
+
+.blog-posts p{
+ margin: 5px 0;
+} 
+
+.blogPage-header h1 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.blog-posts h2, .blog-posts h3, .blog-posts h4{
+  margin: 3px 0;
+ } 
+
+ .blog-posts li {
+  font-family: "Merriweather", sans-serif;
+  margin: 3px 0;
+}
+
+/*
+.blog-posts h2{
+  font-family: "Merriweather", sans-serif;
+font-size: 1.125rem; 
+line-height: 1.75rem;
+}
+
+
+.blog-posts h3{
+  font-family: "Merriweather", sans-serif;
+  font-size: 1rem; 
+  line-height: 1.5rem;
+  }
+ */
+
 /* 
 .blog-container-heading {
   background: linear-gradient(to right, #fff ,  #5b5448);
-} */
+}  */
+
+
+.blog-posts ul {
+  list-style-type: disc;
+}
 
 .products-container__homepage,
 .brand-benefits,
@@ -188,6 +224,9 @@ z-index: 100;
   border-radius: 10px;
   padding: 5px;
   margin: 0 5px;
+  box-shadow: 0 0 6px #c3c7cb;
+}
+.blog-card {
   box-shadow: 0 0 6px #c3c7cb;
 }
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { CardProps, ProductListProps } from "@/app/types/types";
 import ImagesDisplay from "./ImagesDisplay";
-import carPic from "./../../../../public/assets/images/car.svg";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { formatPriceInMillion } from "../../utils/utils";
 import { BiCar } from "react-icons/bi";
@@ -14,7 +13,6 @@ const ProductDetails: React.FC<CardProps> = ({ product }) => {
     image,
     location,
     year,
-    slug,
     price,
     extra_details,
   } = product;
@@ -22,9 +20,9 @@ const ProductDetails: React.FC<CardProps> = ({ product }) => {
   return (
     <div className="product-details pb-4">
       <div className="product-details-heading min-h-[80px] w-full flex justify-center items-center ">
-        <h1 className="capitalize mx-auto">
+        <h1 className="capitalize mx-auto text-white">
           {" "}
-          <span>{brand} </span> <span className="ml-2">{name} </span>{" "}
+          <span>{brand} </span> <span className="ml-1">{name} </span>{" "}
         </h1>{" "}
       </div>
 

@@ -10,7 +10,6 @@ const ProductSelection: React.FC<ProductListPropsOptions> = ({
 }) => {
   const { selectedProductDisplayOption } = useStateContext() ?? {};
 
-//   console.log(productsSold);
   return (
     <div className="overflow-x-auto">
       {selectedProductDisplayOption === "on sale" ? (
@@ -30,4 +29,3 @@ const ProductSelection: React.FC<ProductListPropsOptions> = ({
 
 export default ProductSelection;
 
-// const ProductFrame: React.FC<ProductListProps> = ({ products }) => {

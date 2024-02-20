@@ -9,9 +9,13 @@ import { usePathname } from "next/navigation";
 
 import "./../../globals.css";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import Searchbar from "../Searchbar";
+import Searchbar from "../searchComponents/Searchbar";
+import SearchFetch from "../searchComponents/FetchSearchResults";
+import { useStateContext } from "@/app/context/Contexts";
 
 const Navbar: React.FC = () => {
+  const { searchTerm, setSearchTerm } = useStateContext() ?? {};
+
   const [nav, setNav] = useState<boolean>(false);
 
   const handleNav = () => {
@@ -39,7 +43,8 @@ const Navbar: React.FC = () => {
 
       {/* 2.Searchbar */}
       <div className="searchbar-container w-[33%] hidden lg:block">
-        <Searchbar />
+        <SearchFetch searchTerm={searchTerm} />
+        {/* <Searchbar /> */}
       </div>
 
       {/* 3.Nav links*/}
@@ -98,7 +103,7 @@ const Navbar: React.FC = () => {
             </li>
           </Link>
 
-          {/* <Link
+          <Link
             href="blog"
             className={
               currentPath == "/blog"
@@ -109,7 +114,7 @@ const Navbar: React.FC = () => {
             <li className="mx-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
               Blog
             </li>
-          </Link> */}
+          </Link>
         </ul>
       </div>
 
@@ -177,7 +182,12 @@ const Navbar: React.FC = () => {
             <div className="flex flex-col mt-4 py-4 uppercase">
               <ul className="">
                 {NavbarLinks.map((navlink, index) => (
-                  <Link href={`/${navlink.address}`} passHref key={index} className="block">
+                  <Link
+                    href={`/${navlink.address}`}
+                    passHref
+                    key={index}
+                    className="block"
+                  >
                     <li
                       onClick={() => setNav(false)}
                       className="py-4 capitalize text-sm hover:border-b text-customYellow hover:text-white font-semibold cursor-pointer "

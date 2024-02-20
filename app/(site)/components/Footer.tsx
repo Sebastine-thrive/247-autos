@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
         <div className="footer-page-links  w-full  flex justify-center ">
           <div className="footer-page-links-wrapper mt-4 flex flex-wrap gap-x-2 text-sm md:text-lg gap-y-4 w-full lg:w-[70%] justify-between">
             <div className="page-links gap-x-8 capitalize ">
-              <Link href="">
+              <Link href="/#why-us">
                 {" "}
                 <h4 className="text-[#cb9f5c] hover:border-b hover:text-customRed cursor-pointer">
                   Why 247{" "}
@@ -57,17 +57,17 @@ const Footer: React.FC = () => {
 
             <div className="page-links capitalize">
               <h4 className="text-[#cb9f5c]">Resources</h4>
-              <Link href="">
+              <Link href="/#faq">
                 <p className="hover:border-b hover:text-customRed cursor-pointer">
                   FAQs
                 </p>
               </Link>
-              <Link href="">
+              <Link href="/blog">
                 <p className="hover:border-b hover:text-customRed cursor-pointer">
                   Blog
                 </p>
               </Link>
-              <Link href="">
+              <Link href="/contact">
                 <p className="hover:border-b hover:text-customRed cursor-pointer">
                   Contact us
                 </p>
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
                   Facebook
                 </p>
               </Link>
-              <Link href="">
+              <Link href="https://www.instagram.com/_247autos?igsh=MTdoOHhjdzFlczQ1aQ==">
                 <p className="hover:border-b hover:text-customRed cursor-pointer">
                   Instagram
                 </p>
@@ -103,8 +103,9 @@ const Footer: React.FC = () => {
         <Image
           src={footerRightSvg}
           alt="footer right svg image"
-          width={200}
-          height={200}
+          width={300}
+          height={300}
+          className="w-[100px] md:w-[200px] lg:w-[300px]"
         />
       </div>
       <div className="hidden lg:absolute left-0 bottom-0">
@@ -113,6 +114,7 @@ const Footer: React.FC = () => {
           alt="footer right svg image"
           width={200}
           height={200}
+          className="w-[100px] lg:w-[300px]"
         />
       </div>
     </div>

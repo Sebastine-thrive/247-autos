@@ -24,7 +24,7 @@ const faqData: FaqItemProps[] = [
       "No, they are not. We ensure that the prices are fair enough and better than most out there.",
   },
   {
-    question: "Can a vehicle returned after purchase?",
+    question: "Can a vehicle be returned after purchase?",
     answer:
       "Once a vehicle has been tested and purchased in good condition, it cannot be returned.",
   },

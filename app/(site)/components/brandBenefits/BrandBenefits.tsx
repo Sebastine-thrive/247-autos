@@ -6,22 +6,20 @@ const BrandBenefits: React.FC = () => {
   return (
     <>
       <div className="flex flex-col w-full">
-        <h2 className="mx-auto mb-8 font-bold text-2xl ">
-          Why 24//7 Autos{" "}
-        </h2>
+        <h2 className="mx-auto mb-8 font-bold text-2xl ">Why 24//7 Autos </h2>
         <div className="flex flex-wrap justify-center m-auto xxs:gap-8 md:gap-12 w-full">
           {benefitsData.map((benefit, index) => (
             <div
               key={index}
-              className=" flex flex-col justify-center items-center w-full md:w-[30%] bg-[#f8f8f8] px-3 py-2 rounded-md "
+              className=" flex flex-col justify-center items-center w-full md:w-[30%] bg-[#fff] px-3 py-2 rounded-md "
             >
               <div className="benefit-image max-w-[100px] max-h-[80px]">
                 <Image
                   src={benefit.imageSrc}
-                  className={benefit.className}
                   alt={benefit.imageAlt}
                   width={100}
                   height={80}
+                  className={benefit.className}
                 />
               </div>
 
@@ -35,7 +33,6 @@ const BrandBenefits: React.FC = () => {
         </div>
       </div>
     </>
-    
   );
 };
 

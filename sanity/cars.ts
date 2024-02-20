@@ -7,7 +7,7 @@ interface MyDocument extends Document {
 
 export default {
   name: "product",
-  title: "cars",
+  title: "Cars",
   type: "document",
   fields: [
     {
@@ -78,20 +78,3 @@ export default {
     },
   ],
 };
-
-// options: {
-//   // include category if dataset is production
-//   source: (doc, context) => context.dataset === 'production' ? `${doc.category}-${doc.title}` : doc.title
-// }
-
-// type: "slug",
-// options: {
-//   source: "name",
-//   maxLength: 90,
-
-// source: (doc: Record<string, any>) => `${doc.Brand}-${doc.Name}`,
-
-// (doc: MyDocument, context: { dataset: string }) =>
-//           context.dataset === "production"
-//             ? `${doc.brand}-${doc.name}`
-//             : `${doc.brand}-${doc.name}`,
