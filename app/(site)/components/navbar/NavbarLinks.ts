@@ -20,8 +20,8 @@ export const NavbarLinks: NavbarLink[] = [
     title: "contact",
     address: "contact",
   },
-  // {
-  //   title: "blog",
-  //   address: "blog",
-  // },
+  {
+    title: "blog",
+    address: "blog",
+  },
 ];

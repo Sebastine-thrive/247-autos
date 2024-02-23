@@ -1,6 +1,6 @@
 export default function VideoBackground() {
   return (
-    <div className="video-overlay">
+    <div className="video-overlay h-full flex">
       <video
         poster="/assets/images/vid1.png"
         src={require("./../../../public/assets/video/247_video_bg.mp4")}

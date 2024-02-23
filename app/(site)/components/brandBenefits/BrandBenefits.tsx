@@ -14,13 +14,15 @@ const BrandBenefits: React.FC = () => {
               className=" flex flex-col justify-center items-center w-full md:w-[30%] bg-[#fff] px-3 py-2 rounded-md "
             >
               <div className="benefit-image max-w-[100px] max-h-[80px]">
-                <Image
+                <div className={`${benefit.className}`}>{benefit.icon}</div>
+                {/* <Image
                   src={benefit.imageSrc}
                   alt={benefit.imageAlt}
                   width={100}
                   height={80}
                   className={benefit.className}
-                />
+                  priority
+                /> */}
               </div>
 
               <h6 className="text-[#f02d34] capitalize text-center font-medium my-6">

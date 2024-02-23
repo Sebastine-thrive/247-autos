@@ -7,11 +7,11 @@ import vidSubstitute from "./../../../../public/assets/images/vid1.png";
 
 const HomepageHero = () => {
   return (
-    <div>
-      <div className="hero-homepage flex pl-8 bg-black h-auto max-w-[1920px] items-center  overflow-hidden">
+    <div className=" flex flex-col justify-center">
+      <div className="hero-homepage flex pl-8 bg-black lg:h-[60vh] xl:h-[70vh] max-w-[1920px] items-center  overflow-hidden">
         {/* Only show on large screens 50-50 with the div below */}
-        <div className="intro hidden lg:flex flex-col items-center w-0 lg:w-[50%] lg:h-[90%]  min-h-[90%] text-white">
-          <div className=" flex items-center text-xl  lg:text-4xl mb-8">
+        <div className="intro hidden lg:flex flex-col items-center justify-center  w-0 lg:w-[50%] lg:h-full  min-h-[90%] text-white">
+          <div className=" flex items-center text-xl  lg:text-4xl mb-8 lg:mb-12">
             {" "}
             <motion.h2
               initial={{ opacity: 0 }}
@@ -49,7 +49,7 @@ const HomepageHero = () => {
               Daily
             </motion.h2>{" "}
           </div>
-          <div className="flex flex-col items-center text-lg lg:text-3xl mt-8 px-2 ">
+          <div className="flex flex-col items-center lg:mt-8 text-lg lg:text-3xl mt-8 lg:mt-12 px-2 ">
             {" "}
             <motion.h3
               initial={{ y: -50, opacity: 0 }}
@@ -73,12 +73,12 @@ const HomepageHero = () => {
         </div>
 
         {/* No display on small screens, 50% on large screens */}
-        <div className="hero-image-wrapper__homepage  relative justify-center items-center hidden lg:block lg:w-[50%] lg:h-[90%] min-h-[90%]">
+        <div className="hero-image-wrapper__homepage  relative justify-center items-center hidden lg:block lg:w-[50%] h-full lg:h-[90%] min-h-[90%]">
           <div className="dark-overlay absolute inset-0 bg-gradient-to-l from-transparent to-black min-h-full"></div>
           <VideoBackground />
           <h4 className="name hidden lg:block  absolute  text-3xl  font-extrabold">
             {" "}
-            <span className="text-[#d21108]"> 24//7 </span>{" "}
+            <span className="text-[#d21108]"> 24//7 </span>
             <span className="text-white"> Autos </span>
           </h4>
         </div>

@@ -7,7 +7,7 @@ import footerLeftSvg from "../../../public/assets/images/footer-left-svg.svg";
 
 const Footer: React.FC = () => {
   return (
-    <div className="footer-container relative  text-sm md:text-lg max-w-[1920px] w-[100vw] bg-[#040404] text-white p-8">
+    <div className="footer-container relative pt-8 text-sm md:text-lg max-w-[1920px] w-[100vw] bg-[#040404] text-white p-8">
       <div className="footer-links">
         <div className="logo-socials-container">
           <div className="flex items-center">

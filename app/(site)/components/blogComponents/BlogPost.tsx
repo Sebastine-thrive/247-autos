@@ -22,11 +22,7 @@ const BlogPost: React.FC<BlogProps> = ({ blog }) => {
     summary,
     references,
   } = blog;
-  // console.log(author, paragraph1);
-
-  // const outline = await getTableOfContents();
-
-  // console.log(outline)
+ 
   return (
     <div className="bg-[#f1f1f1]">
       <div className="h-[50vh] z-10 lg:h-[60vh] py-4 bg-black">

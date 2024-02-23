@@ -4,18 +4,11 @@ import ImagesDisplay from "./ImagesDisplay";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { formatPriceInMillion } from "../../utils/utils";
 import { BiCar } from "react-icons/bi";
+import { HiCheck } from "react-icons/hi";
 
 const ProductDetails: React.FC<CardProps> = ({ product }) => {
-  const {
-    brand,
-    details,
-    name,
-    image,
-    location,
-    year,
-    price,
-    extra_details,
-  } = product;
+  const { brand, details, name, image, location, year, price, extra_details } =
+    product;
   // console.log(product);
   return (
     <div className="product-details pb-4">
@@ -55,19 +48,27 @@ const ProductDetails: React.FC<CardProps> = ({ product }) => {
               <div className="mt-2 ">
                 {details?.split(";").map((line, index) => (
                   <div key={index} className="flex items-center gap-y-2  ">
-                    ✔<p className="ml-1"> {line} </p>
+                    <div>
+                      <HiCheck />{" "}
+                    </div>
+                    <p className="ml-1"> {line} </p>
                   </div>
                 ))}
               </div>
               <div className="mt-1 flex items-center">
                 {" "}
-                ✔<p className="ml-1 capitalize"> {extra_details}</p>
+                <div className="text-green-700">
+                  <HiCheck />{" "}
+                </div>
+                <p className="ml-1 capitalize"> {extra_details}</p>
               </div>
             </div>
             <div className="product-details-important bg-white rounded-md">
               {/*2. location */}
               <div className="flex items-center mt-2 font-bold">
-                <FaMapMarkerAlt />
+                <div className="text-yellow-500">
+                  <FaMapMarkerAlt />
+                </div>
                 <p className="ml-2.5 capitalize"> {location}</p>
               </div>{" "}
               {/*3. price */}

@@ -141,7 +141,7 @@ height: 40px;
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.about-us-heading, .cars-heading, .blog-container-heading {
+.about-us-heading, .cars-heading, .blog-container-heading, .contact-container-heading {
   background: linear-gradient(to right, #5b5448, #d21108);
 }
 
@@ -152,8 +152,10 @@ height: 40px;
  background: linear-gradient(to right,  #cb9f5c, #5b5448);
 }
 
-.blog-posts p{
+.blog-posts > p{
  margin: 5px 0;
+ line-height: 1.5rem;
+
 } 
 
 .blogPage-header h1 {
@@ -163,6 +165,7 @@ height: 40px;
 
 .blog-posts h2, .blog-posts h3, .blog-posts h4{
   margin: 3px 0;
+  line-height: 1.5rem;
  } 
 
  .blog-posts li {
@@ -337,6 +340,12 @@ width: 200px;
   width: fit-content;
 }
 
+.benefits_icon > path,
+.benefits_icon > svg 
+ {
+  width:50px;
+  height: 50px;
+}
 
 /* footer */
 

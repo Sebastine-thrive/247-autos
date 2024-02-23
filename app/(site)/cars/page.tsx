@@ -22,6 +22,11 @@ export default async function Cars() {
           height={60}
           className="h-[50px] rounded-lg"
         />
+        <div className="my-2">
+        <h2 className="h-full text-sm md:text-lg lg:text-xl flex justify-center items-center text-white">
+            Select the right car for you
+          </h2>
+        </div>
       </div>
       <div className="px-4 md:px-8 lg:px-12">
         <ProductFrame products={allCarsForSale} />
