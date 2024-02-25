@@ -16,7 +16,7 @@ export default async function Blog() {
     <div className="w-full bg-[#f1f1f1]">
       <div className="blog-container min-h-[90vh]  md:m-auto ">
         <div className="blog-container-heading h-[5rem] px-2 sm:px-0 min-h-[5rem] w-full text-[#2d2720]">
-          <h2 className="h-full text-sm md:text-lg lg:text-xl flex justify-center items-center text-white">
+          <h2 className="h-full px-4 text-base md:text-lg lg:text-xl flex justify-center items-center text-white">
             {" "}
             Stay updated! Power your drive with the right information.
           </h2>
@@ -37,3 +37,4 @@ export default async function Blog() {
     </div>
   );
 }
+

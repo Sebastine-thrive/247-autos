@@ -13,12 +13,12 @@ export const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
   return (
     <div className="faq-accordion w-full h-auto  mb-3 ">
       <div
-        className={`flex justify-between items-center p-4 cursor-pointer h-3rem shadow-sm shadow-[#2d2720] rounded-${
+        className={`flex bg-white justify-between items-center p-4 cursor-pointer h-3rem shadow-sm shadow-[#2d2720] rounded-${
           isOpen ? "none" : "t-md"
         } `}
         onClick={toggleAccordion}
       >
-        <div className="text-[#2d2720] px-2 font-semibold xxs:text-[12px]  sm:text-sm md:text-lg ml-[-1rem] text-start ">
+        <div className="text-[#2d2720]  px-2 font-semibold xxs:text-[12px]  sm:text-sm md:text-lg ml-[-1rem] text-start ">
           {question}
         </div>
         <div className="text-xl faq-icons">

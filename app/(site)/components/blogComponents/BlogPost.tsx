@@ -1,9 +1,23 @@
+"use client";
+import { useState } from "react";
 import { BlogProps } from "@/app/types/types";
 import Image from "next/image";
 // import { BlogPortableTextComponent } from "./PortableTextComponents";
 import { formatDate } from "../../utils/utils";
 import { urlForImage } from "@/sanity/lib/image";
 import { PortableText } from "@portabletext/react";
+// import { useRouter } from "next/router";
+import { useEffect } from "react";
+import {
+  FacebookIcon,
+  FacebookShareButton,
+  TwitterIcon,
+  TwitterShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+} from "react-share";
+import { MdOutlineKeyboardBackspace } from "react-icons/md";
+import Link from "next/link";
 
 // import { TableOfContents } from "./FindHeadings";
 // import { client } from "@/sanity/lib/client";
@@ -22,7 +36,16 @@ const BlogPost: React.FC<BlogProps> = ({ blog }) => {
     summary,
     references,
   } = blog;
- 
+
+  const [currentUrl, setCurrentUrl] = useState<string>("");
+
+  useEffect(() => {
+    setCurrentUrl(window.location.href);
+  }, []);
+
+  // const url = window.location.href;
+  const hashtags = ["iKnowMyCars"];
+
   return (
     <div className="bg-[#f1f1f1]">
       <div className="h-[50vh] z-10 lg:h-[60vh] py-4 bg-black">
@@ -35,7 +58,6 @@ const BlogPost: React.FC<BlogProps> = ({ blog }) => {
           priority
         />
       </div>
-      {/* <div className="blog-container min-h-[90vh] w-[100%] mx-8 md:[w-80%] lg:w-[70%] xl:w-[60%] flex flex-col  md:m-auto bg-[#f1f1f1]"> */}
 
       <div className="bg-white mt-8 z-20 min-h-[50vh] mx-auto  w-full px-4 lg:px-8 md:[w-80%] lg:w-[70%] xl:w-[60%] max-w-full">
         <div className="blogPage-header py-4 px-1 bg-customYellow">
@@ -46,7 +68,7 @@ const BlogPost: React.FC<BlogProps> = ({ blog }) => {
                 {" "}
                 <span className="mt-2">
                   {" "}
-                  By <span className="mr-0 "> {author} </span>{" "}
+                  By <span className="mr-0 text-black "> {author} </span>{" "}
                 </span>{" "}
                 <span className="ml-0 md:ml-2">{formatDate(publishedAt)} </span>
               </p>
@@ -56,8 +78,89 @@ const BlogPost: React.FC<BlogProps> = ({ blog }) => {
                 <span className="ml-1">{timeTakenToComplete} mins</span>
               </p>
             </div>
+
             <div className="hidden md:block">
-              <p> Share this article: Faceboook | Twitter </p>
+              <p> Share this article on: </p>
+              <div className="flex ">
+                {/* Facebook */}
+                <div className="facebook-share mx-1">
+                  <FacebookShareButton url={currentUrl} hashtag="iKnowMyCars">
+                    <FacebookIcon size={32} round={true} />
+                  </FacebookShareButton>
+                </div>
+                {/* Twitter */}
+                <div className="twitter-share mx-1">
+                  <TwitterShareButton
+                    url={currentUrl}
+                    hashtags={hashtags}
+                    title={title}
+                  >
+                    <TwitterIcon size={32} round={true} />
+                  </TwitterShareButton>
+                </div>
+                {/* Whatsapp Share */}
+                <div className="whatsapp-share mx-1">
+                  <WhatsappShareButton
+                    url={currentUrl}
+                    title={title}
+                    separator="--"
+                  >
+                    <WhatsappIcon size={32} round={true} />
+                  </WhatsappShareButton>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="my-4 mx-1 flex justify-between w-full">
+            <Link href="/blog">
+              <div className="flex items-center hover:underline">
+                <div className="mr-2">
+                  <MdOutlineKeyboardBackspace />
+                </div>
+                <p>Back to Blog</p>
+              </div>
+            </Link>
+
+            <Link href="/cars">
+              <div className="flex items-center text-customRed hover:underline">
+                <div className="mr-2">
+                  <MdOutlineKeyboardBackspace />
+                </div>
+                <p>Shop Cars</p>
+              </div>
+            </Link>
+          </div>
+          {/* Share display on small screens */}
+          <div className="flex md:hidden">
+            <p> Share this article on: </p>
+            <div className="flex ml-2 ">
+              {/* Facebook */}
+              <div className="facebook-share mx-1">
+                <FacebookShareButton url={currentUrl} hashtag="iKnowMyCars">
+                  <FacebookIcon size={20} round={true} />
+                </FacebookShareButton>
+              </div>
+              {/* Twitter */}
+              <div className="twitter-share mx-1">
+                <TwitterShareButton
+                  url={currentUrl}
+                  hashtags={hashtags}
+                  title={title}
+                >
+                  <TwitterIcon size={20} round={true} />
+                </TwitterShareButton>
+              </div>
+              {/* Whatsapp Share */}
+              <div className="whatsapp-share mx-1">
+                <WhatsappShareButton
+                  url={currentUrl}
+                  title={title}
+                  separator="--"
+                >
+                  <WhatsappIcon size={20} round={true} />
+                </WhatsappShareButton>
+              </div>
             </div>
           </div>
         </div>

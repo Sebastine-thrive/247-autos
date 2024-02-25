@@ -25,7 +25,6 @@ font-family: Helvetica, Arial, sans-serif;
 
 :root {
   /* CSS HEX */
-  /* lighter shade1: #cb9f5c  ligther shade 2: #e5c8a0  ash-blend;#f8f8f8*/
   --sundance: #cb9f5c;
   --black: #040404;
   --soya-bean: #5b5448;
@@ -152,10 +151,9 @@ height: 40px;
  background: linear-gradient(to right,  #cb9f5c, #5b5448);
 }
 
-.blog-posts > p{
+.blog-posts  p {
  margin: 5px 0;
  line-height: 1.5rem;
-
 } 
 
 .blogPage-header h1 {
@@ -163,8 +161,8 @@ height: 40px;
   font-weight: 900;
 }
 
-.blog-posts h2, .blog-posts h3, .blog-posts h4{
-  margin: 3px 0;
+.blog-posts h2, .blog-posts h3, .blog-posts h4 {
+  margin: 5px 0;
   line-height: 1.5rem;
  } 
 
@@ -172,27 +170,6 @@ height: 40px;
   font-family: "Merriweather", sans-serif;
   margin: 3px 0;
 }
-
-/*
-.blog-posts h2{
-  font-family: "Merriweather", sans-serif;
-font-size: 1.125rem; 
-line-height: 1.75rem;
-}
-
-
-.blog-posts h3{
-  font-family: "Merriweather", sans-serif;
-  font-size: 1rem; 
-  line-height: 1.5rem;
-  }
- */
-
-/* 
-.blog-container-heading {
-  background: linear-gradient(to right, #fff ,  #5b5448);
-}  */
-
 
 .blog-posts ul {
   list-style-type: disc;
@@ -229,6 +206,7 @@ z-index: 100;
   margin: 0 5px;
   box-shadow: 0 0 6px #c3c7cb;
 }
+
 .blog-card {
   box-shadow: 0 0 6px #c3c7cb;
 }
@@ -340,8 +318,8 @@ width: 200px;
   width: fit-content;
 }
 
-.benefits_icon > path,
-.benefits_icon > svg 
+.benefits_icon  path,
+.benefits_icon  svg 
  {
   width:50px;
   height: 50px;
@@ -381,13 +359,10 @@ width: 200px;
     height: 130px;
   }
 
-
-  
 .small-image{
   width: 120px;
       height: 90px;
   }
-
 
   .navbar img,
   .footer img {
@@ -402,6 +377,11 @@ width: 200px;
     padding: 1rem;
     min-height: 400px;
   }
+
+.blog-posts  p, .blog-posts li{
+  margin: 5px 0;
+  line-height: 1.6rem;
+ } 
 }
 
 
@@ -411,6 +391,11 @@ width: 200px;
   width: 280px;
   height: 210px;
   }
+  
+.blog-posts > p, .blog-posts li{
+  margin: 5px 0;
+  line-height: 1.8rem;
+ } 
 }
 
 @media screen and (max-width: 281px) {
