@@ -23,7 +23,7 @@ interface ImagesDisplayProps {
           className="large-product-image rounded-md bg-white"
           width={400}
           height={300}
-          priority={true}
+          priority
         />
       </div>
       <div className="small-images-container mt-4 flex mx-auto justify-center flex-wrap gap-2">
@@ -35,7 +35,7 @@ interface ImagesDisplayProps {
             alt="smaller product image"
             width={100}
             height={100}
-            priority={true}
+            priority
             className={
               i === index ? "small-image rounded-md selected-image" : "small-image"
             }

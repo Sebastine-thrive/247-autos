@@ -52,15 +52,15 @@ const WhatWeDo = () => {
       </p>
       {/* send a whataspp message */}
       <motion.div
-        initial={{ x: -50, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
+        initial={{ y: -50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 2 }}
         viewport={{ once: true }}
         className="rounded-lg flex justify-center max-w-[10rem] text-underline mx-auto my-4 h-auto p-2 bg-[#e86c57] text-white hover:bg-customYellow"
       >
-          <Link href="/contact">
-            <button className="font-normal">Request Service </button>
-          </Link>
+        <Link href="/contact">
+          <button className="font-normal">Request Service </button>
+        </Link>
       </motion.div>
     </div>
   );

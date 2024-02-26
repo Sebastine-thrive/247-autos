@@ -44,7 +44,7 @@ const BlogPost: React.FC<BlogProps> = ({ blog }) => {
   }, []);
 
   // const url = window.location.href;
-  const hashtags = ["iKnowMyCars"];
+  const hashtags = ["#iKnowMyCars"];
 
   return (
     <div className="bg-[#f1f1f1]">
@@ -84,7 +84,7 @@ const BlogPost: React.FC<BlogProps> = ({ blog }) => {
               <div className="flex ">
                 {/* Facebook */}
                 <div className="facebook-share mx-1">
-                  <FacebookShareButton url={currentUrl} hashtag="iKnowMyCars">
+                  <FacebookShareButton url={currentUrl} hashtag="#iKnowMyCars">
                     <FacebookIcon size={32} round={true} />
                   </FacebookShareButton>
                 </div>
@@ -123,7 +123,7 @@ const BlogPost: React.FC<BlogProps> = ({ blog }) => {
             </Link>
 
             <Link href="/cars">
-              <div className="flex items-center text-customRed hover:underline">
+              <div className="flex items-center text-customRed hover:underline px-2">
                 <div className="mr-2">
                   <MdOutlineKeyboardBackspace />
                 </div>
@@ -131,18 +131,21 @@ const BlogPost: React.FC<BlogProps> = ({ blog }) => {
               </div>
             </Link>
           </div>
+
+
+          
           {/* Share display on small screens */}
           <div className="flex md:hidden">
             <p> Share this article on: </p>
             <div className="flex ml-2 ">
               {/* Facebook */}
-              <div className="facebook-share mx-1">
+              <div className="facebook-share mx-3">
                 <FacebookShareButton url={currentUrl} hashtag="iKnowMyCars">
                   <FacebookIcon size={20} round={true} />
                 </FacebookShareButton>
               </div>
               {/* Twitter */}
-              <div className="twitter-share mx-1">
+              <div className="twitter-share mx-3">
                 <TwitterShareButton
                   url={currentUrl}
                   hashtags={hashtags}
@@ -152,7 +155,7 @@ const BlogPost: React.FC<BlogProps> = ({ blog }) => {
                 </TwitterShareButton>
               </div>
               {/* Whatsapp Share */}
-              <div className="whatsapp-share mx-1">
+              <div className="whatsapp-share mx-3">
                 <WhatsappShareButton
                   url={currentUrl}
                   title={title}

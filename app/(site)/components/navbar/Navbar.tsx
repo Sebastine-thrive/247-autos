@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
           </Link>
 
           <Link
-            href="about-us"
+            href="/about-us"
             className={
               currentPath == "/about-us"
                 ? "text-white border-b border-2 border-white font-extrabold mx-2 px-1"
@@ -78,9 +78,9 @@ const Navbar: React.FC = () => {
           </Link>
 
           <Link
-            href="cars"
+            href="/cars"
             className={
-              currentPath == "/cars"
+              currentPath.startsWith("/cars") 
                 ? "text-white border-b border-2 border-white font-extrabold mx-2"
                 : "text-customYellow mx-2"
             }
@@ -91,7 +91,7 @@ const Navbar: React.FC = () => {
           </Link>
 
           <Link
-            href="contact"
+            href="/contact"
             className={
               currentPath == "/contact"
                 ? "text-white border-b border-2 border-white font-extrabold mx-2"
@@ -104,9 +104,9 @@ const Navbar: React.FC = () => {
           </Link>
 
           <Link
-            href="blog"
+            href="/blog"
             className={
-              currentPath == "/blog"
+              currentPath.startsWith("/blog") 
                 ? "text-white border-b border-2 border-white font-extrabold mx-2"
                 : "text-customYellow mx-2"
             }
@@ -190,7 +190,7 @@ const Navbar: React.FC = () => {
                   >
                     <li
                       onClick={() => setNav(false)}
-                      className="py-4 capitalize text-sm hover:border-b text-customYellow hover:text-white font-semibold cursor-pointer "
+                      className="py-4 capitalize text-sm hover:border-b text-customYellow hover:text-white font-semibold cursor-pointer w-fit "
                     >
                       {navlink.title}
                     </li>

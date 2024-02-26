@@ -8,7 +8,7 @@ import footerLeftSvg from "../../../public/assets/images/footer-left-svg.svg";
 const Footer: React.FC = () => {
   return (
     <div className="footer-container relative pt-8 text-sm md:text-lg max-w-[1920px] w-[100vw] bg-[#040404] text-white p-8">
-      <div className="footer-links">
+      <div className="footer-links my-8">
         <div className="logo-socials-container">
           <div className="flex items-center">
             <div className="footer-logo w-[80px] h-[40px] mr-4 flex ">
@@ -26,11 +26,11 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="footer-page-links  w-full  flex justify-center ">
-          <div className="footer-page-links-wrapper mt-4 flex flex-wrap gap-x-2 text-sm md:text-lg gap-y-4 w-full lg:w-[70%] justify-between">
+          <div className="footer-page-links-wrapper mt-4 flex flex-wrap gap-x-2 gap-y-8  text-sm md:text-lg w-full lg:w-[70%] justify-between">
             <div className="page-links gap-x-8 capitalize ">
               <Link href="/#why-us">
                 {" "}
-                <h4 className="text-[#cb9f5c] hover:border-b hover:text-customRed cursor-pointer">
+                <h4 className="text-[#cb9f5c] hover:border-b hover:text-customRed cursor-pointer   w-fit">
                   Why 247{" "}
                 </h4>
               </Link>
@@ -39,17 +39,17 @@ const Footer: React.FC = () => {
             <div className="page-links capitalize ">
               <h4 className="text-[#cb9f5c]">Products</h4>
               <Link href="">
-                <p className="hover:border-b hover:text-customRed cursor-pointer ">
+                <p className="hover:border-b hover:text-customRed w-fit  my-4 lg:my-0 cursor-pointer ">
                   New
                 </p>
               </Link>
               <Link href="">
-                <p className="hover:border-b hover:text-customRed cursor-pointer">
+                <p className="hover:border-b hover:text-customRed w-fit  my-4 lg:my-0  cursor-pointer">
                   Used
                 </p>
               </Link>
               <Link href="">
-                <p className="hover:border-b hover:text-customRed cursor-pointer">
+                <p className="hover:border-b hover:text-customRed  w-fit  my-4 lg:my-0 cursor-pointer">
                   Sell your Car
                 </p>
               </Link>
@@ -58,17 +58,17 @@ const Footer: React.FC = () => {
             <div className="page-links capitalize">
               <h4 className="text-[#cb9f5c]">Resources</h4>
               <Link href="/#faq">
-                <p className="hover:border-b hover:text-customRed cursor-pointer">
+                <p className="hover:border-b hover:text-customRed my-4 lg:my-0  w-fit cursor-pointer">
                   FAQs
                 </p>
               </Link>
               <Link href="/blog">
-                <p className="hover:border-b hover:text-customRed cursor-pointer">
+                <p className="hover:border-b hover:text-customRed  my-4 lg:my-0  w-fit cursor-pointer">
                   Blog
                 </p>
               </Link>
               <Link href="/contact">
-                <p className="hover:border-b hover:text-customRed cursor-pointer">
+                <p className="hover:border-b hover:text-customRed  my-4 lg:my-0  w-fit cursor-pointer">
                   Contact us
                 </p>
               </Link>
@@ -77,12 +77,12 @@ const Footer: React.FC = () => {
             <div className="page-links capitalize  cursor-pointer">
               <h4 className="text-[#cb9f5c]">Socials</h4>
               <Link href="">
-                <p className="hover:border-b hover:text-customRed cursor-pointer">
+                <p className="hover:border-b hover:text-customRed cursor-pointer  my-4 lg:my-0  w-fit">
                   Facebook
                 </p>
               </Link>
               <Link href="https://www.instagram.com/_247autos?igsh=MTdoOHhjdzFlczQ1aQ==">
-                <p className="hover:border-b hover:text-customRed cursor-pointer">
+                <p className="hover:border-b hover:text-customRed cursor-pointer  my-4 lg:my-0  w-fit">
                   Instagram
                 </p>
               </Link>
@@ -108,7 +108,7 @@ const Footer: React.FC = () => {
           className="w-[100px] md:w-[200px] lg:w-[300px]"
         />
       </div>
-      <div className="hidden lg:absolute left-0 bottom-0">
+      {/* <div className="hidden lg:absolute left-0 bottom-0">
         <Image
           src={footerLeftSvg}
           alt="footer right svg image"
@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
           height={200}
           className="w-[100px] lg:w-[300px]"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

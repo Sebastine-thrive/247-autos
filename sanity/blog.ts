@@ -77,12 +77,9 @@ export default {
       title: "Slug",
       type: "slug",
       options: {
-        source: (doc: MyDocument, context: { dataset: string }) =>
-          context.dataset === "production"
-            ? `${doc.author}-${doc.title}`
-            : `${doc.author}-${doc.title}`,
+        source: "title",
+        maxLength: 90,
       },
-      maxLength: 90,
     },
     {
       name: "summary",
@@ -106,3 +103,10 @@ export default {
     },
   ],
 };
+
+// options: {
+//   source: (doc: MyDocument, context: { dataset: string }) =>
+//     context.dataset === "production"
+//       ? `${doc.author}-${doc.title}`
+//       : `${doc.author}-${doc.title}`,
+// },
