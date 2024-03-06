@@ -25,7 +25,6 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
 
   const currentPath = usePathname();
 
-  const absoluteValue = 50 % -"100px";
   // Show few products except on the cars page
   const showFewProducts = currentPath !== "/cars";
 
@@ -34,7 +33,7 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
       {showFewProducts ? (
         <div className="flex z-7">
           {/*  sale option and toggle icon */}
-          <h4 className="show-sale-option capitalize absolute flex w-300px max-w-auto items-center left-[5vw] lg:left-[42vw] ">
+          <h4 className="show-sale-option capitalize absolute flex w-300px max-w-auto items-center top-[-0.75rem] left-[5vw] lg:left-[42vw] p-2 bg-white rounded-md font-bold ">
             {" "}
             {selectedProductDisplayOption}{" "}
             {/* Dont' display this on cars page */}
@@ -54,7 +53,7 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
             <div
               className={
                 displaySaleSelectionBox
-                  ? "select-component-container absolute right-[34vw]"
+                  ? "select-component-container absolute right-[34vw] "
                   : "hidden"
               }
             >
@@ -62,15 +61,16 @@ const ProductFrame: React.FC<ProductListProps> = ({ products }) => {
             </div>
           ) : null}
 
-          {/* Show see all button when on home page- currently using show FewProducts state for that */}
-          <div className="absolute right-[5vw] lg:right[10vw] hover:scale-105 ">
-            <Link href="./cars">
-              <h4 className="flex items-center hover:text-customRed">
-                {" "}
-                See all <span className="ml-1"> &#187; </span>{" "}
-              </h4>
-            </Link>
-          </div>
+          {selectedProductDisplayOption === "on sale" ? (
+            <div className="absolute right-[5vw] lg:right[10vw] hover:scale-105 ">
+              <Link href="./cars">
+                <h4 className="flex items-center hover:text-customRed font-bold">
+                  {" "}
+                  See all <span className="ml-1"> &#187; </span>{" "}
+                </h4>
+              </Link>
+            </div>
+          ) : null}
         </div>
       ) : null}
 
