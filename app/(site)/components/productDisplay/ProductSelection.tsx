@@ -3,6 +3,8 @@ import { ProductListProps, ProductListPropsOptions } from "@/app/types/types";
 import React from "react";
 import ProductFrame from "./ProductFrame";
 import { useStateContext } from "@/app/context/Contexts";
+import { motion } from "framer-motion";
+import { mainImageShow } from "../pageAnimation/AnimationVariables";
 
 const ProductSelection: React.FC<ProductListPropsOptions> = ({
   productsOnSale,
@@ -11,7 +13,12 @@ const ProductSelection: React.FC<ProductListPropsOptions> = ({
   const { selectedProductDisplayOption } = useStateContext() ?? {};
 
   return (
-    <div className="overflow-x-auto">
+    <motion.div
+      variants={mainImageShow}
+      initial="hidden"
+      animate="show"
+      className="overflow-x-auto"
+    >
       {selectedProductDisplayOption === "on sale" ? (
         <div>
           <ProductFrame products={productsOnSale} />
@@ -23,9 +30,8 @@ const ProductSelection: React.FC<ProductListPropsOptions> = ({
           <ProductFrame products={productsSold} />
         </div>
       ) : null}
-    </div>
+    </motion.div>
   );
 };
 
 export default ProductSelection;
-

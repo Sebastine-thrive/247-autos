@@ -10,18 +10,18 @@ export const NavbarLinks: NavbarLink[] = [
   },
   {
     title: "about us",
-    address: "about-us",
+    address: "/about-us",
   },
   {
     title: "cars",
-    address: "cars",
+    address: "/cars",
   },
   {
     title: "contact",
-    address: "contact",
+    address: "/contact",
   },
   {
     title: "blog",
-    address: "blog",
+    address: "/blog",
   },
 ];

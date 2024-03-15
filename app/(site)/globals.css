@@ -186,7 +186,11 @@ height: 40px;
 
 .faq-icons,
 .faq-accordion {
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.faq-icons.rotate {
+  transform: rotate(180deg);
 }
 
 .select-component-container {
@@ -236,8 +240,6 @@ z-index: 100;
     transform: translateX(100%);
   }
 }
-
-
 
 .product-card:hover {
   transform: scale(0.9);

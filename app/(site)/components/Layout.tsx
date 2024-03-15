@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import Navbar from "./navbar/Navbar";
 import Footer from "./Footer";
+import PageAnimationWrapper from "./pageAnimation/PageAnimation";
 
 type LayoutProps = {
   children: ReactNode;
@@ -12,7 +13,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <header className="m-0">
         <Navbar />
       </header>
-      <main className="main-container">{children}</main>
+      <PageAnimationWrapper>
+        <main className="main-container">{children}</main>
+      </PageAnimationWrapper>
+
       <footer className="mt-auto mb-0 ">
         <Footer />
       </footer>

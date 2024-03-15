@@ -6,6 +6,7 @@ import logo__large from "./../../../../public/assets/logo/logo__large.jpg";
 import logo__small from "./../../../../public/assets/logo/logo__small.jpg";
 import { NavbarLinks } from "./NavbarLinks";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 import "./../../globals.css";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
@@ -22,7 +23,9 @@ const Navbar: React.FC = () => {
     setNav(!nav);
   };
 
-  const currentPath = usePathname();
+  let currentPath = usePathname();
+  if (currentPath.startsWith("/cars")) currentPath = "/cars";
+  if (currentPath.startsWith("/blog")) currentPath = "/blog";
 
   return (
     <nav className="max-w-[1920px] w-[100vw] h-auto min-h-[40px] lg:flex bg-black text-white items-center justify-between mt-0">
@@ -49,9 +52,29 @@ const Navbar: React.FC = () => {
 
       {/* 3.Nav links*/}
 
-      <div className="navlink-container hidden lg:flex lg:w-[30%]">
-        <ul className="flex ">
-          <Link
+      <div className="navlink-container hidden lg:flex ">
+        <ul className="flex items-center w-full ">
+          {NavbarLinks.map((navlink, index) => (
+            <motion.div whileHover={{ scale: 1.1 }} key={index}>
+              <Link
+                href={navlink.address}
+                className={`${
+                  navlink.address === currentPath
+                    ? "text-white font-extrabold mx-2 px-1"
+                    : "text-customYellow font-bold"
+                }  `}
+              >
+                <li className="py-1 text-[10px] mx-2 xl:text-sm capitalize hover:border-b hover:text-white cursor-pointer">
+                  {navlink.title}
+                </li>
+              </Link>
+            </motion.div>
+          ))}
+        </ul>
+      </div>
+
+
+      {/* <Link
             href="/"
             className={
               currentPath == "/"
@@ -101,6 +124,11 @@ const Navbar: React.FC = () => {
             <li className="mx-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
               Contact{" "}
             </li>
+
+
+
+
+
           </Link>
 
           <Link
@@ -114,9 +142,9 @@ const Navbar: React.FC = () => {
             <li className="mx-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
               Blog
             </li>
-          </Link>
-        </ul>
-      </div>
+          </Link> */}
+      {/* </ul> */}
+      {/* </div> */}
 
       {/* logo and outline display on small screens */}
       <div className="flex w-full h-auto justify-between lg:hidden items-center">
