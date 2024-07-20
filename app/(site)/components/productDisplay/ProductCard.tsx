@@ -31,19 +31,19 @@ const ProductCard: React.FC<CardProps> = ({ product }) => {
       <Link href={`/cars/${slug?.current}`} className="product-card-link">
         <div className="product-card bg-white text-black flex flex-col justify-center items-center rounded-sm">
           {image && (
-            <div className="md:w-[300px] md:h-[290px] pt-[2px]">
+            <div className="md:w-[350px] md:h-[260px] pt-[2px] mx-auto">
               <Image
                 src={image.length > 0 ? urlForImage(image[0]) : ""}
                 alt={brand + name}
-                width={300}
-                height={280}
-                className="product-image w-auto rounded-sm"
+                width={350}
+                height={260}
+                className="product-image mx-auto w-[350px] rounded-sm"
               />
             </div>
           )}
 
           {/* Houses other details asides images */}
-          <div className="flex flex-col text-xs md:text-base h-[120px] px-1 pb-1 text-black my-[2px] md:mx-0 justify-center text-center md:justify-start md:text-start overflow-hidden md:overflow-hidden">
+          <div className="flex flex-col text-xs md:text-base h-[150px] my-4 px-1 pb-1 text-black md:mx-0 justify-center text-center md:justify-start md:text-start overflow-hidden md:overflow-hidden">
             {/* <div className="flex flex-col"> */}
             <div className="flex flex-col">
               {/* year | brand | name */}

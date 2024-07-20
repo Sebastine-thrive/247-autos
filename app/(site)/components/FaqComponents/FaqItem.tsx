@@ -5,20 +5,19 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 export const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [rotateIcon, setRotateIcon] = useState(false);
+  const [isRotated, setIsRotated] = useState(false);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
-    setRotateIcon(true);
+   setIsRotated(!isRotated);
   };
 
-  // console.log(isOpen);
-  // console.log(rotateIcon);
+
 
   return (
     <div className="faq-accordion w-full h-auto  mb-3 ">
       <div
-        className={`flex bg-white justify-between items-center p-4 cursor-pointer h-3rem shadow-sm shadow-[#2d2720] rounded-${
+        className={`flex justify-between items-center p-4 cursor-pointer h-3rem shadow-sm shadow-[#2d2720] rounded-${
           isOpen ? "none" : "t-md"
         } `}
         onClick={toggleAccordion}
@@ -30,14 +29,10 @@ export const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
           {isOpen ? (
             <IoIosArrowUp
               size={20}
-              // className={rotateIcon ? "rotate faq-icons" : "faq-icons"}
+              className={isRotated ? "rotate faq-icons" : "faq-icons"}
             />
-          ) : (
-            <IoIosArrowDown
-              size={20}
-              // className={rotateIcon ? "rotate faq-icons" : "faq-icons"}
-            />
-          )}
+          ) : null }
+         
         </div>
       </div>
       {isOpen ? (

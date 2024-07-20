@@ -73,79 +73,6 @@ const Navbar: React.FC = () => {
         </ul>
       </div>
 
-
-      {/* <Link
-            href="/"
-            className={
-              currentPath == "/"
-                ? "text-white border-b border-2 border-white font-extrabold mx-2 px-1"
-                : "text-customYellow mx-2"
-            }
-          >
-            <li className="py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
-              Home
-            </li>
-          </Link>
-
-          <Link
-            href="/about-us"
-            className={
-              currentPath == "/about-us"
-                ? "text-white border-b border-2 border-white font-extrabold mx-2 px-1"
-                : "text-customYellow mx-2"
-            }
-          >
-            <li className=" py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
-              About us
-            </li>
-          </Link>
-
-          <Link
-            href="/cars"
-            className={
-              currentPath.startsWith("/cars") 
-                ? "text-white border-b border-2 border-white font-extrabold mx-2"
-                : "text-customYellow mx-2"
-            }
-          >
-            <li className="mx-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
-              Cars
-            </li>
-          </Link>
-
-          <Link
-            href="/contact"
-            className={
-              currentPath == "/contact"
-                ? "text-white border-b border-2 border-white font-extrabold mx-2"
-                : "text-customYellow mx-2"
-            }
-          >
-            <li className="mx-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
-              Contact{" "}
-            </li>
-
-
-
-
-
-          </Link>
-
-          <Link
-            href="/blog"
-            className={
-              currentPath.startsWith("/blog") 
-                ? "text-white border-b border-2 border-white font-extrabold mx-2"
-                : "text-customYellow mx-2"
-            }
-          >
-            <li className="mx-2 py-1 text-[10px] xl:text-sm font-bold capitalize hover:border-b hover:text-white cursor-pointer">
-              Blog
-            </li>
-          </Link> */}
-      {/* </ul> */}
-      {/* </div> */}
-
       {/* logo and outline display on small screens */}
       <div className="flex w-full h-auto justify-between lg:hidden items-center">
         <div className="block border-[1px] hover:border-customYellow rounded-sm">
@@ -208,17 +135,18 @@ const Navbar: React.FC = () => {
             {/* Nav drawer links */}
 
             <div className="flex flex-col mt-4 py-4 uppercase">
-              <ul className="">
+              <ul className=" ">
                 {NavbarLinks.map((navlink, index) => (
                   <Link
-                    href={`/${navlink.address}`}
+                    href={navlink.address}
+                    onClick={() => setNav(false)}
                     passHref
                     key={index}
                     className="block"
                   >
                     <li
-                      onClick={() => setNav(false)}
-                      className="py-4 capitalize text-sm hover:border-b text-customYellow hover:text-white font-semibold cursor-pointer w-fit "
+                      // onClick={() => setNav(false)}
+                      className="py-4 inline-block capitalize text-sm hover:border-b text-customYellow hover:text-white font-semibold cursor-pointer w-fit "
                     >
                       {navlink.title}
                     </li>

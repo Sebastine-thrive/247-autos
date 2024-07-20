@@ -11,7 +11,7 @@ const HomepageHero = () => {
       <div className="hero-homepage flex pl-8 bg-black lg:h-[60vh] xl:h-[70vh] max-w-[1920px] items-center  overflow-hidden">
         {/* Only show on large screens 50-50 with the div below */}
         <div className="intro hidden lg:flex flex-col items-center justify-center  w-0 lg:w-[50%] lg:h-full  min-h-[90%] text-white">
-          <div className=" flex items-center text-xl  lg:text-4xl mb-8 lg:mb-12">
+          <div className=" flex items-center text-3xl  lg:text-4xl mb-8 lg:mb-12">
             {" "}
             <motion.h2
               initial={{ opacity: 0 }}
@@ -49,7 +49,7 @@ const HomepageHero = () => {
               Daily
             </motion.h2>{" "}
           </div>
-          <div className="flex flex-col items-center lg:mt-8 text-lg lg:text-3xl mt-8 lg:mt-12 px-2 ">
+          <div className="flex flex-col items-center lg:mt-8 text-xl lg:text-3xl mt-8  px-2 ">
             {" "}
             <motion.h3
               initial={{ y: -50, opacity: 0 }}
@@ -131,7 +131,7 @@ const HomepageHero = () => {
           <motion.h3
             initial={{ y: -50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 3, duration: 2 }}
+            transition={{ delay: 3, duration: 4 }}
             viewport={{ once: true }}
             className="text-white text-center"
           >
@@ -140,7 +140,7 @@ const HomepageHero = () => {
           <motion.h3
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 5, duration: 2 }}
+            transition={{ delay: 7, duration: 3 }}
             viewport={{ once: true }}
             className="text-customYellow capitalize font-bold ml-[5px]"
           >

@@ -96,13 +96,13 @@ const ProductDetails: React.FC<CardProps> = ({ product }) => {
             </div>
           </div>
         </div>
-        {/* Send message to show interest */}
+        {/* Send message to show interest in buying car */}
         <div className="mx-auto w-fit font-bold ">
           <div>
             <Link href={link}>
-              <p className="underline buy-message text-base md:text-lg text-green-600">
+              <button className="buy-link text-base p-2 no-underline rounded-lg md:text-lg text-green-600 border-2 border-green-600 ">
                 I am Interested in this car
-              </p>
+              </button>
             </Link>
           </div>
         </div>

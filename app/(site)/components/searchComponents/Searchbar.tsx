@@ -24,7 +24,7 @@ const Searchbar: React.FC = () => {
         type="text"
         id="search-input"
         className="search-input"
-        placeholder="Search"
+        placeholder="Search - Sorry currently inactive"
         // onChange={handleInputChange}
       />
     </div>
@@ -32,4 +32,3 @@ const Searchbar: React.FC = () => {
 };
 
 export default Searchbar;
-
