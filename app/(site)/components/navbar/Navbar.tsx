@@ -44,16 +44,16 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* 2.Searchbar */}
+      {/* 2.Searchbar
       <div className="searchbar-container w-[33%] hidden lg:block">
         <SearchFetch searchTerm={searchTerm} />
-        {/* <Searchbar /> */}
-      </div>
+        <Searchbar />
+      </div> */}
 
       {/* 3.Nav links*/}
 
-      <div className="navlink-container hidden lg:flex ">
-        <ul className="flex items-center w-full ">
+      <div className="navlink-container hidden lg:flex w-[40%] ">
+        <ul className="flex justify-between items-center w-full ">
           {NavbarLinks.map((navlink, index) => (
             <motion.div whileHover={{ scale: 1.1 }} key={index}>
               <Link
@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
                     : "text-customYellow font-bold"
                 }  `}
               >
-                <li className="py-1 text-[10px] mx-2 xl:text-sm capitalize hover:border-b hover:text-white cursor-pointer">
+                <li className="py-1 text-xs lg:text-sm mx-2 xl:text-sm capitalize hover:border-b hover:text-white cursor-pointer">
                   {navlink.title}
                 </li>
               </Link>

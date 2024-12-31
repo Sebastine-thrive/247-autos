@@ -8,7 +8,7 @@ import vidSubstitute from "./../../../../public/assets/images/vid1.png";
 const HomepageHero = () => {
   return (
     <div className=" flex flex-col justify-center">
-      <div className="hero-homepage flex pl-8 bg-black lg:h-[60vh] xl:h-[70vh] max-w-[1920px] items-center  overflow-hidden">
+      <div className="hero-homepage flex pl-8 bg-black lg:h-[90vh] xl:h-[70vh] max-w-[1920px] items-center  overflow-hidden">
         {/* Only show on large screens 50-50 with the div below */}
         <div className="intro hidden lg:flex flex-col items-center justify-center  w-0 lg:w-[50%] lg:h-full  min-h-[90%] text-white">
           <div className=" flex items-center text-3xl  lg:text-4xl mb-8 lg:mb-12">
